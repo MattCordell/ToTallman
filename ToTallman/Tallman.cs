@@ -1,46 +1,31 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Text.RegularExpressions;
+using ToTallman;
 
 namespace ToTallman
 {
-    class Program
+    public static class Tallman
     {
-        public static Dictionary<string, string> Tallmen = new Dictionary<string, string>();
+        private static Dictionary<string, string> Tallmen = new Dictionary<string, string>();
 
+        private static string[] TM = Properties.Resources.Tallmen.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries);
 
-        static void Main(string[] args)
+        static Tallman()
         {
-            var Drugs = Properties.Resources.MedicinalProductTerms.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries);
-            var TM = Properties.Resources.Tallmen.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries);
-
             //initialiseTallmen
             foreach (var entry in TM)
             {
                 AddTallman(entry);
             }
-
-            Console.WriteLine("{0} => {1}", "amitriptyline", ToTallman("amitriptyline"));
-
-            foreach (var D in Drugs)
-            {
-                Console.WriteLine("{0} => {1}", D, ToTallman(D));
-            }
-
-            Console.WriteLine("Done");
-            Console.ReadKey();
-
         }
 
-        public static void AddTallman(string s)
+        private static void AddTallman(string s)
         {
             Tallmen.Add(s.ToLower(), s);
         }
 
-        public static string ToTallman(string term)
+        public static string ToTallman(this String term)
         {
             var words = term.ToLower().Split(' ');
 
@@ -58,5 +43,6 @@ namespace ToTallman
 
             return term;
         }
+
     }
 }

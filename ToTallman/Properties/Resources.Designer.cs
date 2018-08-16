@@ -19,7 +19,7 @@ namespace ToTallman.Properties {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
@@ -57,29 +57,6 @@ namespace ToTallman.Properties {
             }
             set {
                 resourceCulture = value;
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to nicotine
-        ///micafungin
-        ///calcium + colecalciferol + magnesium + zinc + copper + manganese
-        ///triglycerides medium chain formula
-        ///nizatidine
-        ///disopyramide
-        ///insulin isophane human
-        ///soy protein and fat formula with vitamins and minerals carbohydrate free
-        ///whey protein formula supplemented with amino acids, long chain polyunsaturated fatty acids, vitamins and minerals, low in protein, phosphate, potassium and lactose
-        ///teicoplanin
-        ///glucose
-        ///paper wasp venom
-        ///miconazole + zinc oxide
-        ///anecortave
-        ///clostridium botulinum type A toxin-h [rest of string was truncated]&quot;;.
-        /// </summary>
-        internal static string MedicinalProductTerms {
-            get {
-                return ResourceManager.GetString("MedicinalProductTerms", resourceCulture);
             }
         }
         
