@@ -10,6 +10,7 @@
 
 namespace ToTallman.Properties {
     using System;
+    using System.Reflection;
     
     
     /// <summary>
@@ -39,7 +40,7 @@ namespace ToTallman.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ToTallman.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ToTallman.Properties.Resources", typeof(Resources).GetTypeInfo().Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -106,7 +107,8 @@ namespace ToTallman.Properties {
         ///cLOMIPRAMine
         ///cLOMIPHEne
         ///cHLORPROMAZine
-        ///coUMADIN        /// [rest of string was truncated]&quot;;.
+        ///coUMADIN
+        /// [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string Tallmen {
             get {

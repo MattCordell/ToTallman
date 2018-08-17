@@ -5,7 +5,11 @@ VisualStudioVersion = 15.0.28010.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ToTallman", "ToTallman\ToTallman.csproj", "{E98FE63E-4EA1-4815-99A3-992F4F3BDA7F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoApp1", "DemoApp1\DemoApp1.csproj", "{79AFCEC5-0422-4174-BE8A-5B78651966BE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DemoApp1", "DemoApp1\DemoApp1.csproj", "{79AFCEC5-0422-4174-BE8A-5B78651966BE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tests_ToTallman", "Tests_ToTallman\Tests_ToTallman.csproj", "{4CEBBF25-1F21-4D2D-AE98-EB03BB76B10E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PerformanceMetrics", "PerformanceMetrics\PerformanceMetrics.csproj", "{03035E93-4245-433A-A4BD-090677C504F5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,14 @@ Global
 		{79AFCEC5-0422-4174-BE8A-5B78651966BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{79AFCEC5-0422-4174-BE8A-5B78651966BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{79AFCEC5-0422-4174-BE8A-5B78651966BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4CEBBF25-1F21-4D2D-AE98-EB03BB76B10E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4CEBBF25-1F21-4D2D-AE98-EB03BB76B10E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4CEBBF25-1F21-4D2D-AE98-EB03BB76B10E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4CEBBF25-1F21-4D2D-AE98-EB03BB76B10E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03035E93-4245-433A-A4BD-090677C504F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03035E93-4245-433A-A4BD-090677C504F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03035E93-4245-433A-A4BD-090677C504F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03035E93-4245-433A-A4BD-090677C504F5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
