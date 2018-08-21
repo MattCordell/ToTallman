@@ -1,5 +1,8 @@
 [![Build status](https://build.appcenter.ms/v0.1/apps/a6be2a99-b1cf-4c56-9d5e-9ab6687020e0/branches/master/badge)](https://appcenter.ms)
 
+[![Build Status](https://travis-ci.org/MattCordell/ToTallman.svg?branch=master)](https://travis-ci.org/MattCordell/ToTallman)
+
+
 # ToTallman
 An extension method that will apply specified [Tallman lettering](https://en.wikipedia.org/wiki/Tall_Man_lettering) to any string.
 The default parameterless method, is intended to use all "known" Tallman lists.
