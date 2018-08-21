@@ -6,7 +6,7 @@ namespace ToTallman
 {    
     public static class Tallman
     {              
-            public enum List {AU,US,NZ,ISMP};
+            public enum List {AU,FDA,NZ,ISMP};
 
             //Aggregate (default) list
             private static Dictionary<string, string> Tallmen = new Dictionary<string, string>();
@@ -24,7 +24,7 @@ namespace ToTallman
             string[] _AU = Properties.Resources.AU_2017.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries);
             string[] _FDA = Properties.Resources.FDA_2016.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries);
             string[] _ISMP = Properties.Resources.ISMP_2016.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries);
-            string[] _NZ = Properties.Resources.NZ_2013.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries);
+            string[] _NZ = Properties.Resources.NZ_2013.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries);            
 
             //initialiseTallmen
             //Do this more elegantly
@@ -84,14 +84,18 @@ namespace ToTallman
             {
                 if (Tallmen.ContainsKey(word))
                 {
-                    string pattern = String.Format("({0}|{1}){2}", Char.ToUpper(word[0])
-                                                                 , word[0]
-                                                                 , word.Substring(1));
+                    string pattern = String.Format(@"\b(?i){0}\b", word);
                     Regex rgx = new Regex(pattern);
                     term = rgx.Replace(term, Tallmen [word]);
                 }
             }
             return term;
+        }
+
+        //Method for accepting applying mulitple lists e.g. FDA+ISMP
+        private static string ToTallman(string v, params List[] args)
+        {
+            throw new NotImplementedException();
         }
     }
 
