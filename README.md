@@ -7,6 +7,15 @@ A single overload exists that allows a specific "known" list to be specified.
 
 ToTallman can be applied anywhere a string is being output.
 
+```C#
+  var d = "This drug is norfloxacin";
+  Console.WriteLine("{0} => {1}", d, d.ToTallman();  // To use the default list
+  Console.WriteLine("{0} => {1}", d, d.ToTallman(Tallman.List.AU)); //To specifiy a particular list
+  
+  //Outputs:
+  //    This drug is norfloxacin => This drug is NORfloxacin
+```
+
 Built with [.Net Standard 1.0](http://immo.landwerth.net/netstandard-versions/#), so it'll run on wherever .Net runs!
 
 There is effectively zero impact on UI performance.[link to performance metrics - coming soon]
