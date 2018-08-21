@@ -11,11 +11,11 @@ namespace ToTallman
             //Aggregate (default) list
             private static Dictionary<string, string> Tallmen = new Dictionary<string, string>();
             //Specific Regional Lists
-            private  static Dictionary<string, string> AU;
-            private static Dictionary<string, string> FDA;
-            private static Dictionary<string, string> NZ;
-            private static Dictionary<string, string> ISMP;                          
-        
+            private  static Dictionary<string, string> AU = new Dictionary<string, string>();
+        private static Dictionary<string, string> FDA = new Dictionary<string, string>();
+        private static Dictionary<string, string> NZ = new Dictionary<string, string>();
+        private static Dictionary<string, string> ISMP = new Dictionary<string, string>();
+
 
         static Tallman()
         {
