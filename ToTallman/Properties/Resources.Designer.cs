@@ -62,6 +62,211 @@ namespace ToTallman.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to aCLin
+        ///actoNEL
+        ///actoS
+        ///aKAMin
+        ///alDACTONE
+        ///alDOMET
+        ///ALKeran
+        ///alODORM
+        ///amARYl
+        ///amiNOPHYLLine
+        ///amiODAROne
+        ///amiTRIPTYLine
+        ///amLODIPine
+        ///amOXil
+        ///aPomine
+        ///arABLOC
+        ///arATAC
+        ///ARIPiprazole
+        ///arOPAX
+        ///aTRopt
+        ///avaSTIN
+        ///avaXIM
+        ///aVomine
+        ///azATHIOPRINE
+        ///aziTHROMYCIN
+        ///aZopt
+        ///bisACODYl
+        ///bisOPROLOl
+        ///buDESONide
+        ///buMETANide
+        ///caLTRate
+        ///caPTOPRil
+        ///caRAFate
+        ///CARBAMazepine
+        ///carbiMAZOLe
+        ///cARBOplatin
+        ///CARpine
+        ///caRVEDILOl
+        ///cefaLEXin
+        ///cefALOTIN
+        ///cefaZOLin
+        ///cefEPIME
+        ///cefOTAXIME
+        ///cefOXITIN
+        ///ceftAROLine
+        ///cefTAZIDIME
+        ///cefTRIAXONE
+        ///celAPRAM
+        ///c [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string AU_2017 {
+            get {
+                return ResourceManager.GetString("AU_2017", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to acetaZOLAMIDE
+        ///acetoHEXAMIDE
+        ///buPROPion
+        ///busPIRone
+        ///chlorproMAZINE
+        ///chlorproPAMIDE
+        ///clomiPHENE
+        ///clomiPRAMINE
+        ///cycloSERINE
+        ///cycloSPORINE
+        ///DAUNOrubicin
+        ///dimenhyDRINATE
+        ///diphenhydrAMINE
+        ///DOBUTamine
+        ///DOPamine
+        ///DOXOrubicin
+        ///glipiZIDE
+        ///glyBURIDE
+        ///hydrALAZINE
+        ///HYDROmorphone
+        ///hydrOXYzine
+        ///medroxyPROGESTERone
+        ///methylPREDNISolone
+        ///methylTESTOSTERone
+        ///mitoXANTRONE
+        ///niCARdipine
+        ///NIFEdipine
+        ///prednisoLONE
+        ///predniSONE
+        ///risperiDONE
+        ///rOPINIRole
+        ///sulfADIAZINE
+        ///sulfiSOXAZOLE
+        ///TOLAZamide
+        ///TOLBUTamide
+        ///vinBLAStine
+        ///vinCRIStine        /// [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string FDA_2016 {
+            get {
+                return ResourceManager.GetString("FDA_2016", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ALPRAZolam
+        ///aMILoride
+        ///amLODIPine
+        ///ARIPiprazole
+        ///AVINza
+        ///azaCITIDine
+        ///azaTHIOprine
+        ///carBAMazepine
+        ///CARBOplatin
+        ///ceFAZolin
+        ///cefoTEtan
+        ///cefOXitin
+        ///cefTAZidime
+        ///cefTRIAXone
+        ///CeleBREX
+        ///CeleXA
+        ///chlordiazePOXIDE
+        ///chlorproMAZINE
+        ///CISplatin
+        ///cloBAZam
+        ///clonazePAM
+        ///cloNIDine
+        ///cloZAPine
+        ///DACTINomycin
+        ///DAPTOmycin
+        ///DEPO-Medrol
+        ///diazePAM
+        ///dilTIAZem
+        ///DOCEtaxel
+        ///DOXOrubicin
+        ///DULoxetine
+        ///ePHEDrine
+        ///EPINEPHrine
+        ///epiRUBicin
+        ///eriBULin
+        ///fentaNYL
+        ///flavoxATE
+        ///FLUoxetine
+        ///fluPHENAZine
+        ///fluvoxaMINE
+        ///guaiFENesin
+        ///guanFACINE
+        ///HumaLOG [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string ISMP_2016 {
+            get {
+                return ResourceManager.GetString("ISMP_2016", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ALKeran
+        ///aLLOPURINol
+        ///amINOPHYLLIne
+        ///amIODAROne
+        ///amiSULPIRIDe
+        ///amITRIPTYLIne
+        ///amLODIPIne
+        ///aPomine
+        ///arATAC
+        ///arOPAX
+        ///aTENOLol
+        ///aTRopt
+        ///avaSTIN
+        ///avaXIM
+        ///aVomine
+        ///azATHIOPRINE
+        ///azITHROMYCIN
+        ///aZopt
+        ///BENZATHINE benzylpenicillin
+        ///benzylpenicillin
+        ///bisACODYl
+        ///bisOPROLOl
+        ///buDESONide
+        ///buMETANide
+        ///caLTRate
+        ///caPTOPRIl
+        ///caRAFate
+        ///CARBAMazepine
+        ///carbIMAZOLe
+        ///cARBOplatin
+        ///caRVEDILOl
+        ///cefaLEXin
+        ///cefaZOLin
+        ///cefEPIME
+        ///cefOTAXIME
+        ///cefOXITIN
+        ///cefTAZIDIME
+        ///cefTRIAXONE
+        ///cefUROXIME
+        ///celAPRAM
+        ///celEBREX
+        ///cephaLEXin
+        ///cephaZOLin
+        ///CET [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string NZ_2013 {
+            get {
+                return ResourceManager.GetString("NZ_2013", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to actoNEL
         ///actoS
         ///aKAMin
@@ -107,8 +312,7 @@ namespace ToTallman.Properties {
         ///cLOMIPRAMine
         ///cLOMIPHEne
         ///cHLORPROMAZine
-        ///coUMADIN
-        /// [rest of string was truncated]&quot;;.
+        ///coUMADIN        /// [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string Tallmen {
             get {

@@ -6,31 +6,53 @@ namespace ToTallman
 {    
     public static class Tallman
     {              
-            public enum List {AU,US,NZ,UK};
+            public enum List {AU,US,NZ,ISMP};
 
             //Aggregate (default) list
             private static Dictionary<string, string> Tallmen = new Dictionary<string, string>();
             //Specific Regional Lists
             private  static Dictionary<string, string> AU;
-            private static Dictionary<string, string> US;
+            private static Dictionary<string, string> FDA;
             private static Dictionary<string, string> NZ;
-            private static Dictionary<string, string> UK;                          
+            private static Dictionary<string, string> ISMP;                          
         
 
         static Tallman()
         {
             string[] TM = Properties.Resources.Tallmen.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries);
-            
+
+            string[] _AU = Properties.Resources.AU_2017.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries);
+            string[] _FDA = Properties.Resources.FDA_2016.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries);
+            string[] _ISMP = Properties.Resources.ISMP_2016.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries);
+            string[] _NZ = Properties.Resources.NZ_2013.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries);
+
             //initialiseTallmen
+            //Do this more elegantly
             foreach (var entry in TM)
             {
                 Tallmen.AddTallman(entry);                              
             }
 
-            AU = Tallmen;
-            US = AU;
-            UK = AU;
-            NZ = AU;
+            foreach (var entry in _AU)
+            {
+                AU.AddTallman(entry);
+            }
+
+            foreach (var entry in _FDA)
+            {
+                FDA.AddTallman(entry);
+            }
+
+            foreach (var entry in _ISMP)
+            {
+                ISMP.AddTallman(entry);
+            }
+
+            foreach (var entry in _NZ)
+            {
+                NZ.AddTallman(entry);
+            }
+            
         }
 
         private static void AddTallman(this Dictionary<string,string> list,string s)
