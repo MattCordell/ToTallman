@@ -57,6 +57,25 @@ namespace ToTallman_Tests
         }
 
         [TestMethod]
+        public void WithOtherCharacters()
+        {
+            //ToTallman() should not affect any of these inputs.
+            //"nexiUM" but with other characters attached
+
+            var input = "nexium";
+            var input1 = "nexiUMPost";
+            var input2 = "PrenexiUM";
+            var input3 = "PREnexiUMPOST";
+
+            Assert.AreNotEqual(input, input.ToTallman());
+            Assert.AreEqual("nexiUM", input.ToTallman());
+
+            Assert.AreEqual(input1, input1.ToTallman());
+            Assert.AreEqual(input2, input2.ToTallman());
+            Assert.AreEqual(input3, input3.ToTallman());
+        }
+
+        [TestMethod]
         public void With_a_hyphen()
         {
             var expected = "SOLU-medrol";

@@ -46,9 +46,7 @@ namespace ToTallman
             {
                 if (Tallmen.ContainsKey(word))
                 {
-                    string pattern = String.Format("({0}|{1}){2}", Char.ToUpper(word[0])
-                                                                 , word[0]
-                                                                 , word.Substring(1));
+                    string pattern = String.Format(@"\b(?i){0}\b", word);
                     Regex rgx = new Regex(pattern);
                     term = rgx.Replace(term, Tallmen[word]);
                 }
