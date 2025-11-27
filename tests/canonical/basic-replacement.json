@@ -1,0 +1,52 @@
+{
+  "tests": [
+    {
+      "description": "Single drug name - lowercase",
+      "input": "prednisone",
+      "listId": "DEFAULT",
+      "expected": "predniSONE"
+    },
+    {
+      "description": "Single drug name - at start of sentence",
+      "input": "Prednisone is a common medication",
+      "listId": "DEFAULT",
+      "expected": "predniSONE is a common medication"
+    },
+    {
+      "description": "Single drug name - in middle of sentence",
+      "input": "The patient takes prednisone daily",
+      "listId": "DEFAULT",
+      "expected": "The patient takes predniSONE daily"
+    },
+    {
+      "description": "Multiple occurrences of same drug",
+      "input": "prednisone and more prednisone",
+      "listId": "DEFAULT",
+      "expected": "predniSONE and more predniSONE"
+    },
+    {
+      "description": "Multiple different drugs",
+      "input": "morphine and hydromorphone",
+      "listId": "DEFAULT",
+      "expected": "morphine and HYDROmorphone"
+    },
+    {
+      "description": "Drug at end of sentence with period",
+      "input": "Patient prescribed prednisone.",
+      "listId": "DEFAULT",
+      "expected": "Patient prescribed predniSONE."
+    },
+    {
+      "description": "Drug name norfloxacin",
+      "input": "norfloxacin",
+      "listId": "DEFAULT",
+      "expected": "NORfloxacin"
+    },
+    {
+      "description": "Drug name in context",
+      "input": "This drug is norfloxacin",
+      "listId": "DEFAULT",
+      "expected": "This drug is NORfloxacin"
+    }
+  ]
+}

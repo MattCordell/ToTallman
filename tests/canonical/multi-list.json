@@ -1,0 +1,70 @@
+{
+  "tests": [
+    {
+      "description": "DEFAULT list - prednisone",
+      "input": "prednisone",
+      "listId": "DEFAULT",
+      "expected": "predniSONE"
+    },
+    {
+      "description": "FDA list - predniSONE (lowercase input)",
+      "input": "prednisone",
+      "listId": "FDA",
+      "expected": "predniSONE"
+    },
+    {
+      "description": "AU list - amiodarone",
+      "input": "amiodarone",
+      "listId": "AU",
+      "expected": "amiODAROne"
+    },
+    {
+      "description": "ISMP list - morphine (not in ISMP list)",
+      "input": "morphine",
+      "listId": "ISMP",
+      "expected": "morphine"
+    },
+    {
+      "description": "NZ list - morphine (in NZ list)",
+      "input": "morphine",
+      "listId": "NZ",
+      "expected": "morphine"
+    },
+    {
+      "description": "FDA list - DOBUTamine",
+      "input": "dobutamine",
+      "listId": "FDA",
+      "expected": "DOBUTamine"
+    },
+    {
+      "description": "FDA list - DOPamine",
+      "input": "dopamine",
+      "listId": "FDA",
+      "expected": "DOPamine"
+    },
+    {
+      "description": "AU list - vinCRISTine",
+      "input": "vincristine",
+      "listId": "AU",
+      "expected": "vinCRISTine"
+    },
+    {
+      "description": "ISMP list - vinCRIStine (different capitalization than AU)",
+      "input": "vincristine",
+      "listId": "ISMP",
+      "expected": "vinCRIStine"
+    },
+    {
+      "description": "DEFAULT list - drug not in any list",
+      "input": "aspirin",
+      "listId": "DEFAULT",
+      "expected": "aspirin"
+    },
+    {
+      "description": "AU list - drug not in AU list",
+      "input": "notadrug",
+      "listId": "AU",
+      "expected": "notadrug"
+    }
+  ]
+}

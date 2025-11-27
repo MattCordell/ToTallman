@@ -1,0 +1,58 @@
+{
+  "tests": [
+    {
+      "description": "Drug name followed by comma",
+      "input": "prednisone, prednisolone",
+      "listId": "DEFAULT",
+      "expected": "predniSONE, prednisoLONE"
+    },
+    {
+      "description": "Drug name followed by period",
+      "input": "The medication is prednisone.",
+      "listId": "DEFAULT",
+      "expected": "The medication is predniSONE."
+    },
+    {
+      "description": "Drug name in parentheses",
+      "input": "Steroid (prednisone) prescribed",
+      "listId": "DEFAULT",
+      "expected": "Steroid (predniSONE) prescribed"
+    },
+    {
+      "description": "Drug name with exclamation",
+      "input": "Not prednisone!",
+      "listId": "DEFAULT",
+      "expected": "Not predniSONE!"
+    },
+    {
+      "description": "Drug name with question mark",
+      "input": "Is it prednisone?",
+      "listId": "DEFAULT",
+      "expected": "Is it predniSONE?"
+    },
+    {
+      "description": "Drug name in quotes",
+      "input": "The drug \"prednisone\" was prescribed",
+      "listId": "DEFAULT",
+      "expected": "The drug \"predniSONE\" was prescribed"
+    },
+    {
+      "description": "Drug name with colon",
+      "input": "Medication: prednisone",
+      "listId": "DEFAULT",
+      "expected": "Medication: predniSONE"
+    },
+    {
+      "description": "Drug name with semicolon",
+      "input": "prednisone; prednisolone; morphine",
+      "listId": "DEFAULT",
+      "expected": "predniSONE; prednisoLONE; morphine"
+    },
+    {
+      "description": "Multiple punctuation types",
+      "input": "prednisone, morphine; hydromorphone.",
+      "listId": "DEFAULT",
+      "expected": "predniSONE, morphine; HYDROmorphone."
+    }
+  ]
+}

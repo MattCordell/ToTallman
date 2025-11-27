@@ -1,0 +1,52 @@
+{
+  "tests": [
+    {
+      "description": "Drug name as prefix - should not match",
+      "input": "nexiumtest",
+      "listId": "DEFAULT",
+      "expected": "nexiumtest"
+    },
+    {
+      "description": "Drug name as suffix - should not match",
+      "input": "testnexium",
+      "listId": "DEFAULT",
+      "expected": "testnexium"
+    },
+    {
+      "description": "Drug name in middle of word - should not match",
+      "input": "mynexiumtest",
+      "listId": "DEFAULT",
+      "expected": "mynexiumtest"
+    },
+    {
+      "description": "Drug name with attached prefix",
+      "input": "prenexium",
+      "listId": "DEFAULT",
+      "expected": "prenexium"
+    },
+    {
+      "description": "Drug name with attached suffix",
+      "input": "nexiumpost",
+      "listId": "DEFAULT",
+      "expected": "nexiumpost"
+    },
+    {
+      "description": "Valid standalone drug name for comparison",
+      "input": "nexium",
+      "listId": "DEFAULT",
+      "expected": "nexiUM"
+    },
+    {
+      "description": "Drug name in compound word - should not match",
+      "input": "morphinerelated",
+      "listId": "DEFAULT",
+      "expected": "morphinerelated"
+    },
+    {
+      "description": "Standalone drug vs compound",
+      "input": "morphine vs morphinerelated",
+      "listId": "DEFAULT",
+      "expected": "morphine vs morphinerelated"
+    }
+  ]
+}

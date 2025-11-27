@@ -1,0 +1,94 @@
+{
+  "tests": [
+    {
+      "description": "Null input returns empty string",
+      "input": "",
+      "listId": "DEFAULT",
+      "expected": ""
+    },
+    {
+      "description": "Empty string",
+      "input": "",
+      "listId": "DEFAULT",
+      "expected": ""
+    },
+    {
+      "description": "Whitespace only - single space",
+      "input": " ",
+      "listId": "DEFAULT",
+      "expected": " "
+    },
+    {
+      "description": "Whitespace only - multiple spaces",
+      "input": "   ",
+      "listId": "DEFAULT",
+      "expected": "   "
+    },
+    {
+      "description": "Whitespace only - tab",
+      "input": "\t",
+      "listId": "DEFAULT",
+      "expected": "\t"
+    },
+    {
+      "description": "Whitespace only - newline",
+      "input": "\n",
+      "listId": "DEFAULT",
+      "expected": "\n"
+    },
+    {
+      "description": "Drug name with multiple spaces around it",
+      "input": "  prednisone  ",
+      "listId": "DEFAULT",
+      "expected": "  predniSONE  "
+    },
+    {
+      "description": "Drug names separated by newlines",
+      "input": "prednisone\nmorphine",
+      "listId": "DEFAULT",
+      "expected": "predniSONE\nmorphine"
+    },
+    {
+      "description": "Drug names separated by tabs",
+      "input": "prednisone\tmorphine",
+      "listId": "DEFAULT",
+      "expected": "predniSONE\tmorphine"
+    },
+    {
+      "description": "Single character non-drug",
+      "input": "a",
+      "listId": "DEFAULT",
+      "expected": "a"
+    },
+    {
+      "description": "Numbers only",
+      "input": "12345",
+      "listId": "DEFAULT",
+      "expected": "12345"
+    },
+    {
+      "description": "Drug name with numbers adjacent",
+      "input": "prednisone5mg",
+      "listId": "DEFAULT",
+      "expected": "predniSONE5mg"
+    },
+    {
+      "description": "Numbers separate drug names",
+      "input": "prednisone 5 morphine",
+      "listId": "DEFAULT",
+      "expected": "predniSONE 5 morphine"
+    },
+    {
+      "description": "Special characters only",
+      "input": "!@#$%",
+      "listId": "DEFAULT",
+      "expected": "!@#$%"
+    },
+    {
+      "description": "Very long text with drug names",
+      "input": "This is a very long sentence that contains the drug name prednisone somewhere in the middle of all this text and we want to make sure it still gets converted properly even with lots of surrounding content.",
+      "listId": "DEFAULT",
+      "expected": "This is a very long sentence that contains the drug name predniSONE somewhere in the middle of all this text and we want to make sure it still gets converted properly even with lots of surrounding content."
+    }
+  ]
+}

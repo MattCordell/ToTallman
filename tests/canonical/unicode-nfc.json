@@ -1,0 +1,40 @@
+{
+  "tests": [
+    {
+      "description": "Simple ASCII - baseline",
+      "input": "prednisone",
+      "listId": "DEFAULT",
+      "expected": "predniSONE"
+    },
+    {
+      "description": "Text with combining diacritical marks (if drug names had them)",
+      "input": "café prednisone naïve",
+      "listId": "DEFAULT",
+      "expected": "café predniSONE naïve"
+    },
+    {
+      "description": "Unicode normalization test - é (precomposed U+00E9)",
+      "input": "résumé prednisone",
+      "listId": "DEFAULT",
+      "expected": "résumé predniSONE"
+    },
+    {
+      "description": "Unicode normalization test - é (decomposed e + ́  U+0065 U+0301)",
+      "input": "résumé prednisone",
+      "listId": "DEFAULT",
+      "expected": "résumé predniSONE"
+    },
+    {
+      "description": "Non-ASCII characters in surrounding text",
+      "input": "Ü morphine Ñ",
+      "listId": "DEFAULT",
+      "expected": "Ü morphine Ñ"
+    },
+    {
+      "description": "Drug name remains unchanged with emoji context",
+      "input": "💊 prednisone 💊",
+      "listId": "DEFAULT",
+      "expected": "💊 predniSONE 💊"
+    }
+  ]
+}

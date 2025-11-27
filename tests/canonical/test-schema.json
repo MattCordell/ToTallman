@@ -1,0 +1,41 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/MattCordell/ToTallman/tests/canonical/test-schema.json",
+  "title": "Canonical Test Case Schema",
+  "description": "Schema for ToTallman canonical test cases - language-agnostic validation",
+  "type": "object",
+  "required": ["tests"],
+  "properties": {
+    "tests": {
+      "type": "array",
+      "description": "Array of test cases",
+      "items": {
+        "type": "object",
+        "required": ["description", "input", "listId", "expected"],
+        "properties": {
+          "description": {
+            "type": "string",
+            "description": "Human-readable description of what this test validates",
+            "minLength": 1
+          },
+          "input": {
+            "type": "string",
+            "description": "Input string to convert (can be multi-line)"
+          },
+          "listId": {
+            "type": "string",
+            "description": "Tallman list ID to use (DEFAULT, AU, FDA, ISMP, NZ)",
+            "pattern": "^[A-Z][A-Z0-9_-]*$"
+          },
+          "expected": {
+            "type": "string",
+            "description": "Expected output after ToTallman conversion"
+          }
+        },
+        "additionalProperties": false
+      },
+      "minItems": 1
+    }
+  },
+  "additionalProperties": false
+}

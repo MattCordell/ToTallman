@@ -1,0 +1,40 @@
+{
+  "tests": [
+    {
+      "description": "Basic Latin - lowercase",
+      "input": "morphine",
+      "listId": "DEFAULT",
+      "expected": "morphine"
+    },
+    {
+      "description": "Basic Latin - uppercase",
+      "input": "MORPHINE",
+      "listId": "DEFAULT",
+      "expected": "morphine"
+    },
+    {
+      "description": "German ß (sharp s) - should handle casefolding",
+      "input": "straße morphine",
+      "listId": "DEFAULT",
+      "expected": "straße morphine"
+    },
+    {
+      "description": "Greek letters in context",
+      "input": "Σ morphine",
+      "listId": "DEFAULT",
+      "expected": "Σ morphine"
+    },
+    {
+      "description": "Cyrillic characters in context",
+      "input": "Д morphine В",
+      "listId": "DEFAULT",
+      "expected": "Д morphine В"
+    },
+    {
+      "description": "Mixed scripts",
+      "input": "测试 prednisone test",
+      "listId": "DEFAULT",
+      "expected": "测试 predniSONE test"
+    }
+  ]
+}

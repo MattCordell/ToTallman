@@ -1,0 +1,82 @@
+{
+  "tests": [
+    {
+      "description": "Hyphenated drug - SOLU-medrol",
+      "input": "solu-medrol",
+      "listId": "DEFAULT",
+      "expected": "SOLU-medrol"
+    },
+    {
+      "description": "Hyphenated drug - DEPO-medrol",
+      "input": "depo-medrol",
+      "listId": "DEFAULT",
+      "expected": "DEPO-medrol"
+    },
+    {
+      "description": "Hyphenated drug - solu-CORTEF",
+      "input": "solu-cortef",
+      "listId": "DEFAULT",
+      "expected": "solu-CORTEF"
+    },
+    {
+      "description": "Hyphenated drug - depo-PROVERA",
+      "input": "depo-provera",
+      "listId": "DEFAULT",
+      "expected": "depo-PROVERA"
+    },
+    {
+      "description": "Hyphenated drug - uppercase input",
+      "input": "SOLU-MEDROL",
+      "listId": "DEFAULT",
+      "expected": "SOLU-medrol"
+    },
+    {
+      "description": "Hyphenated drug in sentence",
+      "input": "Patient prescribed solu-medrol today",
+      "listId": "DEFAULT",
+      "expected": "Patient prescribed SOLU-medrol today"
+    },
+    {
+      "description": "Multi-word with space - MS Contin",
+      "input": "ms contin",
+      "listId": "DEFAULT",
+      "expected": "MS Contin"
+    },
+    {
+      "description": "Multi-word with space - isopto CARpine",
+      "input": "isopto carpine",
+      "listId": "DEFAULT",
+      "expected": "isopto CARpine"
+    },
+    {
+      "description": "Multi-word with space - isopto HOMATROpine",
+      "input": "isopto homatropine",
+      "listId": "DEFAULT",
+      "expected": "isopto HOMATROpine"
+    },
+    {
+      "description": "Drug name with parentheses - ciclosPORIN (cyclosPORIN)",
+      "input": "ciclosporin",
+      "listId": "DEFAULT",
+      "expected": "ciclosPORIN (cyclosPORIN)"
+    },
+    {
+      "description": "Alternative form in parentheses - cefaLEXin (cephaLEXin)",
+      "input": "cefalexin",
+      "listId": "DEFAULT",
+      "expected": "cefaLEXin (cephaLEXin)"
+    },
+    {
+      "description": "Multiple hyphenated drugs in sentence",
+      "input": "Choose between solu-medrol and depo-medrol",
+      "listId": "DEFAULT",
+      "expected": "Choose between SOLU-medrol and DEPO-medrol"
+    },
+    {
+      "description": "Hyphen should create word boundary",
+      "input": "test-prednisone-test",
+      "listId": "DEFAULT",
+      "expected": "test-predniSONE-test"
+    }
+  ]
+}

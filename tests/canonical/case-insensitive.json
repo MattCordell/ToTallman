@@ -1,0 +1,46 @@
+{
+  "tests": [
+    {
+      "description": "All lowercase input",
+      "input": "prednisone",
+      "listId": "DEFAULT",
+      "expected": "predniSONE"
+    },
+    {
+      "description": "All uppercase input",
+      "input": "PREDNISONE",
+      "listId": "DEFAULT",
+      "expected": "predniSONE"
+    },
+    {
+      "description": "Title case input",
+      "input": "Prednisone",
+      "listId": "DEFAULT",
+      "expected": "predniSONE"
+    },
+    {
+      "description": "Mixed case input - random capitals",
+      "input": "PrEdNiSoNe",
+      "listId": "DEFAULT",
+      "expected": "predniSONE"
+    },
+    {
+      "description": "camelCase style",
+      "input": "predniSone",
+      "listId": "DEFAULT",
+      "expected": "predniSONE"
+    },
+    {
+      "description": "Multiple drugs with different cases",
+      "input": "MORPHINE and HyDrOmOrPhOnE",
+      "listId": "DEFAULT",
+      "expected": "morphine and HYDROmorphone"
+    },
+    {
+      "description": "Sentence with mixed case drug names",
+      "input": "Patient takes PredniSONE and MorPhiNe daily",
+      "listId": "DEFAULT",
+      "expected": "Patient takes predniSONE and morphine daily"
+    }
+  ]
+}
