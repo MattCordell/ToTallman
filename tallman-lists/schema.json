@@ -1,0 +1,43 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/MattCordell/ToTallman/tallman-lists/schema.json",
+  "title": "Tallman List Schema",
+  "description": "Schema for Tallman drug name lists used across all language implementations",
+  "type": "object",
+  "required": ["id", "description", "source", "version", "entries"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier for this list (e.g., AU, FDA, ISMP, NZ, DEFAULT)",
+      "pattern": "^[A-Z][A-Z0-9_-]*$",
+      "minLength": 1,
+      "maxLength": 50
+    },
+    "description": {
+      "type": "string",
+      "description": "Human-readable description of the list and its source",
+      "minLength": 1
+    },
+    "source": {
+      "type": "string",
+      "description": "URL or reference to the authoritative source for this list",
+      "minLength": 1
+    },
+    "version": {
+      "type": "string",
+      "description": "Version in format YYYYMMDD.N (e.g., 20171124.0)",
+      "pattern": "^\\d{8}\\.\\d+$"
+    },
+    "entries": {
+      "type": "array",
+      "description": "Array of drug names with Tallman lettering (canonical output form)",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    }
+  },
+  "additionalProperties": false
+}

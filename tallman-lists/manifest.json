@@ -1,0 +1,32 @@
+[
+  {
+    "id": "AU",
+    "version": "20171124.0",
+    "entries": 206,
+    "description": "Australian National Tall Man Lettering List (November 2017)"
+  },
+  {
+    "id": "DEFAULT",
+    "version": "20180819.0",
+    "entries": 199,
+    "description": "Default aggregate Tallman list combining entries from multiple sources"
+  },
+  {
+    "id": "FDA",
+    "version": "20160101.0",
+    "entries": 37,
+    "description": "US FDA/ISMP Tall Man Lettering List (2016)"
+  },
+  {
+    "id": "ISMP",
+    "version": "20160101.0",
+    "entries": 143,
+    "description": "Institute for Safe Medication Practices (ISMP) Tall Man Lettering List (2016)"
+  },
+  {
+    "id": "NZ",
+    "version": "20131201.0",
+    "entries": 190,
+    "description": "New Zealand Tall Man Lettering List (December 2013)"
+  }
+]

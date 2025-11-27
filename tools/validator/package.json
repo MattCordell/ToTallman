@@ -1,0 +1,15 @@
+{
+  "name": "tallman-validator",
+  "version": "1.0.0",
+  "description": "Validator for ToTallman JSON list files",
+  "main": "validate-schema.js",
+  "scripts": {
+    "validate": "node validate-schema.js"
+  },
+  "keywords": ["tallman", "validation", "medication-safety"],
+  "author": "ToTallman Contributors",
+  "license": "MIT",
+  "dependencies": {
+    "ajv": "^8.12.0"
+  }
+}
