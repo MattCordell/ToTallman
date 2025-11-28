@@ -6,6 +6,10 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ToTallman is a cross-language Tall Man lettering library for medication safety. Tall Man lettering uses mixed case (e.g., "predniSONE" vs "prednisoLONE") to prevent medication errors by highlighting distinguishing characters.
 
+The high level objectives and requirements for this project are detailed in `ToTallman Updated Specification.md`
+
+Ignore the `/archive` directory (if it exists) - do not read or modify content.
+
 **Current Status**
 See `Project Plan.md` for detailed phase tracking and status.
 
@@ -13,6 +17,7 @@ See `Project Plan.md` for detailed phase tracking and status.
 - Ask clarifying questions before making architectural changes.
 - Construct an implementation plan if one has not already been prepared.
 - When the user has confirmed they are happy with the changes, update the `Project Plan.md` to reflect the progress.
+- If any decisions are made that contradict the `ToTallman Updated Specification.md` - seek clarification/confirmation before proceeding, and update the Specification document if the changes are agreed upon.
 
 
 

@@ -2,6 +2,7 @@
 
 **Status**: In Progress
 **Started**: 2025-11-27
+**Technical Specification** `ToTallman Updated Specification.md`
 **Target Completion**: ~11 weeks from start
 **Current Phase**: Phase 2 - Complete ✅ | Next: Phase 3 - C# Implementation
 
