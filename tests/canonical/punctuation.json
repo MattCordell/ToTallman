@@ -2,9 +2,9 @@
   "tests": [
     {
       "description": "Drug name followed by comma",
-      "input": "prednisone, prednisolone",
+      "input": "prednisone, erythromycin",
       "listId": "DEFAULT",
-      "expected": "predniSONE, prednisoLONE"
+      "expected": "predniSONE, ERYthromycin"
     },
     {
       "description": "Drug name followed by period",
@@ -44,9 +44,9 @@
     },
     {
       "description": "Drug name with semicolon",
-      "input": "prednisone; prednisolone; morphine",
+      "input": "prednisone; oxcarbazepine; morphine",
       "listId": "DEFAULT",
-      "expected": "predniSONE; prednisoLONE; morphine"
+      "expected": "predniSONE; OXCARBazepine; morphine"
     },
     {
       "description": "Multiple punctuation types",

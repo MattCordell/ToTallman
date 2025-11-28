@@ -55,14 +55,20 @@
       "expected": "isopto HOMATROpine"
     },
     {
-      "description": "Drug name with parentheses - ciclosPORIN (cyclosPORIN)",
-      "input": "ciclosporin",
+      "description": "Alternative form in parentheses - ciclosPORIN (cyclosPORIN)",
+      "input": "ciclosporin (cyclosporin)",
       "listId": "DEFAULT",
       "expected": "ciclosPORIN (cyclosPORIN)"
     },
     {
       "description": "Alternative form in parentheses - cefaLEXin (cephaLEXin)",
       "input": "cefalexin",
+      "listId": "DEFAULT",
+      "expected": "cefalexin"
+    },
+    {
+      "description": "Alternative form in parentheses partially Tallman - cefaLEXin (cephaLEXin)",
+      "input": "cefalexin (cephaLEXin)",
       "listId": "DEFAULT",
       "expected": "cefaLEXin (cephaLEXin)"
     },
