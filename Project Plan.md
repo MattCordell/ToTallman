@@ -197,7 +197,7 @@
 - [ ] Create `MIGRATION-v1-to-v2.md`
 - [ ] Create example applications for each language
 - [ ] Create `CONTRIBUTING.md`
-- [ ] Archive old implementation to `/archive/v1/`
+- [x] Archive old implementation to `/archive/v1/`
 - [ ] Finalize this Project Plan
 
 **Deliverables**:
