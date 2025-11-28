@@ -374,6 +374,7 @@ namespace ToTallman
                     ["paroxetine"] = "PARoxetine",
                     ["paxtine"] = "paXTINE",
                     ["pexsig"] = "pEXSIG",
+                    ["prednisone"] = "predniSONE",
                     ["primacin"] = "primaCIN",
                     ["primacor"] = "primaCOR",
                     ["primaxin"] = "primaXIN",

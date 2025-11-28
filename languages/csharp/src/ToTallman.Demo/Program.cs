@@ -8,7 +8,7 @@ namespace ToTallman.Demo
         static int Main(string[] args)
         {
             // CLI mode for canonical test adapter
-            if (args.Length >= 2 && args[0] == "--input")
+            if (args.Length >= 2 && (args[0] == "--input" || args[0] == "--input-base64"))
             {
                 return RunCliMode(args);
             }
@@ -25,8 +25,30 @@ namespace ToTallman.Demo
         {
             try
             {
-                string input = args[1];
+                // Set console output encoding to UTF-8 to properly handle Unicode
+                Console.OutputEncoding = System.Text.Encoding.UTF8;
+
+                string input;
                 string listId = "DEFAULT";
+
+                // Check if using base64 encoding (handles newlines and special characters)
+                if (args[0] == "--input-base64")
+                {
+                    // Decode from base64
+                    byte[] data = Convert.FromBase64String(args[1]);
+                    input = System.Text.Encoding.UTF8.GetString(data);
+                }
+                else if (args[0] == "--input")
+                {
+                    // Direct input (legacy mode, doesn't handle newlines well)
+                    input = args[1];
+                }
+                else
+                {
+                    Console.Error.WriteLine("Usage: ToTallman.Demo --input \"text\" [--list \"LIST_ID\"]");
+                    Console.Error.WriteLine("   or: ToTallman.Demo --input-base64 \"base64\" [--list \"LIST_ID\"]");
+                    return 1;
+                }
 
                 // Check for optional --list parameter
                 for (int i = 2; i < args.Length - 1; i++)

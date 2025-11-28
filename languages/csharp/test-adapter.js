@@ -17,11 +17,12 @@ module.exports = {
      */
     toTallman: function(input, listId) {
         try {
-            // Escape double quotes in input for command line
-            const escapedInput = input.replace(/"/g, '\\"');
+            // Use Base64 encoding to safely pass arbitrary strings through command line
+            // This handles newlines, quotes, unicode, and other special characters
+            const base64Input = Buffer.from(input, 'utf8').toString('base64');
 
-            // Build command: ToTallman.Demo.exe --input "text" --list "LIST_ID"
-            const command = `"${exePath}" --input "${escapedInput}" --list "${listId}"`;
+            // Build command: ToTallman.Demo.exe --input-base64 "base64string" --list "LIST_ID"
+            const command = `"${exePath}" --input-base64 "${base64Input}" --list "${listId}"`;
 
             // Execute C# program and capture output
             const result = execSync(command, {
