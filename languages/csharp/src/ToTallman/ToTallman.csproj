@@ -1,0 +1,36 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+
+    <!-- Package Metadata -->
+    <PackageId>ToTallman</PackageId>
+    <Version>2.0.0</Version>
+    <Authors>ToTallman Contributors</Authors>
+    <Description>Cross-language Tall Man lettering library for medication safety. Converts drug names to standardized mixed-case format (e.g., predniSONE) to prevent medication errors.</Description>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/your-repo/ToTallman</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/your-repo/ToTallman</RepositoryUrl>
+    <PackageTags>medication;safety;tallman;lettering;healthcare;pharmacy</PackageTags>
+  </PropertyGroup>
+
+  <!-- Pre-build: Generate embedded Tallman lists -->
+  <Target Name="GenerateEmbeddedLists" BeforeTargets="BeforeBuild">
+    <PropertyGroup>
+      <!-- Detect PowerShell executable (cross-platform support) -->
+      <PowerShellExe Condition="'$(OS)' == 'Windows_NT'">powershell</PowerShellExe>
+      <PowerShellExe Condition="'$(OS)' != 'Windows_NT'">pwsh</PowerShellExe>
+      <EmbedListsScript>$(MSBuildProjectDirectory)\..\..\build\embed-lists.ps1</EmbedListsScript>
+    </PropertyGroup>
+
+    <Message Text="Generating embedded Tallman lists from JSON..." Importance="high" />
+    <Exec Command="$(PowerShellExe) -ExecutionPolicy Bypass -File &quot;$(EmbedListsScript)&quot;" />
+  </Target>
+
+  <!-- No external dependencies - zero runtime I/O -->
+  <ItemGroup>
+  </ItemGroup>
+
+</Project>
