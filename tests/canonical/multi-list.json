@@ -49,9 +49,9 @@
       "expected": "vinCRISTine"
     },
     {
-      "description": "ISMP list - vinCRIStine (different capitalization than AU)",
+      "description": "FDA list - vinCRIStine (different capitalization than AU)",
       "input": "vincristine",
-      "listId": "ISMP",
+      "listId": "FDA",
       "expected": "vinCRIStine"
     },
     {

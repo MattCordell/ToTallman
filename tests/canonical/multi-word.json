@@ -61,10 +61,10 @@
       "expected": "ciclosPORIN (cyclosPORIN)"
     },
     {
-      "description": "Alternative form in parentheses - cefaLEXin (cephaLEXin)",
+      "description": "Standalone cefalexin converts to cefaLEXin",
       "input": "cefalexin",
       "listId": "DEFAULT",
-      "expected": "cefalexin"
+      "expected": "cefaLEXin"
     },
     {
       "description": "Alternative form in parentheses partially Tallman - cefaLEXin (cephaLEXin)",
