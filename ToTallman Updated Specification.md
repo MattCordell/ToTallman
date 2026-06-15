@@ -90,8 +90,20 @@ derived automatically via casefold(NFC(entry)).
 
     ToTallman(text: string, listId?: string = "DEFAULT") -> string
 
-Behaviour: - DEFAULT list used when omitted. - Throw clear error if
-listId invalid.
+Behaviour: - DEFAULT list used when omitted. - Null input returns `""`.
+- Throw a clear, **dedicated library exception** (NOT a generic argument
+exception) when `listId` is invalid. The message must name the offending
+`listId` and list the available list IDs.
+
+For cross-language parity, each implementation uses its own dedicated
+exception type:
+
+  Language       Exception type
+  -------------- ------------------
+  C#             `TallmanException`
+  Python         `TallmanError`
+  JavaScript/TS  `TallmanError`
+  Java           `TallmanException`
 
 All platforms must support equivalent overloads.
 

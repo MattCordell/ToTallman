@@ -819,12 +819,12 @@ namespace ToTallman
 
         public static IReadOnlyDictionary<string, string> GetList(string listId)
         {
-            if (AllLists.TryGetValue(listId, out var list))
+            if (listId != null && AllLists.TryGetValue(listId, out var list))
             {
                 return list;
             }
 
-            throw new System.ArgumentException("Unknown list ID: " + listId, nameof(listId));
+            throw new TallmanException("Unknown Tallman list ID: '" + listId + "'. Available lists: " + string.Join(", ", AvailableListIds) + ".");
         }
 
         public static bool HasList(string listId)

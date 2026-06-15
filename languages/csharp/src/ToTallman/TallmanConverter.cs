@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -18,7 +17,7 @@ namespace ToTallman
         /// <param name="input">The input string containing medication names</param>
         /// <param name="listId">The Tallman list to use (DEFAULT, AU, FDA, ISMP, NZ). Defaults to "DEFAULT"</param>
         /// <returns>The input string with medication names converted to Tall Man format</returns>
-        /// <exception cref="ArgumentException">If the specified list ID is not found</exception>
+        /// <exception cref="TallmanException">If the specified list ID is not found</exception>
         /// <example>
         /// <code>
         /// string result = "Patient prescribed prednisone".ToTallman();
@@ -37,16 +36,9 @@ namespace ToTallman
             // This ensures that decomposed characters (e.g., e + ́ ) match precomposed forms (é)
             string normalized = input.Normalize(NormalizationForm.FormC);
 
-            // Step 2: Get the Tallman dictionary for the specified list
-            IReadOnlyDictionary<string, string> dictionary;
-            try
-            {
-                dictionary = EmbeddedTallmanLists.GetList(listId);
-            }
-            catch (ArgumentException ex)
-            {
-                throw new TallmanException($"Unknown Tallman list: {listId}", ex);
-            }
+            // Step 2: Get the Tallman dictionary for the specified list.
+            // GetList throws TallmanException if the listId is unknown.
+            IReadOnlyDictionary<string, string> dictionary = EmbeddedTallmanLists.GetList(listId);
 
             // Step 3: Iterate character-by-character with greedy longest-match
             StringBuilder result = new StringBuilder(normalized.Length);
