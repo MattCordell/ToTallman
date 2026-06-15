@@ -49,6 +49,15 @@ Examples: - `prednisone` → `predniSONE` - `prednisone.` →
 -   Use the canonical Tallman form from the JSON list.
 -   Never replace substrings inside larger words.
 
+## 3.4 Multi-word and Hyphenated Entries
+
+-   Entries may contain multiple words separated by spaces or hyphens
+    (e.g. `MS Contin`, `SOLU-medrol`, `methylprednisolone SODIUM SUCCINate`).
+-   Matching is greedy longest-match: the longest list entry that matches
+    starting at the current word wins.
+-   The lookahead is bounded by the longest entry (in words) in the
+    selected list, keeping conversion linear in input length.
+
 ------------------------------------------------------------------------
 
 # 4. Tallman List Data Format
@@ -216,8 +225,9 @@ Repo releases: semantic versioning.
 
 # 12. Out-of-scope Enhancements
 
--   Hyphenated drugs
--   Multi‑word drugs
+(Multi-word and hyphenated drugs were originally listed here but are now
+implemented; see section 3.4.)
+
 -   Locale‑specific rules
 -   Plural handling
 

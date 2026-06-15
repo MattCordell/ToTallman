@@ -817,6 +817,16 @@ namespace ToTallman
                 "NZ",
             };
 
+        public static readonly IReadOnlyDictionary<string, int> MaxWordCounts =
+            new Dictionary<string, int>(StringComparer.Ordinal)
+            {
+                ["AU"] = 2,
+                ["DEFAULT"] = 2,
+                ["FDA"] = 1,
+                ["ISMP"] = 2,
+                ["NZ"] = 3,
+            };
+
         public static IReadOnlyDictionary<string, string> GetList(string listId)
         {
             if (listId != null && AllLists.TryGetValue(listId, out var list))
@@ -825,6 +835,16 @@ namespace ToTallman
             }
 
             throw new TallmanException("Unknown Tallman list ID: '" + listId + "'. Available lists: " + string.Join(", ", AvailableListIds) + ".");
+        }
+
+        public static int GetMaxWordCount(string listId)
+        {
+            if (listId != null && MaxWordCounts.TryGetValue(listId, out var count))
+            {
+                return count;
+            }
+
+            return 1;
         }
 
         public static bool HasList(string listId)

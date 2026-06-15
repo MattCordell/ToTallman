@@ -40,6 +40,12 @@ namespace ToTallman
             // GetList throws TallmanException if the listId is unknown.
             IReadOnlyDictionary<string, string> dictionary = EmbeddedTallmanLists.GetList(listId);
 
+            // The multi-word lookahead (Step 3) never needs to consider more words than
+            // the longest entry in this list contains. Bounding by this per-list cap keeps
+            // the whole conversion linear in input length, instead of O(n^2) on long runs
+            // of non-matching, separator-delimited tokens.
+            int maxWords = EmbeddedTallmanLists.GetMaxWordCount(listId);
+
             // Step 3: Iterate character-by-character with greedy longest-match
             StringBuilder result = new StringBuilder(normalized.Length);
             int i = 0;
@@ -65,11 +71,15 @@ namespace ToTallman
                         bestMatchEndIndex = i;
                     }
 
-                    // Then, try multi-word matches (greedy lookahead for space/hyphen-separated patterns)
+                    // Then, try multi-word matches (greedy lookahead for space/hyphen-separated
+                    // patterns). Stop once the candidate reaches maxWords: a longer pattern can
+                    // never match an entry in this list, so scanning on would be wasted work.
                     int lookAheadIndex = i;
+                    int wordsInPattern = 1;
                     StringBuilder pattern = new StringBuilder(word);
 
-                    while (lookAheadIndex < normalized.Length &&
+                    while (wordsInPattern < maxWords &&
+                           lookAheadIndex < normalized.Length &&
                            (normalized[lookAheadIndex] == ' ' || normalized[lookAheadIndex] == '-'))
                     {
                         char separator = normalized[lookAheadIndex];
@@ -79,9 +89,9 @@ namespace ToTallman
                         // Check if there's a word after the separator
                         if (lookAheadIndex < normalized.Length && UnicodeHelpers.IsLetterOrMark(normalized, lookAheadIndex))
                         {
-                            int nextWordStart = lookAheadIndex;
                             lookAheadIndex = ExtractWord(normalized, lookAheadIndex, out string nextWord);
                             pattern.Append(nextWord);
+                            wordsInPattern++;
 
                             // Check if this longer pattern matches
                             string multiWordKey = UnicodeHelpers.CaseFold(pattern.ToString());
