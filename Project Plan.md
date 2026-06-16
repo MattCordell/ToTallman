@@ -191,11 +191,24 @@ guaranteeing byte-identical embeddings. New languages MUST NOT re-derive keys.
   - Code formatting
   - Linting
 - [ ] Cross-language validation
+- [ ] **Cross-language output parity** (carried from list-pipeline work, 2026-06-16):
+  run the canonical inputs through every language implementation and assert
+  byte-identical output. This is the guard for the runtime-casefold concern —
+  the compiled artifact gives all languages identical keys/values, but each
+  runtime must also fold input identically (current C# uses an ASCII-safe
+  `ToUpperInvariant().ToLowerInvariant()` approximation; non-ASCII entries would
+  need true Unicode case folding in every runtime — see spec §3.2).
+- [ ] **Compiled-artifact freshness check** (carried from list-pipeline work, 2026-06-16):
+  CI re-runs `tools/compile-lists` and fails if `tallman-lists/compiled/lists.compiled.json`
+  differs from the committed copy, so a stale artifact (source JSON changed without
+  recompiling) can't be merged.
 - [ ] Status badges in README
 
 **Deliverables**:
 - GitHub Actions workflows ❌
 - Pre-commit configuration ❌
+- Cross-language output-parity check ❌
+- Compiled-artifact freshness check ❌
 - Updated README with badges ❌
 
 ---
