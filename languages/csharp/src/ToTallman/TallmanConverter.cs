@@ -15,7 +15,14 @@ namespace ToTallman
         /// Uses the DEFAULT list by default.
         /// </summary>
         /// <param name="input">The input string containing medication names</param>
-        /// <param name="listId">The Tallman list to use (DEFAULT, AU, FDA, ISMP, NZ). Defaults to "DEFAULT"</param>
+        /// <param name="listId">
+        /// The Tall Man list to use. Defaults to "DEFAULT" — a 202-entry aggregate of FDA/ISMP, AU, and NZ
+        /// sources, suitable when no specific jurisdiction is required.
+        /// Other lists: AU (206 entries, Australian National), FDA (37 entries, US FDA),
+        /// ISMP (143 entries, Institute for Safe Medication Practices), NZ (190 entries, New Zealand).
+        /// See <see cref="AvailableLists"/> for the runtime set of valid IDs and
+        /// <see cref="ListVersion"/> for provenance of each list.
+        /// </param>
         /// <returns>The input string with medication names converted to Tall Man format</returns>
         /// <exception cref="TallmanException">If the specified list ID is not found</exception>
         /// <example>
@@ -141,6 +148,49 @@ namespace ToTallman
             }
 
             return result.ToString();
+        }
+
+        /// <summary>
+        /// The set of available Tall Man list IDs (e.g. DEFAULT, AU, FDA, ISMP, NZ).
+        /// </summary>
+        public static IReadOnlySet<string> AvailableLists => EmbeddedTallmanLists.AvailableListIds;
+
+        /// <summary>
+        /// Returns the version string (YYYYMMDD.N) of the specified Tall Man list.
+        /// Useful for auditing which list version produced a given conversion result.
+        /// </summary>
+        /// <param name="listId">The list ID (DEFAULT, AU, FDA, ISMP, NZ)</param>
+        /// <returns>The version string in YYYYMMDD.N format</returns>
+        /// <exception cref="TallmanException">If the specified list ID is not found</exception>
+        public static string ListVersion(string listId) => EmbeddedTallmanLists.GetVersion(listId);
+
+        /// <summary>
+        /// Tries to convert medication names to Tall Man lettering using the DEFAULT list.
+        /// Returns false instead of throwing if the list ID is not found.
+        /// </summary>
+        /// <param name="input">The input string containing medication names</param>
+        /// <param name="result">The converted string, or empty string if conversion failed</param>
+        /// <returns>True if conversion succeeded; false if the list ID is not found</returns>
+        public static bool TryToTallman(this string? input, out string result) =>
+            input.TryToTallman("DEFAULT", out result);
+
+        /// <summary>
+        /// Tries to convert medication names to Tall Man lettering using the specified list.
+        /// Returns false instead of throwing if the list ID is not found.
+        /// </summary>
+        /// <param name="input">The input string containing medication names</param>
+        /// <param name="listId">The Tallman list to use (DEFAULT, AU, FDA, ISMP, NZ)</param>
+        /// <param name="result">The converted string, or empty string if conversion failed</param>
+        /// <returns>True if conversion succeeded; false if the list ID is not found</returns>
+        public static bool TryToTallman(this string? input, string listId, out string result)
+        {
+            if (!EmbeddedTallmanLists.HasList(listId))
+            {
+                result = string.Empty;
+                return false;
+            }
+            result = input.ToTallman(listId);
+            return true;
         }
 
         /// <summary>
