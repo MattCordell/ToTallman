@@ -1,0 +1,72 @@
+name: CI
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+  workflow_dispatch:
+
+# Cancel superseded runs on the same ref (e.g. rapid pushes to a PR branch).
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+# Least privilege: CI only needs to read the repository.
+permissions:
+  contents: read
+
+jobs:
+  # Validate the source lists and prove the committed build artifacts are not stale.
+  # Guards Risk #1 (cross-language casefold parity) by ensuring the compiled artifact
+  # always matches what the shared compiler produces from the source lists.
+  lists:
+    name: Lists (validate + freshness)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install validator dependencies
+        run: npm ci
+        working-directory: tools/validator
+
+      - name: Validate lists (regenerates manifest.json)
+        run: npm run validate
+        working-directory: tools/validator
+
+      - name: Compile lists (regenerates compiled artifact)
+        run: node tools/compile-lists/compile-lists.js
+
+      - name: Fail if committed artifacts are stale
+        run: git diff --exit-code -- tallman-lists/manifest.json tallman-lists/compiled/lists.compiled.json
+
+  # Build the C# implementation and run its tests, then run the canonical suite
+  # through the language-agnostic harness + adapter (the contract every Phase 4
+  # language will reuse). pwsh is preinstalled on ubuntu-latest, so the C# pre-build
+  # emitter (generate-embedded.ps1) runs without extra setup.
+  csharp:
+    name: C# build + tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Build and test (102 native + 84 canonical)
+        run: dotnet test languages/csharp/ToTallman.sln
+
+      - name: Install test-runner dependencies
+        run: npm ci
+        working-directory: tools/test-runner
+
+      - name: Canonical suite via shared harness + C# adapter
+        run: node tools/test-runner/run-canonical-tests.js languages/csharp/test-adapter.js

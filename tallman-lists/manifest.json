@@ -8,7 +8,7 @@
   {
     "id": "DEFAULT",
     "version": "20180819.0",
-    "entries": 199,
+    "entries": 202,
     "description": "Default aggregate Tallman list combining entries from multiple sources"
   },
   {
