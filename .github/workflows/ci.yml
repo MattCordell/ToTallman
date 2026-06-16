@@ -61,8 +61,14 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Build and test (102 native + 84 canonical)
-        run: dotnet test languages/csharp/ToTallman.sln
+      # Build the whole solution explicitly: `dotnet test` only builds the test
+      # project and its dependencies, not the ToTallman.Demo project the shared
+      # harness drives. The pre-build emitter (generate-embedded.ps1) runs here.
+      - name: Build solution (incl. demo used by the shared harness)
+        run: dotnet build languages/csharp/ToTallman.sln
+
+      - name: Test (102 native + 84 canonical)
+        run: dotnet test languages/csharp/ToTallman.sln --no-build
 
       - name: Install test-runner dependencies
         run: npm ci
