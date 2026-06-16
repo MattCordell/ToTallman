@@ -1,37 +1,37 @@
 {
   "tests": [
     {
-      "description": "Basic Latin - lowercase",
-      "input": "morphine",
+      "description": "ASCII drug name matched via casefold - lowercase input converts",
+      "input": "prednisone",
       "listId": "DEFAULT",
-      "expected": "morphine"
+      "expected": "predniSONE"
     },
     {
-      "description": "Basic Latin - uppercase",
-      "input": "MORPHINE",
+      "description": "ASCII drug name matched via casefold - uppercase input normalizes and converts",
+      "input": "PREDNISONE",
       "listId": "DEFAULT",
-      "expected": "morphine"
+      "expected": "predniSONE"
     },
     {
-      "description": "German ß (sharp s) - should handle casefolding",
-      "input": "straße morphine",
+      "description": "Non-Latin surrounding text (German sharp-s) does not affect ASCII drug matching",
+      "input": "straße prednisone",
       "listId": "DEFAULT",
-      "expected": "straße morphine"
+      "expected": "straße predniSONE"
     },
     {
-      "description": "Greek letters in context",
-      "input": "Σ morphine",
+      "description": "Non-Latin surrounding text (Greek) does not affect ASCII drug matching",
+      "input": "Σ prednisone",
       "listId": "DEFAULT",
-      "expected": "Σ morphine"
+      "expected": "Σ predniSONE"
     },
     {
-      "description": "Cyrillic characters in context",
-      "input": "Д morphine В",
+      "description": "Non-Latin surrounding text (Cyrillic) does not affect ASCII drug matching",
+      "input": "Д prednisone В",
       "listId": "DEFAULT",
-      "expected": "Д morphine В"
+      "expected": "Д predniSONE В"
     },
     {
-      "description": "Mixed scripts",
+      "description": "Mixed scripts - CJK surrounding text does not affect ASCII drug matching",
       "input": "测试 prednisone test",
       "listId": "DEFAULT",
       "expected": "测试 predniSONE test"
