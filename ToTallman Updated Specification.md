@@ -52,7 +52,7 @@ Examples: - `prednisone` → `predniSONE` - `prednisone.` →
 
 ## 3.3 Replacement Rules
 
--   Replace entire token if the lowercased NFC form matches.
+-   Replace entire token if the casefolded NFC form matches (see 3.2).
 -   Use the canonical Tallman form from the JSON list.
 -   Never replace substrings inside larger words.
 
@@ -175,6 +175,10 @@ All platforms must support equivalent overloads.
 
         return result
 
+The pseudocode above shows single-word matching. Multi-word and hyphenated
+entries (section 3.4) extend the inner match with a greedy, length-bounded
+lookahead, omitted here for clarity.
+
 ------------------------------------------------------------------------
 
 # 8. Canonical Test Suite
@@ -207,6 +211,13 @@ All platforms must support equivalent overloads.
 
 Different lists produce different replacements depending on configured
 entries.
+
+## 8.6 Multi-word and Hyphenated
+
+  Input           Expect
+  --------------- ---------------
+  `ms contin`     `MS Contin`
+  `solu-medrol`   `SOLU-medrol`
 
 ------------------------------------------------------------------------
 

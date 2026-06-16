@@ -69,21 +69,21 @@
   - [x] `unicode-casefolding.json` (6 tests) ✓
   - [x] `multi-list.json` (11 tests) ✓
   - [x] `edge-cases.json` (15 tests) ✓
-  - [x] `multi-word.json` (13 tests - hyphenated drugs) ✓
+  - [x] `multi-word.json` (14 tests - hyphenated + alternative forms) ✓
 - [x] Document current behavior
   - Analyzed existing C# implementation ✓
   - Created `KNOWN-FAILURES.md` with detailed analysis ✓
 - [x] Build test runner at `/tools/test-runner/` ✓
 
 **Deliverables**:
-- 83 canonical test cases ✅
+- 84 canonical test cases ✅
 - Test schema definition ✅
 - Test runner framework ✅
 - Baseline failure documentation ✅
 
 **Test Suite Breakdown**:
 - 9 test files covering all edge cases
-- 83 total test cases
+- 84 total test cases (originally 83; one case corrected/added during Phase 3)
 - 100% schema validation pass
 - Comprehensive coverage: basic matching, case sensitivity, word boundaries, punctuation, Unicode, multi-list, edge cases, multi-word drugs
 
@@ -109,9 +109,9 @@
   - Proper casefolding
   - Word boundary detection
   - Multi-word drug support (greedy longest-match lookahead)
-- [x] Build-time list embedding
-  - PowerShell script: `/languages/csharp/build/embed-lists.ps1`
-  - Generate `EmbeddedTallmanLists.g.cs` (regenerated on every build)
+- [x] Build-time list embedding (via the shared pipeline)
+  - Shared compiler `tools/compile-lists` → `tallman-lists/compiled/lists.compiled.json`
+  - Thin C# emitter `languages/csharp/tools/generate-embedded.ps1` → `EmbeddedTallmanLists.g.cs` (regenerated each build via `.csproj` pre-build)
 - [x] Runtime API
   - `ToTallman(this string? input, string listId = "DEFAULT")`
 - [x] Test adapter for canonical tests (Node adapter → Demo CLI; 84/84 pass)

@@ -68,11 +68,20 @@ Adapter must export: `module.exports = { toTallman: function(input, listId) { re
 
 Exit code: 0 = 100% pass, 1 = failures detected
 
+### Compile Tallman Lists (shared, language-agnostic)
+```bash
+node tools/compile-lists/compile-lists.js
+```
+- Reads `/tallman-lists/*.json`, NFC-normalizes, derives casefold keys, computes per-list `maxWords`
+- Emits the versioned artifact `tallman-lists/compiled/lists.compiled.json` (consumed by every language emitter)
+- Re-run whenever a source list changes
+
 ### Build .NET Solution
 ```bash
-dotnet build ToTallman.sln
-dotnet test Tests_ToTallman/Tests_ToTallman.csproj
+dotnet build languages/csharp/ToTallman.sln
+dotnet test languages/csharp/ToTallman.sln
 ```
+- The C# pre-build emits `EmbeddedTallmanLists.g.cs` from the compiled artifact, so run the compile step above first if any list changed
 
 ---
 
@@ -82,8 +91,13 @@ dotnet test Tests_ToTallman/Tests_ToTallman.csproj
 
 ### Data Flow
 ```
-JSON Lists (source) → Validator → NFC Normalize + Derive Keys → Generate Language Code → Compile
+JSON Lists (source)
+  → Shared Compiler [tools/compile-lists]   (validate + NFC + casefold keys + maxWords)
+  → Compiled Artifact [tallman-lists/compiled/lists.compiled.json]   (versioned)
+  → Per-language thin emitter [e.g. languages/csharp/tools]   (formatting only)
+  → Native embedded code → Compile
 ```
+Semantics run ONCE in the shared compiler; per-language emitters only format the artifact, so every language embeds byte-identical data.
 
 ### Why This Pattern?
 - **Zero I/O**: No file loading at runtime
@@ -151,7 +165,7 @@ function ToTallman(input, listId = "DEFAULT"):
 ## Test Suite Architecture
 
 ### Test Files
-Location: `/tests/canonical/*.json` (9 files, 83 total tests)
+Location: `/tests/canonical/*.json` (9 files, 84 total tests; also run natively by the C# `dotnet test` suite)
 
 ### Test Format
 Schema: `/tests/canonical/test-schema.json`
@@ -189,6 +203,9 @@ module.exports = {
 **"How should lists be formatted?"**
 → `/tallman-lists/schema.json`
 
+**"Where do the embedded lists come from?"**
+→ `tools/compile-lists` generates `tallman-lists/compiled/lists.compiled.json`; each language's emitter (e.g. `languages/csharp/tools/`) formats it into native code.
+
 **"What's the canonical algorithm?"**
 → `/ToTallman Updated Specification.md` (Section 7 - Canonical Algorithm)
 
@@ -214,7 +231,7 @@ module.exports = {
 
 ## What NOT to Do
 ### ❌ Do NOT Fix v1.x Code
-The implementation in `/ToTallman/Tallman.cs` is being replaced, not fixed. Implement Phase 3 in new `/languages/csharp/` directory.
+The old v1.x implementation is archived under `/archive/v1/` (do not read or modify it). Phase 3 replaced it with the v2 implementation in `/languages/csharp/`; v1 is not maintained.
 
 ### ❌ Do NOT Use Regex Replacement
 v1.x used regex. v2.0.0 uses character-by-character iteration per canonical algorithm.
@@ -224,6 +241,8 @@ v1.x used regex. v2.0.0 uses character-by-character iteration per canonical algo
 - Python: NOT `lower()` → Use `casefold()`
 - JavaScript: NOT `toLowerCase()` → Use proper Unicode casefolding
 - Java: Use ICU4J for proper casefolding
+
+The canonical match key is `casefold(NFC(text))` (spec Section 3.2); every language runtime must fold identically. All current entries are ASCII, so C#'s `ToUpperInvariant().ToLowerInvariant()` is an exact (ASCII-safe) approximation; cross-language parity is enforced in Phase 5.
 
 ### ❌ Do NOT Load JSON at Runtime
 Lists must be embedded at build time. No file I/O in production code.
@@ -239,7 +258,7 @@ Unicode NFC normalization is required at algorithm start. Non-negotiable.
 2. **Validate data**: Run `tools/validator` before any coding
 3. **Understand v1.x failures**: Read `tests/canonical/KNOWN-FAILURES.md`
 4. **Follow canonical algorithm**: Character iteration, Unicode NFC, proper casefolding
-5. **Test rigorously**: 100% pass required (83/83 tests)
+5. **Test rigorously**: 100% pass required (84/84 canonical; C# `dotnet test` is 102/102)
 6. **Respect phase gates**: Phase 3 blocks Phases 4-6
 
-The project is well-structured with clear separation: data layer (Phase 1), tests (Phase 2), implementation (Phases 3-4), automation (Phase 5), documentation (Phase 6). Focus on getting Phase 3 to 100% test pass before proceeding.
+The project is well-structured with clear separation: data layer (Phase 1), tests (Phase 2), implementation (Phases 3-4), automation (Phase 5), documentation (Phase 6). Phase 3 (C#) is complete at 100% canonical pass; the next focus is Phase 4 (Python → JS → Java), each plugging into the shared list-compilation pipeline.
