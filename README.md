@@ -1,6 +1,26 @@
-# [!WARNING]
-**Major Refactor in Progress (v2.0.0)**  
-This repository is undergoing a complete rewrite to for multi-language support and address outstanding test cases. See the [Project Plan](Project%20Plan.md) for details and progress.
+> [!WARNING]
+> **Major Refactor in Progress (v2.0.0)**
+> This repository is undergoing a complete rewrite for multi-language support and to address outstanding test cases. Work is tracked in [GitHub issues](https://github.com/MattCordell/ToTallman/issues). The content below the divider describes the current (v1) API and will be updated when v2 ships.
+
+## v2.0.0 Progress
+
+| Phase | Status |
+|-------|--------|
+| 1. Foundation (data format + validation) | ✅ Complete |
+| 2. Canonical test suite | ✅ Complete |
+| 3. C# implementation | ✅ Complete — 84/84 canonical, 102/102 native |
+| 4. Multi-language (Python → JS → Java) | ⏳ Next — [#13](https://github.com/MattCordell/ToTallman/issues/13) |
+| 5. CI/CD | ⏳ Planned — [#14](https://github.com/MattCordell/ToTallman/issues/14) |
+| 6. Documentation & release | ⏳ Planned — [#15](https://github.com/MattCordell/ToTallman/issues/15) |
+
+Detailed, up-to-date work lives in [GitHub issues](https://github.com/MattCordell/ToTallman/issues).
+
+### v2 Goals
+- **Byte-identical output** across C#, Python, JavaScript/TypeScript, and Java from a shared canonical dataset
+- **100% canonical test pass** in every language
+- Whole-word, Unicode-safe, punctuation-aware matching, with multi-word and hyphenated drug support
+- Build-time embedding (zero runtime I/O)
+- Example apps and documentation for each language
 
 ------------------------------------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------------------------------

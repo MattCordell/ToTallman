@@ -11,12 +11,12 @@ The high level objectives and requirements for this project are detailed in `ToT
 Ignore the `/archive` directory (if it exists) - do not read or modify content.
 
 **Current Status**
-See `Project Plan.md` for detailed phase tracking and status.
+Work is tracked in [GitHub issues](https://github.com/MattCordell/ToTallman/issues) (the source of truth); `README.md` has a high-level v2 progress table.
 
 ## General Guide to workflow.
 - Ask clarifying questions before making architectural changes.
 - Construct an implementation plan if one has not already been prepared.
-- When the user has confirmed they are happy with the changes, update the `Project Plan.md` to reflect the progress.
+- When the user has confirmed they are happy with the changes, update the relevant GitHub issue(s) to reflect progress. GitHub issues are the source of truth for work tracking.
 - If any decisions are made that contradict the `ToTallman Updated Specification.md` - seek clarification/confirmation before proceeding, and update the Specification document if the changes are agreed upon.
 
 
@@ -222,7 +222,7 @@ module.exports = {
 → `/tools/test-runner/README.md`
 
 **"What's the overall project status?"**
-→ `/Project Plan.md`
+→ GitHub issues (source of truth) + the v2 progress table in `README.md`
 
 **"What are the technical requirements?"**
 → `/ToTallman Updated Specification.md`
@@ -254,7 +254,7 @@ Unicode NFC normalization is required at algorithm start. Non-negotiable.
 
 ## Summary for New Contributors
 
-1. **Read first**: `Project Plan.md` (status), `ToTallman Updated Specification.md` (algorithm)
+1. **Read first**: open GitHub issues (status), `ToTallman Updated Specification.md` (algorithm)
 2. **Validate data**: Run `tools/validator` before any coding
 3. **Understand v1.x failures**: Read `tests/canonical/KNOWN-FAILURES.md`
 4. **Follow canonical algorithm**: Character iteration, Unicode NFC, proper casefolding
