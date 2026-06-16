@@ -32,8 +32,15 @@
     <Exec Command="$(PowerShellExe) -ExecutionPolicy Bypass -File &quot;$(EmbedListsScript)&quot;" />
   </Target>
 
-  <!-- No external dependencies - zero runtime I/O -->
+  <!-- The embedded lists file is generated at build time (and not committed).
+       The SDK's default **/*.cs glob is expanded during evaluation, before the
+       GenerateEmbeddedLists target runs, so on a cold build (fresh clone / CI) the
+       freshly emitted file would be missing from the compile set. Declare it
+       explicitly here; Remove first so we never duplicate the globbed copy on a
+       warm build where the file already exists on disk. -->
   <ItemGroup>
+    <Compile Remove="EmbeddedTallmanLists.g.cs" />
+    <Compile Include="EmbeddedTallmanLists.g.cs" />
   </ItemGroup>
 
 </Project>

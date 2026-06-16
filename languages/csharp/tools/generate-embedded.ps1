@@ -103,6 +103,18 @@ foreach ($listId in $listIds) {
 
 [void]$sb.AppendLine("            };")
 [void]$sb.AppendLine("")
+[void]$sb.AppendLine("        public static readonly IReadOnlyDictionary<string, string> Versions =")
+[void]$sb.AppendLine("            new Dictionary<string, string>(StringComparer.Ordinal)")
+[void]$sb.AppendLine("            {")
+
+foreach ($listId in $listIds) {
+    $list = $artifact.lists.PSObject.Properties[$listId].Value
+    $ver = ConvertTo-CSharpLiteral $list.version
+    [void]$sb.AppendLine("                [""$listId""] = ""$ver"",")
+}
+
+[void]$sb.AppendLine("            };")
+[void]$sb.AppendLine("")
 [void]$sb.AppendLine("        public static IReadOnlyDictionary<string, string> GetList(string listId)")
 [void]$sb.AppendLine("        {")
 [void]$sb.AppendLine("            if (listId != null && AllLists.TryGetValue(listId, out var list))")
@@ -121,6 +133,16 @@ foreach ($listId in $listIds) {
 [void]$sb.AppendLine("            }")
 [void]$sb.AppendLine("")
 [void]$sb.AppendLine("            return 1;")
+[void]$sb.AppendLine("        }")
+[void]$sb.AppendLine("")
+[void]$sb.AppendLine("        public static string GetVersion(string listId)")
+[void]$sb.AppendLine("        {")
+[void]$sb.AppendLine("            if (listId != null && Versions.TryGetValue(listId, out var version))")
+[void]$sb.AppendLine("            {")
+[void]$sb.AppendLine("                return version;")
+[void]$sb.AppendLine("            }")
+[void]$sb.AppendLine("")
+[void]$sb.AppendLine("            throw new TallmanException(""Unknown Tallman list ID: '"" + listId + ""'. Available lists: "" + string.Join("", "", AvailableListIds) + ""."");")
 [void]$sb.AppendLine("        }")
 [void]$sb.AppendLine("")
 [void]$sb.AppendLine("        public static bool HasList(string listId)")

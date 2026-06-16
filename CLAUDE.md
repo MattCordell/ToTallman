@@ -6,7 +6,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ToTallman is a cross-language Tall Man lettering library for medication safety. Tall Man lettering uses mixed case (e.g., "predniSONE" vs "prednisoLONE") to prevent medication errors by highlighting distinguishing characters.
 
-The high level objectives and requirements for this project are detailed in `ToTallman Updated Specification.md`
+The high level objectives and requirements for this project are detailed in `spec/TECHNICAL-SPEC.md`
 
 Ignore the `/archive` directory (if it exists) - do not read or modify content.
 
@@ -17,7 +17,7 @@ Work is tracked in [GitHub issues](https://github.com/MattCordell/ToTallman/issu
 - Ask clarifying questions before making architectural changes.
 - Construct an implementation plan if one has not already been prepared.
 - When the user has confirmed they are happy with the changes, update the relevant GitHub issue(s) to reflect progress. GitHub issues are the source of truth for work tracking.
-- If any decisions are made that contradict the `ToTallman Updated Specification.md` - seek clarification/confirmation before proceeding, and update the Specification document if the changes are agreed upon.
+- If any decisions are made that contradict the `spec/TECHNICAL-SPEC.md` - seek clarification/confirmation before proceeding, and update the Specification document if the changes are agreed upon.
 
 
 
@@ -121,7 +121,7 @@ Format enforced by `/tallman-lists/schema.json`:
 
 
 ## Canonical Algorithm Requirements
-**Source**: `/ToTallman Updated Specification.md` Section 7
+**Source**: `/spec/TECHNICAL-SPEC.md` Section 7
 
 ### Pseudocode (Reference Implementation)
 ```
@@ -207,7 +207,7 @@ module.exports = {
 → `tools/compile-lists` generates `tallman-lists/compiled/lists.compiled.json`; each language's emitter (e.g. `languages/csharp/tools/`) formats it into native code.
 
 **"What's the canonical algorithm?"**
-→ `/ToTallman Updated Specification.md` (Section 7 - Canonical Algorithm)
+→ `/spec/TECHNICAL-SPEC.md` (Section 7 - Canonical Algorithm)
 
 **"What does current v1.x get wrong?"**
 → `/tests/canonical/KNOWN-FAILURES.md`
@@ -225,7 +225,7 @@ module.exports = {
 → GitHub issues (source of truth) + the v2 progress table in `README.md`
 
 **"What are the technical requirements?"**
-→ `/ToTallman Updated Specification.md`
+→ `/spec/TECHNICAL-SPEC.md`
 
 ---
 
@@ -254,7 +254,7 @@ Unicode NFC normalization is required at algorithm start. Non-negotiable.
 
 ## Summary for New Contributors
 
-1. **Read first**: open GitHub issues (status), `ToTallman Updated Specification.md` (algorithm)
+1. **Read first**: open GitHub issues (status), `spec/TECHNICAL-SPEC.md` (algorithm)
 2. **Validate data**: Run `tools/validator` before any coding
 3. **Understand v1.x failures**: Read `tests/canonical/KNOWN-FAILURES.md`
 4. **Follow canonical algorithm**: Character iteration, Unicode NFC, proper casefolding

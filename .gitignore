@@ -240,3 +240,10 @@ ModelManifest.xml
 
 # FAKE - F# Make
 .fake/
+
+# --- ToTallman ---
+# Build-time generated C#: emitted from tallman-lists/compiled/lists.compiled.json
+# by languages/csharp/tools/generate-embedded.ps1 during the C# pre-build. The
+# compiled artifact is the committed source of truth; this file is regenerated on
+# every build, so it is not tracked (avoids diff noise and cross-platform encoding churn).
+languages/csharp/src/ToTallman/EmbeddedTallmanLists.g.cs

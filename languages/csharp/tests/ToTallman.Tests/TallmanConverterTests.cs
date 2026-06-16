@@ -79,6 +79,55 @@ namespace ToTallman.Tests
             Assert.Equal("prednisone".ToTallman("DEFAULT"), "prednisone".ToTallman());
         }
 
+        [Fact]
+        public void AvailableLists_Contains_Known_Ids()
+        {
+            IReadOnlySet<string> lists = TallmanConverter.AvailableLists;
+            Assert.Contains("DEFAULT", lists);
+            Assert.Contains("AU", lists);
+            Assert.Contains("FDA", lists);
+            Assert.Contains("ISMP", lists);
+            Assert.Contains("NZ", lists);
+        }
+
+        [Fact]
+        public void ListVersion_Returns_Version_String()
+        {
+            // Version strings are in YYYYMMDD.N format
+            string version = TallmanConverter.ListVersion("DEFAULT");
+            Assert.Matches(@"^\d{8}\.\d+$", version);
+        }
+
+        [Fact]
+        public void ListVersion_Throws_For_Unknown_List()
+        {
+            Assert.Throws<TallmanException>(() => TallmanConverter.ListVersion("NOT_A_REAL_LIST"));
+        }
+
+        [Fact]
+        public void TryToTallman_Returns_True_And_Converts_For_Known_List()
+        {
+            bool ok = "prednisone".TryToTallman("DEFAULT", out string result);
+            Assert.True(ok);
+            Assert.Equal("predniSONE", result);
+        }
+
+        [Fact]
+        public void TryToTallman_Returns_False_For_Unknown_List()
+        {
+            bool ok = "prednisone".TryToTallman("NOT_A_REAL_LIST", out string result);
+            Assert.False(ok);
+            Assert.Equal(string.Empty, result);
+        }
+
+        [Fact]
+        public void TryToTallman_Default_Overload_Uses_DEFAULT_List()
+        {
+            bool ok = "prednisone".TryToTallman(out string result);
+            Assert.True(ok);
+            Assert.Equal("predniSONE", result);
+        }
+
         // ---------------------------------------------------------------------
         // Layer 2: Data-driven canonical suite.
         // ---------------------------------------------------------------------
