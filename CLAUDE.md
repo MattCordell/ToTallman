@@ -16,6 +16,7 @@ Work is tracked in [GitHub issues](https://github.com/MattCordell/ToTallman/issu
 ## General Guide to workflow.
 - Ask clarifying questions before making architectural changes.
 - Construct an implementation plan if one has not already been prepared.
+- Work associated with a GitHub issue must be done on a dedicated branch (e.g. `issue/20-casefold-parity`) and merged via a pull request — do not commit directly to `master`.
 - When the user has confirmed they are happy with the changes, update the relevant GitHub issue(s) to reflect progress. GitHub issues are the source of truth for work tracking.
 - If any decisions are made that contradict the `spec/TECHNICAL-SPEC.md` - seek clarification/confirmation before proceeding, and update the Specification document if the changes are agreed upon.
 
