@@ -1,0 +1,80 @@
+name: CI
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+  workflow_dispatch:
+
+# Cancel superseded runs on the same ref (e.g. rapid pushes to a PR branch).
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+# Least privilege: CI only needs to read the repository.
+permissions:
+  contents: read
+
+jobs:
+  # Validate the source lists and prove the committed build artifacts are not stale.
+  # Guards Risk #1 (cross-language casefold parity) by ensuring the compiled artifact
+  # always matches what the shared compiler produces from the source lists.
+  lists:
+    name: Lists (validate + freshness)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '24'
+
+      - name: Install validator dependencies
+        run: npm ci
+        working-directory: tools/validator
+
+      - name: Validate lists (regenerates manifest.json)
+        run: npm run validate
+        working-directory: tools/validator
+
+      - name: Compile lists (regenerates compiled artifact)
+        run: node tools/compile-lists/compile-lists.js
+
+      - name: Fail if committed artifacts are stale
+        run: git diff --exit-code -- tallman-lists/manifest.json tallman-lists/compiled/lists.compiled.json
+
+  # Build the C# implementation and run its tests, then run the canonical suite
+  # through the language-agnostic harness + adapter (the contract every Phase 4
+  # language will reuse). pwsh is preinstalled on ubuntu-latest, so the C# pre-build
+  # emitter (generate-embedded.ps1) runs without extra setup.
+  csharp:
+    name: C# build + tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: actions/setup-dotnet@v5
+        with:
+          dotnet-version: '8.0.x'
+
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '24'
+
+      # Build the whole solution explicitly: `dotnet test` only builds the test
+      # project and its dependencies, not the ToTallman.Demo project the shared
+      # harness drives. The pre-build emitter (generate-embedded.ps1) runs here.
+      # Pin -c Debug explicitly on both steps: the test-adapter resolves the demo
+      # at bin/Debug/net8.0, so build and test must agree on the configuration.
+      - name: Build solution (incl. demo used by the shared harness)
+        run: dotnet build languages/csharp/ToTallman.sln -c Debug
+
+      - name: Test (102 native + 84 canonical)
+        run: dotnet test languages/csharp/ToTallman.sln -c Debug --no-build
+
+      - name: Install test-runner dependencies
+        run: npm ci
+        working-directory: tools/test-runner
+
+      - name: Canonical suite via shared harness + C# adapter
+        run: node tools/test-runner/run-canonical-tests.js languages/csharp/test-adapter.js

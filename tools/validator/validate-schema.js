@@ -66,9 +66,12 @@ function main() {
   const ajv = new Ajv({ allErrors: true });
   const validate = ajv.compile(schema);
 
-  // Find all JSON files in tallman-lists directory
+  // Find all JSON source lists in the tallman-lists directory.
+  // Exclude schema.json and the generated manifest.json (which is this tool's own
+  // output, not a source list) so the validator is idempotent on a fresh checkout.
+  // This mirrors the same exclusion in tools/compile-lists/compile-lists.js.
   const jsonFiles = fs.readdirSync(listsDir)
-    .filter(file => file.endsWith('.json') && file !== 'schema.json')
+    .filter(file => file.endsWith('.json') && file !== 'schema.json' && file !== 'manifest.json')
     .sort();
 
   if (jsonFiles.length === 0) {

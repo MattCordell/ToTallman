@@ -4,9 +4,11 @@
 const { execSync } = require('child_process');
 const path = require('path');
 
-// Determine the path to the compiled demo executable
-// This assumes the demo has been built in Debug configuration
-const exePath = path.join(__dirname, 'src', 'ToTallman.Demo', 'bin', 'Debug', 'net8.0', 'ToTallman.Demo.exe');
+// Determine the path to the compiled demo assembly.
+// This assumes the demo has been built in Debug configuration.
+// We launch via the `dotnet` CLI (dotnet <dll>) rather than the native apphost
+// so the adapter works identically on Windows (.exe) and Linux/macOS (no extension) in CI.
+const dllPath = path.join(__dirname, 'src', 'ToTallman.Demo', 'bin', 'Debug', 'net8.0', 'ToTallman.Demo.dll');
 
 module.exports = {
     /**
@@ -21,8 +23,8 @@ module.exports = {
             // This handles newlines, quotes, unicode, and other special characters
             const base64Input = Buffer.from(input, 'utf8').toString('base64');
 
-            // Build command: ToTallman.Demo.exe --input-base64 "base64string" --list "LIST_ID"
-            const command = `"${exePath}" --input-base64 "${base64Input}" --list "${listId}"`;
+            // Build command: dotnet ToTallman.Demo.dll --input-base64 "base64string" --list "LIST_ID"
+            const command = `dotnet "${dllPath}" --input-base64 "${base64Input}" --list "${listId}"`;
 
             // Execute C# program and capture output
             const result = execSync(command, {

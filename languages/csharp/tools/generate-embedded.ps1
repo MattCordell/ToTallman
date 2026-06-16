@@ -17,8 +17,11 @@ $ErrorActionPreference = "Stop"
 $scriptDir = Split-Path -Parent $MyInvocation.MyCommand.Path          # languages/csharp/tools
 $csharpDir = Split-Path -Parent $scriptDir                            # languages/csharp
 $projectRoot = Split-Path -Parent (Split-Path -Parent $csharpDir)     # repo root
-$artifactFile = Join-Path $projectRoot "tallman-lists\compiled\lists.compiled.json"
-$outputFile = Join-Path $csharpDir "src\ToTallman\EmbeddedTallmanLists.g.cs"
+# Build paths with [IO.Path]::Combine so the correct separator is used on every
+# OS (PowerShell 5.1 on Windows, pwsh on Linux/macOS in CI). Hardcoded backslashes
+# would be treated as literal filename characters under pwsh on Linux.
+$artifactFile = [System.IO.Path]::Combine($projectRoot, "tallman-lists", "compiled", "lists.compiled.json")
+$outputFile = [System.IO.Path]::Combine($csharpDir, "src", "ToTallman", "EmbeddedTallmanLists.g.cs")
 
 if (-not (Test-Path $artifactFile)) {
     Write-Error "Compiled list artifact not found: $artifactFile`nRun 'node tools/compile-lists/compile-lists.js' first."
