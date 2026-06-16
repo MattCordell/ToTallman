@@ -39,16 +39,20 @@ Examples: - `prednisone` → `predniSONE` - `prednisone.` →
 
 ## 3.2 Unicode Handling
 
--   All text normalized to NFC.
--   Case-insensitive comparisons use Unicode casefolding.
--   Word extraction uses Unicode letter + mark categories.
--   The canonical match key is `casefold(NFC(text))`, where `casefold` is
-    Unicode default (full) case folding. Keys are derived once by the shared
-    compiler; every language runtime MUST fold input the same way so a word
-    matches identically across languages. All current entries are ASCII/Latin,
-    for which `toLowerCase` equals this folding; adding non-ASCII entries would
-    require a full case-folding implementation in the compiler and in every
-    runtime.
+-   All input text is normalized to NFC before processing.
+-   Word extraction uses Unicode letter + combining-mark categories
+    (`\p{L}\p{M}`).
+-   **Canonical fold**: the match key is `toLowerCase(NFC(word))`.
+-   **ASCII-only entry constraint**: all Tall Man list entries must consist
+    solely of ASCII characters (U+0000–U+007F). The list validator enforces
+    this; any entry containing a non-ASCII character is a validation error.
+    Within the ASCII range `toLowerCase` is identical to Unicode Default Case
+    Folding, so the canonical fold is simultaneously simple and formally
+    correct.
+-   Match keys are derived once by the shared compiler and embedded in the
+    compiled artifact. Every language runtime MUST apply `toLowerCase(NFC(word))`
+    to the input word before dictionary lookup; this guarantees byte-identical
+    output across all language implementations.
 
 ## 3.3 Replacement Rules
 

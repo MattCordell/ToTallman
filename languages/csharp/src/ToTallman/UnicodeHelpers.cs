@@ -42,12 +42,14 @@ namespace ToTallman
         }
 
         /// <summary>
-        /// Performs Unicode casefolding for case-insensitive string comparison.
-        /// C# approximation: converts to uppercase invariant, then to lowercase invariant.
-        /// This handles most edge cases including Turkish İ/i and German ß.
+        /// Returns the canonical match key for a word: ToUpperInvariant then ToLowerInvariant.
+        /// All list entries are constrained to ASCII characters (see spec section 3.2), so this
+        /// is equivalent to Unicode Default Case Folding for the full entry set. The two-step
+        /// approach is retained as a defensive pattern but produces the same result as
+        /// ToLowerInvariant alone for all ASCII input.
         /// </summary>
-        /// <param name="text">The string to casefold</param>
-        /// <returns>The casefolded string suitable for case-insensitive matching</returns>
+        /// <param name="text">The NFC-normalized word to fold</param>
+        /// <returns>The casefolded key for dictionary lookup</returns>
         public static string CaseFold(string text)
         {
             if (string.IsNullOrEmpty(text))
@@ -55,12 +57,6 @@ namespace ToTallman
                 return text ?? string.Empty;
             }
 
-            // C# doesn't have native Unicode casefolding like Python's str.casefold()
-            // Best approximation: ToUpperInvariant() then ToLowerInvariant()
-            // This normalizes case more reliably than simple ToLowerInvariant() alone
-            // Handles edge cases like:
-            // - Turkish: İ (U+0130) and i (U+0069)
-            // - German: ß (U+00DF) → ss
             string upper = text.ToUpperInvariant();
             string lower = upper.ToLowerInvariant();
 

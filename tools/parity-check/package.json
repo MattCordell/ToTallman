@@ -1,0 +1,10 @@
+{
+  "name": "totallman-parity-check",
+  "version": "1.0.0",
+  "description": "Cross-language output parity check for the ToTallman canonical test suite",
+  "main": "run-parity-check.js",
+  "scripts": {
+    "parity": "node run-parity-check.js"
+  },
+  "license": "MIT"
+}

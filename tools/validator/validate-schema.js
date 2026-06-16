@@ -184,6 +184,18 @@ function validateEntries(data, fileName) {
     logError(`  Found ${emptyEntries.length} empty entry(ies)`);
     hasErrors = true;
   }
+
+  // ASCII-only constraint: entries must contain only ASCII characters (U+0000-U+007F).
+  // Within ASCII, toLowerCase equals Unicode Default Case Folding, guaranteeing
+  // identical casefold keys across all language runtimes. See spec section 3.2.
+  const nonAsciiEntries = data.entries.filter(e => !/^[\x00-\x7F]*$/.test(e));
+  if (nonAsciiEntries.length > 0) {
+    logError(`  Found ${nonAsciiEntries.length} entry(ies) with non-ASCII characters (ASCII-only constraint, see spec 3.2):`);
+    nonAsciiEntries.forEach(e => logError(`    "${e}"`));
+    hasErrors = true;
+  } else {
+    logSuccess(`  All entries are ASCII-only`);
+  }
 }
 
 function validateVersion(data, fileName) {

@@ -78,3 +78,31 @@ jobs:
 
       - name: Canonical suite via shared harness + C# adapter
         run: node tools/test-runner/run-canonical-tests.js languages/csharp/test-adapter.js
+
+  # Cross-language output parity check (guards Risk #1: canonical casefold parity).
+  # Discovers all languages/*/test-adapter.js adapters and asserts every adapter
+  # produces identical output for every canonical test input. Currently only C# exists
+  # (single-adapter, no comparison); adding a Phase 4 language adapter automatically
+  # enables real cross-language comparison with no CI changes required.
+  parity:
+    name: Cross-language output parity
+    runs-on: ubuntu-latest
+    needs: [csharp]
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: actions/setup-dotnet@v5
+        with:
+          dotnet-version: '8.0.x'
+
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '24'
+
+      # The C# adapter spawns `dotnet ToTallman.Demo.dll`; rebuild here so the
+      # binary is present in this job's workspace.
+      - name: Build C# (required by the C# adapter)
+        run: dotnet build languages/csharp/ToTallman.sln -c Debug
+
+      - name: Run cross-language parity check
+        run: node tools/parity-check/run-parity-check.js
