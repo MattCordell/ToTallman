@@ -7,27 +7,33 @@
       "expected": "predniSONE"
     },
     {
-      "description": "FDA list - predniSONE (lowercase input)",
+      "description": "FDA list - prednisone (same capitalization as DEFAULT)",
       "input": "prednisone",
       "listId": "FDA",
       "expected": "predniSONE"
     },
     {
-      "description": "AU list - amiodarone",
+      "description": "AU list - amiodarone (AU-specific entry)",
       "input": "amiodarone",
       "listId": "AU",
       "expected": "amiODAROne"
     },
     {
-      "description": "ISMP list - morphine (not in ISMP list)",
+      "description": "ISMP list - morphine (self-mapping entry in ISMP, no Tall Man caps)",
       "input": "morphine",
       "listId": "ISMP",
       "expected": "morphine"
     },
     {
-      "description": "NZ list - morphine (in NZ list)",
+      "description": "NZ list - morphine (not in NZ list -> unchanged)",
       "input": "morphine",
       "listId": "NZ",
+      "expected": "morphine"
+    },
+    {
+      "description": "DEFAULT list - morphine (self-mapping entry in DEFAULT, no Tall Man caps -> unchanged)",
+      "input": "morphine",
+      "listId": "DEFAULT",
       "expected": "morphine"
     },
     {
@@ -49,13 +55,13 @@
       "expected": "vinCRISTine"
     },
     {
-      "description": "FDA list - vinCRIStine (different capitalization than AU)",
+      "description": "FDA list - vinCRIStine (different capitalization than AU vinCRISTine)",
       "input": "vincristine",
       "listId": "FDA",
       "expected": "vinCRIStine"
     },
     {
-      "description": "DEFAULT list - drug not in any list",
+      "description": "DEFAULT list - drug not in any list (aspirin -> unchanged)",
       "input": "aspirin",
       "listId": "DEFAULT",
       "expected": "aspirin"
@@ -65,6 +71,24 @@
       "input": "notadrug",
       "listId": "AU",
       "expected": "notadrug"
+    },
+    {
+      "description": "NZ list - foliNIc acid (positive NZ-only match)",
+      "input": "folinic acid",
+      "listId": "NZ",
+      "expected": "foliNIc acid"
+    },
+    {
+      "description": "DEFAULT list - SOLU-medrol (lowercase m in medrol)",
+      "input": "solu-medrol",
+      "listId": "DEFAULT",
+      "expected": "SOLU-medrol"
+    },
+    {
+      "description": "ISMP list - SOLU-Medrol (capital M differs from DEFAULT SOLU-medrol)",
+      "input": "solu-medrol",
+      "listId": "ISMP",
+      "expected": "SOLU-Medrol"
     }
   ]
 }

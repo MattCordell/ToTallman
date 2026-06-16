@@ -83,6 +83,48 @@
       "input": "test-prednisone-test",
       "listId": "DEFAULT",
       "expected": "test-predniSONE-test"
+    },
+    {
+      "description": "3-word entry match - methylprednisolone SODIUM SUCCINate (NZ list, lowercase input)",
+      "input": "methylprednisolone sodium succinate",
+      "listId": "NZ",
+      "expected": "methylprednisolone SODIUM SUCCINate"
+    },
+    {
+      "description": "3-word entry match in sentence (NZ list)",
+      "input": "Administer methylprednisolone sodium succinate intravenously",
+      "listId": "NZ",
+      "expected": "Administer methylprednisolone SODIUM SUCCINate intravenously"
+    },
+    {
+      "description": "3-word entry match - mixed case input normalizes (NZ list)",
+      "input": "Methylprednisolone Sodium Succinate",
+      "listId": "NZ",
+      "expected": "methylprednisolone SODIUM SUCCINate"
+    },
+    {
+      "description": "Multi-word case variant - all uppercase (MS CONTIN -> MS Contin)",
+      "input": "MS CONTIN",
+      "listId": "DEFAULT",
+      "expected": "MS Contin"
+    },
+    {
+      "description": "Multi-word case variant - title case (Ms Contin -> MS Contin)",
+      "input": "Ms Contin",
+      "listId": "DEFAULT",
+      "expected": "MS Contin"
+    },
+    {
+      "description": "Multi-word fallback - first word of ms contin entry present but second word differs (no partial match)",
+      "input": "ms aspirin",
+      "listId": "DEFAULT",
+      "expected": "ms aspirin"
+    },
+    {
+      "description": "Multi-word fallback - first word of multi-word entry is not a standalone entry",
+      "input": "ms",
+      "listId": "DEFAULT",
+      "expected": "ms"
     }
   ]
 }

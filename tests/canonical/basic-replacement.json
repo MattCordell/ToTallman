@@ -25,10 +25,10 @@
       "expected": "predniSONE and more predniSONE"
     },
     {
-      "description": "Multiple different drugs",
-      "input": "morphine and hydromorphone",
+      "description": "Multiple different drugs - one in list (converts), one not in any list (unchanged)",
+      "input": "aspirin and hydromorphone",
       "listId": "DEFAULT",
-      "expected": "morphine and HYDROmorphone"
+      "expected": "aspirin and HYDROmorphone"
     },
     {
       "description": "Drug at end of sentence with period",

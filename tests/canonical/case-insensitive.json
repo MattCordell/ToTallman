@@ -1,12 +1,6 @@
 {
   "tests": [
     {
-      "description": "All lowercase input",
-      "input": "prednisone",
-      "listId": "DEFAULT",
-      "expected": "predniSONE"
-    },
-    {
       "description": "All uppercase input",
       "input": "PREDNISONE",
       "listId": "DEFAULT",
@@ -31,13 +25,13 @@
       "expected": "predniSONE"
     },
     {
-      "description": "Multiple drugs with different cases",
+      "description": "Multiple drugs with different cases - MORPHINE normalizes to self-mapped form, HyDrOmOrPhOnE converts",
       "input": "MORPHINE and HyDrOmOrPhOnE",
       "listId": "DEFAULT",
       "expected": "morphine and HYDROmorphone"
     },
     {
-      "description": "Sentence with mixed case drug names",
+      "description": "Sentence with mixed case drug names - self-mapped entry (morphine) and converting entry (prednisone) both normalize",
       "input": "Patient takes PredniSONE and MorPhiNe daily",
       "listId": "DEFAULT",
       "expected": "Patient takes predniSONE and morphine daily"

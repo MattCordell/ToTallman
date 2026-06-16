@@ -53,6 +53,30 @@
       "input": "prednisone, morphine; hydromorphone.",
       "listId": "DEFAULT",
       "expected": "predniSONE, morphine; HYDROmorphone."
+    },
+    {
+      "description": "No-space punctuation adjacency - comma with no surrounding spaces (spec 8.3)",
+      "input": "prednisone,prednisone",
+      "listId": "DEFAULT",
+      "expected": "predniSONE,predniSONE"
+    },
+    {
+      "description": "Possessive apostrophe is a word boundary - drug name before apostrophe-s converts",
+      "input": "prednisone's",
+      "listId": "DEFAULT",
+      "expected": "predniSONE's"
+    },
+    {
+      "description": "Multi-word drug in parentheses - parentheses are word boundaries",
+      "input": "(ms contin)",
+      "listId": "DEFAULT",
+      "expected": "(MS Contin)"
+    },
+    {
+      "description": "Hyphenated drug with trailing comma - comma is word boundary after second component",
+      "input": "solu-medrol,",
+      "listId": "DEFAULT",
+      "expected": "SOLU-medrol,"
     }
   ]
 }

@@ -1,37 +1,37 @@
 {
   "tests": [
     {
-      "description": "Simple ASCII - baseline",
+      "description": "Simple ASCII baseline - NFC normalization applied but no effect on ASCII input",
       "input": "prednisone",
       "listId": "DEFAULT",
       "expected": "predniSONE"
     },
     {
-      "description": "Text with combining diacritical marks (if drug names had them)",
+      "description": "NFC normalization of surrounding text with combining diacritical marks does not affect ASCII drug matching",
       "input": "café prednisone naïve",
       "listId": "DEFAULT",
       "expected": "café predniSONE naïve"
     },
     {
-      "description": "Unicode normalization test - é (precomposed U+00E9)",
+      "description": "Precomposed é (U+00E9) in surrounding text - NFC input, ASCII drug still matches",
       "input": "résumé prednisone",
       "listId": "DEFAULT",
       "expected": "résumé predniSONE"
     },
     {
-      "description": "Unicode normalization test - é (decomposed e + ́  U+0065 U+0301)",
+      "description": "Decomposed é (U+0065 U+0301) in surrounding text - NFC normalizes it, ASCII drug still matches",
       "input": "résumé prednisone",
       "listId": "DEFAULT",
       "expected": "résumé predniSONE"
     },
     {
-      "description": "Non-ASCII characters in surrounding text",
-      "input": "Ü morphine Ñ",
+      "description": "Non-ASCII diacritical characters in surrounding text do not affect ASCII drug matching",
+      "input": "Ü prednisone Ñ",
       "listId": "DEFAULT",
-      "expected": "Ü morphine Ñ"
+      "expected": "Ü predniSONE Ñ"
     },
     {
-      "description": "Drug name remains unchanged with emoji context",
+      "description": "Emoji in surrounding text does not affect ASCII drug matching",
       "input": "💊 prednisone 💊",
       "listId": "DEFAULT",
       "expected": "💊 predniSONE 💊"
