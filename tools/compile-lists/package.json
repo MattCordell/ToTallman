@@ -1,0 +1,12 @@
+{
+  "name": "totallman-compile-lists",
+  "version": "1.0.0",
+  "description": "Shared, language-agnostic compiler that turns tallman-lists/*.json into a versioned canonical artifact (tallman-lists/compiled/lists.compiled.json) consumed by every language's code generator.",
+  "private": true,
+  "bin": {
+    "compile-lists": "compile-lists.js"
+  },
+  "scripts": {
+    "compile": "node compile-lists.js"
+  }
+}

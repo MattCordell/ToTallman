@@ -16,16 +16,19 @@
     <PackageTags>medication;safety;tallman;lettering;healthcare;pharmacy</PackageTags>
   </PropertyGroup>
 
-  <!-- Pre-build: Generate embedded Tallman lists -->
+  <!-- Pre-build: Emit embedded Tallman lists from the shared compiled artifact.
+       Semantics (NFC, casefold keys, maxWords) are produced once by the shared
+       compiler (tools/compile-lists -> tallman-lists/compiled/lists.compiled.json);
+       this thin emitter only formats that artifact as C#. -->
   <Target Name="GenerateEmbeddedLists" BeforeTargets="BeforeBuild">
     <PropertyGroup>
       <!-- Detect PowerShell executable (cross-platform support) -->
       <PowerShellExe Condition="'$(OS)' == 'Windows_NT'">powershell</PowerShellExe>
       <PowerShellExe Condition="'$(OS)' != 'Windows_NT'">pwsh</PowerShellExe>
-      <EmbedListsScript>$(MSBuildProjectDirectory)\..\..\build\embed-lists.ps1</EmbedListsScript>
+      <EmbedListsScript>$(MSBuildProjectDirectory)\..\..\tools\generate-embedded.ps1</EmbedListsScript>
     </PropertyGroup>
 
-    <Message Text="Generating embedded Tallman lists from JSON..." Importance="high" />
+    <Message Text="Emitting embedded Tallman lists from compiled artifact..." Importance="high" />
     <Exec Command="$(PowerShellExe) -ExecutionPolicy Bypass -File &quot;$(EmbedListsScript)&quot;" />
   </Target>
 

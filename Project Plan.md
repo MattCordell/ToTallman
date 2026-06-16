@@ -131,16 +131,22 @@
 - Exception API: unknown list throws `TallmanException` directly; spec §6 updated to mandate a dedicated exception type per language.
 - Migration notes: de-scoped (v1 unreleased prototype).
 
-**Spec nit to reconcile**: §12 still lists multi-word / hyphenated drugs as "out-of-scope", yet they are implemented and tested. §12 should be updated to match.
+**Spec reconciled (2026-06-16)**: §12 updated (multi-word / hyphenated drugs moved out of "out-of-scope"; behaviour now documented in §3.4). §3.2/§5/§9 updated for the shared list-compilation pipeline.
 
 ---
 
 ## Phase 4: Multi-Language Implementation (Week 5-9)
 
-**Status**: ⏸️ Blocked (awaiting Phase 3 completion)
+**Status**: ⏸️ Ready to start (Phase 3 complete)
 **Objective**: Implement in Python, JavaScript/TypeScript, Java.
 
 **Priority Order**: Python → JavaScript → Java (phased rollout)
+
+**Shared list pipeline (in place 2026-06-16)**: list semantics (NFC, casefold
+keys, maxWords) are centralised in `tools/compile-lists` → versioned artifact
+`tallman-lists/compiled/lists.compiled.json`. Each language adds only a *thin*
+emitter that formats that artifact (C# emitter at `languages/csharp/tools/`),
+guaranteeing byte-identical embeddings. New languages MUST NOT re-derive keys.
 
 ### 4.1 Python Implementation (Week 5-6)
 - [ ] Setup `/languages/python/` structure
@@ -224,7 +230,7 @@
 | 1. Foundation | ✅ Complete | 100% |
 | 2. Canonical Tests | ✅ Complete | 100% |
 | 3. C# Implementation | ✅ Complete | 100% |
-| 4. Multi-Language | ⏸️ Blocked | 0% |
+| 4. Multi-Language | ⏸️ Ready to start | 0% |
 | 5. CI/CD | ⏸️ Not Started | 0% |
 | 6. Documentation | ⏸️ Not Started | 0% |
 
@@ -268,6 +274,11 @@
   - Fixed a latent O(n²) in the multi-word lookahead: now bounded by each list's longest-entry word count (FDA 1, NZ 3, others 2). Verified linear via stopwatch tests.
   - Added performance guards to `ToTallman.Tests` (now 102 tests). Canonical suite still 84/84.
   - Migration notes (v1 → v2) de-scoped — v1 was an unreleased prototype.
+- ✅ **Centralised the list-compilation pipeline (Phase 4 enabler).**
+  - New shared compiler `tools/compile-lists` does all semantics once (NFC, casefold keys, maxWords) → versioned artifact `tallman-lists/compiled/lists.compiled.json`.
+  - C# refactored into a thin emitter (`languages/csharp/tools/generate-embedded.ps1`) that only formats the artifact; old `build/embed-lists.ps1` (gitignored) removed and `.csproj` pre-build repointed.
+  - Behaviour-preserving: `.g.cs` changed only by header + a deterministic ordinal re-sort of two keys; tests stayed 102/102 + 84/84.
+  - Spec §3.2/§5/§9 updated; defines `casefold(NFC(text))` as the canonical key and requires per-language runtimes to fold identically.
 
 ### 2026-06-15
 - 🟡 **Phase 3 (C#) found to be near complete** — Project Plan was stale (had listed it as Not Started).

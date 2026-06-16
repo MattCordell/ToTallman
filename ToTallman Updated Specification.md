@@ -42,6 +42,13 @@ Examples: - `prednisone` → `predniSONE` - `prednisone.` →
 -   All text normalized to NFC.
 -   Case-insensitive comparisons use Unicode casefolding.
 -   Word extraction uses Unicode letter + mark categories.
+-   The canonical match key is `casefold(NFC(text))`, where `casefold` is
+    Unicode default (full) case folding. Keys are derived once by the shared
+    compiler; every language runtime MUST fold input the same way so a word
+    matches identically across languages. All current entries are ASCII/Latin,
+    for which `toLowerCase` equals this folding; adding non-ASCII entries would
+    require a full case-folding implementation in the compiler and in every
+    runtime.
 
 ## 3.3 Replacement Rules
 
@@ -88,10 +95,27 @@ derived automatically via casefold(NFC(entry)).
 
 # 5. Build-Time Processing
 
-1.  Validate all JSON files.
-2.  Normalize + derive lowercase match keys.
-3.  Embed lists in each language runtime.
-4.  Generate manifest of available list IDs.
+Processing is split into one shared, language-agnostic stage and a thin
+per-language stage, so the semantic steps happen exactly once and every
+language embeds identical data.
+
+**Shared compiler** (`/tools/compile-lists/`):
+
+1.  Validate all JSON files against the schema.
+2.  NFC-normalize each entry and derive its casefold match key (once).
+3.  Compute each list's longest-entry word count (the multi-word lookahead cap).
+4.  Emit one versioned canonical artifact,
+    `tallman-lists/compiled/lists.compiled.json`
+    (`{ list: { version, description, maxWords, entries: { key: form } } }`).
+
+**Per-language emitters** (e.g. `/languages/csharp/tools/`):
+
+5.  Read the compiled artifact and serialize it into the language's native
+    embedded structure (C# `Dictionary`, Python `dict`, JS object, Java `Map`).
+    These emitters do formatting only - no normalization or key derivation -
+    so cross-language output stays byte-identical.
+
+The validator additionally generates a manifest of available list IDs.
 
 ------------------------------------------------------------------------
 
@@ -188,13 +212,16 @@ entries.
 
 # 9. Directory Structure
 
-    /tallman-lists/*.json
+    /tallman-lists/*.json              (source of truth)
+    /tallman-lists/compiled/           (generated canonical artifact)
     /spec/TECHNICAL-SPEC.md
     /tests/canonical/*
     /tools/validator/
+    /tools/compile-lists/              (shared, language-agnostic compiler)
 
     /languages/
         /csharp/
+            /tools/                    (thin C# emitter)
         /python/
         /js/
         /java/
