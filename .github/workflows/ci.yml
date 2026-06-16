@@ -64,11 +64,13 @@ jobs:
       # Build the whole solution explicitly: `dotnet test` only builds the test
       # project and its dependencies, not the ToTallman.Demo project the shared
       # harness drives. The pre-build emitter (generate-embedded.ps1) runs here.
+      # Pin -c Debug explicitly on both steps: the test-adapter resolves the demo
+      # at bin/Debug/net8.0, so build and test must agree on the configuration.
       - name: Build solution (incl. demo used by the shared harness)
-        run: dotnet build languages/csharp/ToTallman.sln
+        run: dotnet build languages/csharp/ToTallman.sln -c Debug
 
       - name: Test (102 native + 84 canonical)
-        run: dotnet test languages/csharp/ToTallman.sln --no-build
+        run: dotnet test languages/csharp/ToTallman.sln -c Debug --no-build
 
       - name: Install test-runner dependencies
         run: npm ci
