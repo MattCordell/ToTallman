@@ -2,15 +2,15 @@
   "tests": [
     {
       "description": "ASCII drug name matched via casefold - lowercase input converts",
-      "input": "prednisone",
+      "input": "norfloxacin",
       "listId": "DEFAULT",
-      "expected": "predniSONE"
+      "expected": "NORfloxacin"
     },
     {
       "description": "ASCII drug name matched via casefold - uppercase input normalizes and converts",
-      "input": "PREDNISONE",
+      "input": "NORFLOXACIN",
       "listId": "DEFAULT",
-      "expected": "predniSONE"
+      "expected": "NORfloxacin"
     },
     {
       "description": "Non-Latin surrounding text (German sharp-s) does not affect ASCII drug matching",
