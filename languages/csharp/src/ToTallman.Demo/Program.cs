@@ -3,9 +3,9 @@ using ToTallman;
 
 namespace ToTallman.Demo
 {
-    class Program
+    internal class Program
     {
-        static int Main(string[] args)
+        private static int Main(string[] args)
         {
             // CLI mode for canonical test adapter
             if (args.Length >= 2 && (args[0] == "--input" || args[0] == "--input-base64"))
@@ -21,7 +21,7 @@ namespace ToTallman.Demo
         /// CLI mode for test adapter integration.
         /// Usage: ToTallman.Demo --input "text" [--list "LIST_ID"]
         /// </summary>
-        static int RunCliMode(string[] args)
+        private static int RunCliMode(string[] args)
         {
             try
             {
@@ -78,7 +78,7 @@ namespace ToTallman.Demo
         /// <summary>
         /// Interactive demonstration mode.
         /// </summary>
-        static int RunInteractiveMode()
+        private static int RunInteractiveMode()
         {
             Console.WriteLine("===========================================");
             Console.WriteLine("  ToTallman v2.0.0 - Medication Safety");
@@ -131,7 +131,7 @@ namespace ToTallman.Demo
         /// <summary>
         /// Demonstrates a Tallman conversion example.
         /// </summary>
-        static void DemoExample(string title, string input)
+        private static void DemoExample(string title, string input)
         {
             Console.WriteLine($"[{title}]");
             Console.WriteLine($"  Input:  {input}");
