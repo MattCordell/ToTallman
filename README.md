@@ -10,7 +10,7 @@
 | 2. Canonical test suite | ✅ Complete |
 | 3. C# implementation | ✅ Complete — 84/84 canonical, 102/102 native |
 | 4. Multi-language (Python → JS → Java) | ⏳ Next — [#13](https://github.com/MattCordell/ToTallman/issues/13) |
-| 5. CI/CD | ⏳ Planned — [#14](https://github.com/MattCordell/ToTallman/issues/14) |
+| 5. CI/CD | 🚧 In progress — minimal CI live (build + canonical tests + artifact freshness); full pipeline [#14](https://github.com/MattCordell/ToTallman/issues/14) |
 | 6. Documentation & release | ⏳ Planned — [#15](https://github.com/MattCordell/ToTallman/issues/15) |
 
 Detailed, up-to-date work lives in [GitHub issues](https://github.com/MattCordell/ToTallman/issues).
