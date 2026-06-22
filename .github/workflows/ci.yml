@@ -171,6 +171,58 @@ jobs:
       - name: Canonical suite via shared harness + Java adapter
         run: node tools/test-runner/run-canonical-tests.js languages/java/test-adapter.js
 
+  # Build the JS/TypeScript implementation, run lint/format/type-check/tests, then
+  # run the canonical suite through the shared harness + adapter.
+  # The JS adapter loads the built CJS module in-process (no subprocess needed
+  # because the shared harness is already Node.js).
+  js:
+    name: JS/TypeScript build + tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '24'
+
+      - name: Install dependencies
+        run: npm ci
+        working-directory: languages/js
+
+      - name: Lint (eslint)
+        run: npm run lint
+        working-directory: languages/js
+
+      - name: Format check (prettier)
+        run: npm run format:check
+        working-directory: languages/js
+
+      - name: Type check
+        run: npm run typecheck
+        working-directory: languages/js
+
+      - name: Build (tsc CJS + ESM)
+        run: npm run build
+        working-directory: languages/js
+
+      - name: Native tests (node:test)
+        run: npm test
+        working-directory: languages/js
+
+      # Prove the committed embedded-lists.ts is not stale: regenerate and
+      # fail if git sees any diff. The generator produces idempotent output.
+      - name: Embedded lists freshness check
+        run: |
+          node languages/js/tools/embed-lists.js
+          git diff --exit-code -- languages/js/src/embedded-lists.ts
+
+      - name: Install test-runner dependencies
+        run: npm ci
+        working-directory: tools/test-runner
+
+      - name: Canonical suite via shared harness + JS adapter
+        run: node tools/test-runner/run-canonical-tests.js languages/js/test-adapter.js
+
   # Cross-language output parity check (guards Risk #1: canonical casefold parity).
   # Discovers all languages/*/test-adapter.js adapters and asserts every adapter
   # produces identical output for every canonical test input.
@@ -179,7 +231,7 @@ jobs:
     runs-on: ubuntu-latest
     # `python` here refers to the matrix job; GitHub Actions waits for ALL
     # matrix variants to succeed before treating the job as done.
-    needs: [csharp, python, java]
+    needs: [csharp, python, java, js]
     steps:
       - uses: actions/checkout@v6
 
@@ -211,6 +263,11 @@ jobs:
       # The Java adapter spawns `java -jar`; build the CLI jar here.
       - name: Build Java CLI jar (required by the Java adapter)
         run: mvn -f languages/java/pom.xml package -DskipTests -Dspotless.check.skip=true --no-transfer-progress
+
+      # The JS adapter require()s the built CJS module in-process.
+      - name: Build JS (required by the JS adapter)
+        run: npm ci && npm run build
+        working-directory: languages/js
 
       - name: Run cross-language parity check
         run: node tools/parity-check/run-parity-check.js
