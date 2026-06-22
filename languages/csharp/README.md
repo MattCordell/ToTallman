@@ -191,10 +191,6 @@ public static string ToTallman(this string input, string listId = "DEFAULT")
 - **O(n) complexity**: Linear time, where n = input length
 - **O(1) lookups**: Hash table lookups for drug names
 
-## Contributing
-
-See [CONTRIBUTING.md](../../CONTRIBUTING.md) for contribution guidelines.
-
 ## License
 
 MIT License - see [LICENSE](../../LICENSE) for details.

@@ -69,7 +69,7 @@ jobs:
       - name: Build solution (incl. demo used by the shared harness)
         run: dotnet build languages/csharp/ToTallman.sln -c Debug
 
-      - name: Test (102 native + 84 canonical)
+      - name: Test (102 native + 98 canonical)
         run: dotnet test languages/csharp/ToTallman.sln -c Debug --no-build
 
       - name: Install test-runner dependencies
@@ -79,21 +79,77 @@ jobs:
       - name: Canonical suite via shared harness + C# adapter
         run: node tools/test-runner/run-canonical-tests.js languages/csharp/test-adapter.js
 
+  # Build the Python implementation, run linting/type-checking/tests, then run
+  # the canonical suite through the shared harness + adapter.
+  # Matrix covers the declared minimum (3.9) and current stable (3.12) so the
+  # 3.9-compatibility claim in pyproject.toml is actually exercised in CI.
+  python:
+    name: Python ${{ matrix.python-version }} build + tests
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ['3.9', '3.12']
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '24'
+
+      - name: Install package and dev dependencies
+        run: pip install -e "languages/python[dev]"
+
+      - name: Lint (ruff)
+        run: python -m ruff check languages/python/src/ languages/python/tests/ languages/python/tools/
+
+      - name: Format check (black)
+        run: python -m black --check languages/python/src/ languages/python/tests/ languages/python/tools/
+
+      - name: Type check (mypy)
+        run: python -m mypy languages/python/src/totallman/ languages/python/tests/
+
+      - name: Unit tests (pytest)
+        run: python -m pytest languages/python/tests/ -v
+
+      # Prove the committed _embedded_lists.py is not stale: regenerate and
+      # fail if git sees any diff. The emitter already produces black-clean
+      # output, so no separate reformat step is needed.
+      - name: Embedded lists freshness check
+        run: |
+          python languages/python/tools/embed_lists.py
+          git diff --exit-code -- languages/python/src/totallman/_embedded_lists.py
+
+      - name: Install test-runner dependencies
+        run: npm ci
+        working-directory: tools/test-runner
+
+      - name: Canonical suite via shared harness + Python adapter
+        run: node tools/test-runner/run-canonical-tests.js languages/python/test-adapter.js
+
   # Cross-language output parity check (guards Risk #1: canonical casefold parity).
   # Discovers all languages/*/test-adapter.js adapters and asserts every adapter
-  # produces identical output for every canonical test input. Currently only C# exists
-  # (single-adapter, no comparison); adding a Phase 4 language adapter automatically
-  # enables real cross-language comparison with no CI changes required.
+  # produces identical output for every canonical test input.
   parity:
     name: Cross-language output parity
     runs-on: ubuntu-latest
-    needs: [csharp]
+    # `python` here refers to the matrix job; GitHub Actions waits for ALL
+    # matrix variants to succeed before treating the job as done.
+    needs: [csharp, python]
     steps:
       - uses: actions/checkout@v6
 
       - uses: actions/setup-dotnet@v5
         with:
           dotnet-version: '8.0.x'
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
 
       - uses: actions/setup-node@v6
         with:
@@ -103,6 +159,9 @@ jobs:
       # binary is present in this job's workspace.
       - name: Build C# (required by the C# adapter)
         run: dotnet build languages/csharp/ToTallman.sln -c Debug
+
+      - name: Install Python package (required by the Python adapter)
+        run: pip install -e languages/python
 
       - name: Run cross-language parity check
         run: node tools/parity-check/run-parity-check.js
