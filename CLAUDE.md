@@ -84,6 +84,20 @@ dotnet test languages/csharp/ToTallman.sln
 ```
 - The C# pre-build emits `EmbeddedTallmanLists.g.cs` from the compiled artifact, so run the compile step above first if any list changed
 
+### Build Java (Maven)
+```bash
+# Regenerate embedded lists (if the compiled artifact changed)
+node languages/java/tools/embed-lists.js
+
+# Build, format-check (Spotless/google-java-format), and test (JUnit 5)
+mvn -f languages/java/pom.xml verify
+
+# On JDK 25+ locally, skip the Spotless check (google-java-format 1.24 requires JDK <= 21):
+mvn -f languages/java/pom.xml verify -Dspotless.check.skip=true
+```
+- Requires Java 11+; CI enforces on JDK 11 and 17 (Temurin)
+- The CLI jar is at `languages/java/target/totallman-2.0.0-cli.jar`
+
 ---
 
 ## Build-Time Embedding Architecture
@@ -166,7 +180,7 @@ function ToTallman(input, listId = "DEFAULT"):
 ## Test Suite Architecture
 
 ### Test Files
-Location: `/tests/canonical/*.json` (9 files, 84 total tests; also run natively by the C# `dotnet test` suite)
+Location: `/tests/canonical/*.json` (9 files, 98 total tests; also run natively by the C# `dotnet test` suite)
 
 ### Test Format
 Schema: `/tests/canonical/test-schema.json`
@@ -259,7 +273,7 @@ Unicode NFC normalization is required at algorithm start. Non-negotiable.
 2. **Validate data**: Run `tools/validator` before any coding
 3. **Understand v1.x failures**: Read `tests/canonical/KNOWN-FAILURES.md`
 4. **Follow canonical algorithm**: Character iteration, Unicode NFC, proper casefolding
-5. **Test rigorously**: 100% pass required (84/84 canonical; C# `dotnet test` is 102/102)
+5. **Test rigorously**: 100% pass required (98/98 canonical; C# `dotnet test` is 102/102)
 6. **Respect phase gates**: Phase 3 blocks Phases 4-6
 
 The project is well-structured with clear separation: data layer (Phase 1), tests (Phase 2), implementation (Phases 3-4), automation (Phase 5), documentation (Phase 6). Phase 3 (C#) is complete at 100% canonical pass; the next focus is Phase 4 (Python → JS → Java), each plugging into the shared list-compilation pipeline.
