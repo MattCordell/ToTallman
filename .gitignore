@@ -247,3 +247,9 @@ ModelManifest.xml
 # compiled artifact is the committed source of truth; this file is regenerated on
 # every build, so it is not tracked (avoids diff noise and cross-platform encoding churn).
 languages/csharp/src/ToTallman/EmbeddedTallmanLists.g.cs
+
+# Python tooling caches (regenerated locally by mypy/ruff; not tracked)
+.mypy_cache/
+.ruff_cache/
+__pycache__/
+*.py[cod]
