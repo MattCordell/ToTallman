@@ -70,8 +70,7 @@ class TallmanConverterTest {
   void drugFollowedByComma() {
     // Both are in the FDA list
     assertEquals(
-        "predniSONE, prednisoLONE",
-        TallmanConverter.toTallman("prednisone, prednisolone", "FDA"));
+        "predniSONE, prednisoLONE", TallmanConverter.toTallman("prednisone, prednisolone", "FDA"));
   }
 
   @Test

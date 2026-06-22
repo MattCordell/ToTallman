@@ -255,7 +255,7 @@ v1.x used regex. v2.0.0 uses character-by-character iteration per canonical algo
 - C#: NOT `ToLower()` → Use `ToUpperInvariant().ToLowerInvariant()` or proper casefolding
 - Python: NOT `lower()` → Use `casefold()`
 - JavaScript: NOT `toLowerCase()` → Use proper Unicode casefolding
-- Java: Use ICU4J for proper casefolding
+- Java: NOT raw `toLowerCase()` → Use `toLowerCase(Locale.ROOT)` (ASCII-safe approximation, no ICU4J needed)
 
 The canonical match key is `casefold(NFC(text))` (spec Section 3.2); every language runtime must fold identically. All current entries are ASCII, so C#'s `ToUpperInvariant().ToLowerInvariant()` is an exact (ASCII-safe) approximation; cross-language parity is enforced in Phase 5.
 
