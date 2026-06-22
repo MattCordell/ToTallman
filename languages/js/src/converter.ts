@@ -3,7 +3,7 @@ import { nfc, caseFold, isLetterOrMark, charCount } from './unicode.js';
 import { TallmanError } from './tallman-error.js';
 
 function getList(listId: string) {
-  const list = EMBEDDED_LISTS[listId];
+  const list = Object.hasOwn(EMBEDDED_LISTS, listId) ? EMBEDDED_LISTS[listId] : undefined;
   if (list === undefined) {
     const available = Object.keys(EMBEDDED_LISTS).sort().join(', ');
     throw new TallmanError(`Unknown list ID: '${listId}'. Available: ${available}.`);
@@ -31,7 +31,10 @@ export function toTallman(text: string, listId: string = 'DEFAULT'): string {
       const word = normalized.slice(wordStart, i);
 
       // Single-word match attempt.
-      let bestMatch: string | undefined = entries[caseFold(word)];
+      const wordKey = caseFold(word);
+      let bestMatch: string | undefined = Object.hasOwn(entries, wordKey)
+        ? entries[wordKey]
+        : undefined;
       let bestEnd = i;
 
       // Greedy multi-word lookahead — bounded by per-list maxWords.
@@ -54,7 +57,8 @@ export function toTallman(text: string, listId: string = 'DEFAULT'): string {
           pattern += normalized.slice(nextWordStart, look);
           wordsInPattern++;
 
-          const multiMatch = entries[caseFold(pattern)];
+          const multiKey = caseFold(pattern);
+          const multiMatch = Object.hasOwn(entries, multiKey) ? entries[multiKey] : undefined;
           if (multiMatch !== undefined) {
             bestMatch = multiMatch;
             bestEnd = look;

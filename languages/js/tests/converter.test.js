@@ -44,11 +44,35 @@ test('does not match substrings — whole-word only', () => {
 
 // --- Multi-word ---
 
-test('matches multi-word entries', () => {
-    // "ms contin" is a 2-word entry in DEFAULT (or NZ lists)
-    // Test with a known single-word entry to stay list-agnostic
-    const result = toTallman('predniSONE prednisoLONE');
-    assert.match(result, /predniSONE/);
+test('matches space-separated multi-word entry', () => {
+    assert.equal(toTallman('ms contin'), 'MS Contin');
+});
+
+test('matches hyphenated multi-word entry', () => {
+    assert.equal(toTallman('solu-medrol'), 'SOLU-medrol');
+});
+
+// --- Prototype-chain safety ---
+// Plain object literals inherit Object.prototype, so without Object.hasOwn guards
+// words like "constructor" would resolve to functions rather than undefined.
+
+test('word matching against Object.prototype key is safe (no prototype leak)', () => {
+    // 'constructor' casefolds to 'constructor' — must not match Object.prototype.constructor
+    assert.equal(toTallman('I am the constructor of medicine'), 'I am the constructor of medicine');
+});
+
+test('throws TallmanError for listId matching Object.prototype key (toString)', () => {
+    assert.throws(
+        () => toTallman('prednisone', 'toString'),
+        (err) => err instanceof TallmanError && /toString/.test(err.message),
+    );
+});
+
+test('throws TallmanError for listId matching Object.prototype key (constructor)', () => {
+    assert.throws(
+        () => toTallman('prednisone', 'constructor'),
+        (err) => err instanceof TallmanError && /constructor/.test(err.message),
+    );
 });
 
 // --- List selection ---

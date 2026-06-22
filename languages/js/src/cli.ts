@@ -35,11 +35,11 @@ function main(): void {
 
   if (input === undefined) {
     usage();
-    process.exit(1) as never;
+    process.exit(1);
   }
 
   try {
-    const result = toTallman(input as string, listId);
+    const result = toTallman(input, listId);
     // No trailing newline — mirrors the Java/Python/C# CLI contract.
     process.stdout.write(result, 'utf8');
   } catch (err) {
