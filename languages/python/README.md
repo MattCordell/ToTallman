@@ -16,7 +16,7 @@ highlighting distinguishing characters in look-alike, sound-alike (LASA) drug na
 - ✅ **Hyphenated drugs**: Supports "SOLU-medrol", "DEPO-medrol"
 - ✅ **Multiple lists**: DEFAULT, AU, FDA, ISMP, NZ
 - ✅ **Build-time embedding**: Zero runtime I/O, embedded dictionaries
-- ✅ **100% test coverage**: Passes all 98 canonical tests
+- ✅ **100% canonical pass rate**: Passes all 98 canonical tests
 - ✅ **Byte-identical output**: Verified against C# reference via parity check
 - ✅ **Typed**: PEP 561 py.typed marker, strict mypy-clean
 
@@ -254,10 +254,6 @@ print(list_version("DEFAULT"))    # "20180819.0"
 - **Zero runtime I/O**: No file loading or network calls
 - **O(n) complexity**: Linear time in input length
 - **O(1) lookups**: Native Python dict hash table lookups
-
-## Contributing
-
-See [CONTRIBUTING.md](../../CONTRIBUTING.md) for contribution guidelines.
 
 ## License
 

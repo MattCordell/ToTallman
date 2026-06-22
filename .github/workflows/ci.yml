@@ -81,15 +81,21 @@ jobs:
 
   # Build the Python implementation, run linting/type-checking/tests, then run
   # the canonical suite through the shared harness + adapter.
+  # Matrix covers the declared minimum (3.9) and current stable (3.12) so the
+  # 3.9-compatibility claim in pyproject.toml is actually exercised in CI.
   python:
-    name: Python build + tests
+    name: Python ${{ matrix.python-version }} build + tests
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ['3.9', '3.12']
     steps:
       - uses: actions/checkout@v6
 
       - uses: actions/setup-python@v5
         with:
-          python-version: '3.12'
+          python-version: ${{ matrix.python-version }}
 
       - uses: actions/setup-node@v6
         with:
@@ -110,12 +116,12 @@ jobs:
       - name: Unit tests (pytest)
         run: python -m pytest languages/python/tests/ -v
 
-      # Prove the committed _embedded_lists.py is not stale: regenerate + reformat,
-      # then fail if git sees any diff. Mirrors the lists freshness check.
+      # Prove the committed _embedded_lists.py is not stale: regenerate and
+      # fail if git sees any diff. The emitter already produces black-clean
+      # output, so no separate reformat step is needed.
       - name: Embedded lists freshness check
         run: |
           python languages/python/tools/embed_lists.py
-          python -m black languages/python/src/totallman/_embedded_lists.py
           git diff --exit-code -- languages/python/src/totallman/_embedded_lists.py
 
       - name: Install test-runner dependencies
@@ -131,6 +137,8 @@ jobs:
   parity:
     name: Cross-language output parity
     runs-on: ubuntu-latest
+    # `python` here refers to the matrix job; GitHub Actions waits for ALL
+    # matrix variants to succeed before treating the job as done.
     needs: [csharp, python]
     steps:
       - uses: actions/checkout@v6

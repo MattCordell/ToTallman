@@ -84,11 +84,14 @@ def main() -> int:
     lines.append("}")
     lines.append("")
 
-    # AVAILABLE_LIST_IDS
-    lines.append("AVAILABLE_LIST_IDS: frozenset[str] = frozenset({")
+    # AVAILABLE_LIST_IDS — use the black-canonical frozenset({…}) form
+    # so the emitter output is already black-clean (no reformatting needed).
+    lines.append("AVAILABLE_LIST_IDS: frozenset[str] = frozenset(")
+    lines.append("    {")
     for list_id in list_ids:
-        lines.append(f"    {_py_str(list_id)},")
-    lines.append("})")
+        lines.append(f"        {_py_str(list_id)},")
+    lines.append("    }")
+    lines.append(")")
     lines.append("")
 
     # Accessor functions (mirrors EmbeddedTallmanLists.g.cs)

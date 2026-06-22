@@ -22,7 +22,7 @@ __version__ = "2.0.0"
 
 def available_lists() -> frozenset[str]:
     """Return the set of valid Tall Man list IDs (e.g. DEFAULT, AU, FDA, ISMP, NZ)."""
-    return frozenset(AVAILABLE_LIST_IDS)
+    return AVAILABLE_LIST_IDS
 
 
 def list_version(list_id: str) -> str:
