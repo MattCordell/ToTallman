@@ -8,8 +8,6 @@ ToTallman is a cross-language Tall Man lettering library for medication safety. 
 
 The high level objectives and requirements for this project are detailed in `spec/TECHNICAL-SPEC.md`
 
-Ignore the `/archive` directory (if it exists) - do not read or modify content.
-
 **Current Status**
 Work is tracked in [GitHub issues](https://github.com/MattCordell/ToTallman/issues) (the source of truth); `README.md` has a high-level v2 progress table.
 
@@ -246,7 +244,7 @@ module.exports = {
 
 ## What NOT to Do
 ### ❌ Do NOT Fix v1.x Code
-The old v1.x implementation is archived under `/archive/v1/` (do not read or modify it). Phase 3 replaced it with the v2 implementation in `/languages/csharp/`; v1 is not maintained.
+The old v1.x implementation has been removed (it remains in git history if ever needed). Phase 3 replaced it with the v2 implementation in `/languages/csharp/`; v1 is not maintained.
 
 ### ❌ Do NOT Use Regex Replacement
 v1.x used regex. v2.0.0 uses character-by-character iteration per canonical algorithm.
