@@ -87,6 +87,14 @@ updates:
       java-deps:
         update-types: ['minor', 'patch']
     open-pull-requests-limit: 5
+    ignore:
+      # JUnit 6.x and Spotless 3.x require JDK 17 — blocked until the Java floor
+      # moves off 11 (see issue #50). Major-skip is here rather than comment state
+      # so it survives any Dependabot comment pruning.
+      - dependency-name: "org.junit.jupiter:junit-jupiter"
+        update-types: ["version-update:semver-major"]
+      - dependency-name: "com.diffplug.spotless:spotless-maven-plugin"
+        update-types: ["version-update:semver-major"]
 
   # C# implementation
   - package-ecosystem: nuget
