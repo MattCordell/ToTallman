@@ -1,0 +1,44 @@
+{
+  "name": "totallman",
+  "version": "2.0.0",
+  "description": "Tall Man lettering for medication safety — JavaScript/TypeScript implementation",
+  "exports": {
+    ".": {
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.js",
+      "types": "./dist/cjs/index.d.ts"
+    }
+  },
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/cjs/index.d.ts",
+  "bin": {
+    "totallman": "./dist/cjs/cli.js"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "embed": "node tools/embed-lists.js",
+    "build": "tsc -p tsconfig.cjs.json && tsc -p tsconfig.esm.json && node tools/post-build.js",
+    "typecheck": "tsc -p tsconfig.cjs.json --noEmit",
+    "lint": "eslint src",
+    "format:check": "prettier --check src",
+    "test": "node --test tests/converter.test.js",
+    "test:canonical": "node ../../tools/test-runner/run-canonical-tests.js test-adapter.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^26.0.0",
+    "@typescript-eslint/eslint-plugin": "^8.0.0",
+    "@typescript-eslint/parser": "^8.0.0",
+    "eslint": "^9.0.0",
+    "prettier": "^3.0.0",
+    "typescript": "^5.0.0",
+    "typescript-eslint": "^8.61.1"
+  }
+}
