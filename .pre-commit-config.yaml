@@ -1,0 +1,81 @@
+# Pre-commit hooks — mirror the CI quality gates locally so format issues are
+# caught before they round-trip through CI.
+#
+# Install once:
+#   pip install pre-commit
+#   pre-commit install
+#
+# Run manually against all files:
+#   pre-commit run --all-files
+#
+# Heavy language toolchains (dotnet, Maven) are available but not run on every
+# commit; invoke them explicitly with:
+#   pre-commit run --hook-stage manual dotnet-format
+#   pre-commit run --hook-stage manual spotless-java
+
+repos:
+  # Generic file hygiene
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-json
+      - id: check-yaml
+      - id: mixed-line-ending
+        args: [--fix=lf]
+
+  # Python linting (ruff) — scoped to languages/python/
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.11.0
+    hooks:
+      - id: ruff
+        args: [--fix]
+        files: ^languages/python/
+
+  # Python formatting (black) — must match pyproject.toml: line-length 100, py39
+  - repo: https://github.com/psf/black
+    rev: 24.10.0
+    hooks:
+      - id: black
+        files: ^languages/python/
+
+  - repo: local
+    hooks:
+      # JS/TS formatting — uses the project's .prettierrc so config stays in sync
+      - id: prettier-js
+        name: Prettier (JS/TS)
+        language: node
+        entry: prettier --check --config languages/js/.prettierrc
+        files: ^languages/js/src/
+        types_or: [javascript, ts]
+        additional_dependencies: ['prettier@^3.0.0']
+
+      # Tallman list freshness — regenerates the compiled artifact; if the
+      # committed version is stale, pre-commit detects the modification and
+      # fails (standard pre-commit fix-and-fail pattern). Only runs when
+      # source lists are staged. Uses plain `node` — no bash required.
+      - id: compile-lists-freshness
+        name: Tallman lists freshness
+        language: system
+        entry: node tools/compile-lists/compile-lists.js
+        pass_filenames: false
+        files: ^tallman-lists/.*\.json$
+
+      # C# formatting — heavy toolchain, manual stage only
+      - id: dotnet-format
+        name: dotnet format (C#)
+        language: system
+        entry: dotnet format languages/csharp/ToTallman.sln
+        pass_filenames: false
+        files: ^languages/csharp/
+        stages: [manual]
+
+      # Java formatting — heavy toolchain, manual stage only
+      - id: spotless-java
+        name: Spotless apply (Java)
+        language: system
+        entry: mvn -f languages/java/pom.xml spotless:apply --no-transfer-progress
+        pass_filenames: false
+        files: ^languages/java/
+        stages: [manual]

@@ -2,6 +2,9 @@
 > **Major Refactor in Progress (v2.0.0)**
 > This repository is undergoing a complete rewrite for multi-language support and to address outstanding test cases. Work is tracked in [GitHub issues](https://github.com/MattCordell/ToTallman/issues). The content below the divider describes the current (v1) API and will be updated when v2 ships.
 
+[![CI](https://github.com/MattCordell/ToTallman/actions/workflows/ci.yml/badge.svg)](https://github.com/MattCordell/ToTallman/actions/workflows/ci.yml)
+[![CodeQL](https://github.com/MattCordell/ToTallman/actions/workflows/codeql.yml/badge.svg)](https://github.com/MattCordell/ToTallman/actions/workflows/codeql.yml)
+
 ## v2.0.0 Progress
 
 | Phase | Status |
@@ -10,7 +13,7 @@
 | 2. Canonical test suite | ✅ Complete |
 | 3. C# implementation | ✅ Complete — 99/99 canonical, 102/102 native |
 | 4. Multi-language (Python → JS → Java) | ✅ Complete — Python ✅ 99/99 canonical [#24](https://github.com/MattCordell/ToTallman/issues/24); JS ✅ 99/99 canonical [#25](https://github.com/MattCordell/ToTallman/issues/25); Java ✅ 99/99 canonical [#26](https://github.com/MattCordell/ToTallman/issues/26) |
-| 5. CI/CD | 🚧 In progress — minimal CI live (build + canonical tests + artifact freshness); full pipeline [#14](https://github.com/MattCordell/ToTallman/issues/14) |
+| 5. CI/CD | ✅ Complete — SHA-pinned Actions, dependency caching, Dependabot, CodeQL scanning, pre-commit hooks [#14](https://github.com/MattCordell/ToTallman/issues/14) |
 | 6. Documentation & release | ⏳ Planned — [#15](https://github.com/MattCordell/ToTallman/issues/15) |
 
 Detailed, up-to-date work lives in [GitHub issues](https://github.com/MattCordell/ToTallman/issues).
