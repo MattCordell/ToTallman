@@ -51,12 +51,14 @@ repos:
         types_or: [javascript, ts]
         additional_dependencies: ['prettier@^3.0.0']
 
-      # Tallman list freshness — regenerates the compiled artifact and fails if
-      # the committed version is stale. Only runs when source lists are staged.
+      # Tallman list freshness — regenerates the compiled artifact; if the
+      # committed version is stale, pre-commit detects the modification and
+      # fails (standard pre-commit fix-and-fail pattern). Only runs when
+      # source lists are staged. Uses plain `node` — no bash required.
       - id: compile-lists-freshness
         name: Tallman lists freshness
         language: system
-        entry: bash -c 'node tools/compile-lists/compile-lists.js && git diff --exit-code -- tallman-lists/compiled/ tallman-lists/manifest.json'
+        entry: node tools/compile-lists/compile-lists.js
         pass_filenames: false
         files: ^tallman-lists/.*\.json$
 

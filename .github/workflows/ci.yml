@@ -274,9 +274,7 @@ jobs:
         with:
           node-version: '24'
           cache: 'npm'
-          cache-dependency-path: |
-            languages/js/package-lock.json
-            tools/parity-check/package-lock.json
+          cache-dependency-path: languages/js/package-lock.json
 
       # The C# adapter spawns `dotnet ToTallman.Demo.dll`; rebuild here so the
       # binary is present in this job's workspace.
