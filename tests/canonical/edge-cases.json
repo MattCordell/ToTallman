@@ -89,6 +89,12 @@
       "input": "This is a very long sentence that contains the drug name prednisone somewhere in the middle of all this text and we want to make sure it still gets converted properly even with lots of surrounding content.",
       "listId": "DEFAULT",
       "expected": "This is a very long sentence that contains the drug name predniSONE somewhere in the middle of all this text and we want to make sure it still gets converted properly even with lots of surrounding content."
+    },
+    {
+      "description": "Words matching language-reserved names pass through unchanged — not in drug list",
+      "input": "constructor toString hasOwnProperty valueOf",
+      "listId": "DEFAULT",
+      "expected": "constructor toString hasOwnProperty valueOf"
     }
   ]
 }
