@@ -8,8 +8,8 @@
 |-------|--------|
 | 1. Foundation (data format + validation) | ✅ Complete |
 | 2. Canonical test suite | ✅ Complete |
-| 3. C# implementation | ✅ Complete — 98/98 canonical, 102/102 native |
-| 4. Multi-language (Python → JS → Java) | ✅ Complete — Python ✅ 98/98 canonical [#24](https://github.com/MattCordell/ToTallman/issues/24); JS ✅ 98/98 canonical [#25](https://github.com/MattCordell/ToTallman/issues/25); Java ✅ 98/98 canonical [#26](https://github.com/MattCordell/ToTallman/issues/26) |
+| 3. C# implementation | ✅ Complete — 99/99 canonical, 102/102 native |
+| 4. Multi-language (Python → JS → Java) | ✅ Complete — Python ✅ 99/99 canonical [#24](https://github.com/MattCordell/ToTallman/issues/24); JS ✅ 99/99 canonical [#25](https://github.com/MattCordell/ToTallman/issues/25); Java ✅ 99/99 canonical [#26](https://github.com/MattCordell/ToTallman/issues/26) |
 | 5. CI/CD | 🚧 In progress — minimal CI live (build + canonical tests + artifact freshness); full pipeline [#14](https://github.com/MattCordell/ToTallman/issues/14) |
 | 6. Documentation & release | ⏳ Planned — [#15](https://github.com/MattCordell/ToTallman/issues/15) |
 

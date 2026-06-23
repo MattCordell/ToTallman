@@ -69,7 +69,7 @@ jobs:
       - name: Build solution (incl. demo used by the shared harness)
         run: dotnet build languages/csharp/ToTallman.sln -c Debug
 
-      - name: Test (102 native + 98 canonical)
+      - name: Test (102 native + 99 canonical)
         run: dotnet test languages/csharp/ToTallman.sln -c Debug --no-build
 
       - name: Install test-runner dependencies
