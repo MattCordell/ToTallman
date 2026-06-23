@@ -1,0 +1,100 @@
+version: 2
+updates:
+  # GitHub Actions — covers all workflows under .github/workflows/
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+    groups:
+      actions:
+        patterns: ['*']
+    open-pull-requests-limit: 5
+
+  # JavaScript / TypeScript implementation
+  - package-ecosystem: npm
+    directory: /languages/js
+    schedule:
+      interval: weekly
+      day: monday
+    groups:
+      js-deps:
+        update-types: ['minor', 'patch']
+    open-pull-requests-limit: 5
+
+  # Shared tools — validator
+  - package-ecosystem: npm
+    directory: /tools/validator
+    schedule:
+      interval: weekly
+      day: monday
+    groups:
+      tools-deps:
+        update-types: ['minor', 'patch']
+    open-pull-requests-limit: 3
+
+  # Shared tools — test-runner
+  - package-ecosystem: npm
+    directory: /tools/test-runner
+    schedule:
+      interval: weekly
+      day: monday
+    groups:
+      tools-deps:
+        update-types: ['minor', 'patch']
+    open-pull-requests-limit: 3
+
+  # Shared tools — compile-lists
+  - package-ecosystem: npm
+    directory: /tools/compile-lists
+    schedule:
+      interval: weekly
+      day: monday
+    groups:
+      tools-deps:
+        update-types: ['minor', 'patch']
+    open-pull-requests-limit: 3
+
+  # Shared tools — parity-check
+  - package-ecosystem: npm
+    directory: /tools/parity-check
+    schedule:
+      interval: weekly
+      day: monday
+    groups:
+      tools-deps:
+        update-types: ['minor', 'patch']
+    open-pull-requests-limit: 3
+
+  # Python implementation
+  - package-ecosystem: pip
+    directory: /languages/python
+    schedule:
+      interval: weekly
+      day: monday
+    groups:
+      python-deps:
+        update-types: ['minor', 'patch']
+    open-pull-requests-limit: 5
+
+  # Java implementation
+  - package-ecosystem: maven
+    directory: /languages/java
+    schedule:
+      interval: weekly
+      day: monday
+    groups:
+      java-deps:
+        update-types: ['minor', 'patch']
+    open-pull-requests-limit: 5
+
+  # C# implementation
+  - package-ecosystem: nuget
+    directory: /languages/csharp
+    schedule:
+      interval: weekly
+      day: monday
+    groups:
+      nuget-deps:
+        update-types: ['minor', 'patch']
+    open-pull-requests-limit: 5
