@@ -78,6 +78,8 @@ A null/empty string input always returns `""` without throwing.
 
 ## Development
 
+> **Prerequisite:** Node.js 20.19+ (or 22.13+, or 24+) for the dev toolchain — eslint 10 drops Node 18. The published library itself still runs on Node 18+ (see `engines` in `package.json`).
+
 ```sh
 # In languages/js/
 
