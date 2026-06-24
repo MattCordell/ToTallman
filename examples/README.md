@@ -6,8 +6,8 @@ Each example takes a sample medication sentence, applies Tall Man lettering with
 `DEFAULT` list and the `AU` (Australian) list, and prints both results. An optional
 command-line argument lets you supply your own text.
 
-| Language | Path | One-line run (from repo root) |
-|----------|------|-------------------------------|
+| Language | Path | Run (after build, from repo root) |
+|----------|------|-----------------------------------|
 | C# | [examples/csharp/](csharp/) | `dotnet run --project examples/csharp/Example.csproj` |
 | Python | [examples/python/](python/) | `python examples/python/example.py` |
 | JavaScript | [examples/javascript/](javascript/) | `node examples/javascript/example.js` |

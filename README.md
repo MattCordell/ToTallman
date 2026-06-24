@@ -25,8 +25,8 @@ Detailed, up-to-date work lives in [GitHub issues](https://github.com/MattCordel
 
 Runnable examples for each language live under [`examples/`](examples/):
 
-| Language | Path | One-line run (from repo root) |
-|----------|------|-------------------------------|
+| Language | Path | Run (after build, from repo root) |
+|----------|------|-----------------------------------|
 | C# | [examples/csharp/](examples/csharp/) | `dotnet run --project examples/csharp/Example.csproj` |
 | Python | [examples/python/](examples/python/) | `python examples/python/example.py` |
 | JavaScript | [examples/javascript/](examples/javascript/) | `node examples/javascript/example.js` |
