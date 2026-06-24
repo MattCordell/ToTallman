@@ -1,0 +1,13 @@
+{
+  "name": "totallman-build-lists",
+  "version": "1.0.0",
+  "description": "Transforms reviewed source extracts into build-ready Tall Man list JSON",
+  "scripts": {
+    "build": "node build-lists.js",
+    "build:dry": "node build-lists.js --dry-run"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "private": true
+}

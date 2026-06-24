@@ -1,0 +1,20 @@
+{
+  "id": "AU",
+  "authority": "Australian Commission on Safety and Quality in Health Care (ACSQHC)",
+  "list_name": "National Mixed-Case Lettering List",
+  "country": "Australia",
+  "document_version": "20240400.0",
+  "document_date": "April 2024",
+  "source_url": "https://www.safetyandquality.gov.au/publications-and-resources/resource-library/national-mixed-case-lettering-list",
+  "direct_download_url": "https://www.safetyandquality.gov.au/sites/default/files/2024-04/national_mixed-case_lettering_list.pdf",
+  "retrieved_date": "2026-06-11",
+  "archived_file": "national_mixed-case_lettering_list_2024-04.pdf",
+  "sha256": "d1766ed82f401260f3ee17dd9e3b63295b360d28c2aa26f50ebc07a3e4f599c0",
+  "format": "PDF",
+  "machine_readable": false,
+  "licence": "CC BY-NC-ND 4.0 International",
+  "licence_notes": "Verbatim redistribution with attribution permitted for non-commercial use. No derivative works. Commercial use requires separate permission from ACSQHC (communications@safetyandquality.gov.au). The archived PDF is redistributed verbatim here under CC BY-NC-ND 4.0.",
+  "monitoring": "Check annually at the source URL above. Most recent update was April 2024 (renamed from 'National Tall Man Lettering List').",
+  "notes": "List was renamed from 'National Tall Man Lettering List' to 'National Mixed-Case Lettering List' in the April 2024 revision. Structured in tables: Table 1 (general LASA pairs), Table 2 (oncology), Table 3 (drug classes), Table 4 (mab suffix), Table 5 (nib/gib suffix). Explicitly intended for AMT (Australian Medicines Terminology) integration.",
+  "extract_file": "20240400.0.csv"
+}

@@ -1,0 +1,20 @@
+{
+  "id": "ISMP-SUPP",
+  "authority": "Institute for Safe Medication Practices (ISMP)",
+  "list_name": "ISMP List of Look-Alike Drug Names (Table 2 supplementary entries only)",
+  "country": "USA",
+  "document_version": "20230100.0",
+  "document_date": "January 2023",
+  "source_url": "https://www.ismp.org/node/136",
+  "direct_download_url": "https://www.ismp.org/system/files/resources/2023-01/ISMP_Tallman_Letters_012523_MS5087%20(2).pdf",
+  "retrieved_date": "2026-06-11",
+  "archived_file": "ISMP_Tallman_Letters_2023-01.pdf",
+  "sha256": "e56c550f5a62c686b9cf17647b91352594afad18fb0639ef2a9f16102aed1178",
+  "format": "PDF",
+  "machine_readable": false,
+  "licence": "© 2023 ISMP",
+  "licence_notes": "CAUTION: Internal reproduction with attribution permitted; other use requires written permission from ISMP. The archived PDF is stored for transcription reference only. Confirm with ISMP before publishing this archived PDF in a public repository; consider storing only the citation + checksum rather than the binary if permission cannot be obtained.",
+  "monitoring": "Updated following periodic ISMP surveys and Medication Safety Alert releases. January 2023 was the most recent full revision. Check ismp.org for announcements.",
+  "notes": "This extract covers TABLE 2 ONLY (ISMP supplementary entries not in the FDA list). Table 1 of the ISMP document is identical to the FDA list and is covered by sources/FDA/. The combined ISMP list (FDA + ISMP-SUPP) is derived deterministically by tools/build-lists. The January 2023 update added seven new name pairs including cycloPHOSphamide, droPERidol/droNABinol, dexAMETHasone/dexmedeTOMIDine, and pyRIDostigmine/PHYSostigmine. Brand name entries are marked with flag 'brand' in the extract CSV.",
+  "extract_file": "20230100.0.csv"
+}

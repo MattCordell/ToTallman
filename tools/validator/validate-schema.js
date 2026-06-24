@@ -196,6 +196,29 @@ function validateEntries(data, fileName) {
   } else {
     logSuccess(`  All entries are ASCII-only`);
   }
+
+  // Upper/lower rule: every Tall Man entry must highlight something by containing
+  // at least one uppercase AND one lowercase letter.
+  const noTMLEntries = data.entries.filter(e => !(/[A-Z]/.test(e) && /[a-z]/.test(e)));
+  if (noTMLEntries.length > 0) {
+    logError(`  Found ${noTMLEntries.length} entry(ies) without both uppercase and lowercase (upper/lower rule):`);
+    noTMLEntries.forEach(e => logError(`    "${e}"`));
+    hasErrors = true;
+  } else {
+    logSuccess(`  All entries satisfy upper/lower rule`);
+  }
+
+  // Sort order rule: entries must be casefold-sorted (toLowerCase order).
+  // build-lists.js guarantees this; a violation means the file was hand-edited.
+  const sorted = [...data.entries].sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
+  const unsortedIdx = data.entries.findIndex((e, i) => e !== sorted[i]);
+  if (unsortedIdx !== -1) {
+    logError(`  Entries are not casefold-sorted (first mismatch at index ${unsortedIdx}: "${data.entries[unsortedIdx]}" should be "${sorted[unsortedIdx]}")`);
+    logError(`  Run tools/build-lists/build-lists.js to regenerate sorted output`);
+    hasErrors = true;
+  } else {
+    logSuccess(`  Entries are casefold-sorted`);
+  }
 }
 
 function validateVersion(data, fileName) {
