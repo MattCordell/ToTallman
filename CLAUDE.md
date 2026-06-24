@@ -271,7 +271,7 @@ Unicode NFC normalization is required at algorithm start. Non-negotiable.
 2. **Validate data**: Run `tools/validator` before any coding
 3. **Understand v1.x failures**: Read `tests/canonical/KNOWN-FAILURES.md`
 4. **Follow canonical algorithm**: Character iteration, Unicode NFC, proper casefolding
-5. **Test rigorously**: 100% pass required (99/99 canonical; C# `dotnet test` is 102/102)
+5. **Test rigorously**: 100% pass required (99/99 canonical; C# `dotnet test` is 123/123)
 6. **Respect phase gates**: Phase 3 blocks Phases 4-6
 
 The project is well-structured with clear separation: data layer (Phase 1), tests (Phase 2), implementation (Phases 3-4), automation (Phase 5), documentation (Phase 6). Phase 3 (C#) is complete at 100% canonical pass; the next focus is Phase 4 (Python → JS → Java), each plugging into the shared list-compilation pipeline.

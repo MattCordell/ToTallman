@@ -15,11 +15,24 @@
 | 4. Multi-language (Python → JS → Java) | ✅ Complete — Python ✅ 99/99 canonical [#24](https://github.com/MattCordell/ToTallman/issues/24); JS ✅ 99/99 canonical [#25](https://github.com/MattCordell/ToTallman/issues/25); Java ✅ 99/99 canonical [#26](https://github.com/MattCordell/ToTallman/issues/26) |
 | 5. CI/CD | ✅ Complete — SHA-pinned Actions, dependency caching, Dependabot, CodeQL scanning, pre-commit hooks [#14](https://github.com/MattCordell/ToTallman/issues/14) |
 | 6. Documentation | ⏳ Planned — [#15](https://github.com/MattCordell/ToTallman/issues/15) |
-| 7. Example applications | ⏳ Planned — [#47](https://github.com/MattCordell/ToTallman/issues/47) |
+| 7. Example applications | ✅ Complete — [#47](https://github.com/MattCordell/ToTallman/issues/47) |
 | 8. Manual list review (clinical correctness) | ⏳ Planned — [#48](https://github.com/MattCordell/ToTallman/issues/48) (gates release) |
 | 9. Release &amp; publishing | ⛔ Blocked — [#49](https://github.com/MattCordell/ToTallman/issues/49) (awaits #15, #47, #48, #28, #20) |
 
 Detailed, up-to-date work lives in [GitHub issues](https://github.com/MattCordell/ToTallman/issues).
+
+## Examples
+
+Runnable examples for each language live under [`examples/`](examples/):
+
+| Language | Path | Run (after build, from repo root) |
+|----------|------|-----------------------------------|
+| C# | [examples/csharp/](examples/csharp/) | `dotnet run --project examples/csharp/Example.csproj` |
+| Python | [examples/python/](examples/python/) | `python examples/python/example.py` |
+| JavaScript | [examples/javascript/](examples/javascript/) | `node examples/javascript/example.js` |
+| Java | [examples/java/](examples/java/) | `mvn -f examples/java/pom.xml compile exec:java` |
+
+Each example requires the library to be built first — see the README in each example directory.
 
 ### v2 Goals
 - **Byte-identical output** across C#, Python, JavaScript/TypeScript, and Java from a shared canonical dataset
