@@ -1,0 +1,12 @@
+{
+  "name": "totallman-example",
+  "version": "1.0.0",
+  "description": "ToTallman JavaScript usage example",
+  "private": true,
+  "scripts": {
+    "start": "node example.js"
+  },
+  "dependencies": {
+    "totallman": "file:../../languages/js"
+  }
+}
