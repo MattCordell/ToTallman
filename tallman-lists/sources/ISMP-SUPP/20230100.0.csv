@@ -1,132 +1,153 @@
-form,group,category,flags,page_ref,notes
-ALPRAZolam,,,,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2)
-aMILoride,,,,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2)
-amLODIPine,,,,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2)
-ARIPiprazole,,,,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2)
-AVINza,,,,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2)
-azaCITIDine,,,,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2)
-azaTHIOprine,,,,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2)
-carBAMazepine,,,,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2)
-CARBOplatin,,,,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2)
-ceFAZolin,,,,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2)
-cefoTEtan,,,,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2)
-cefOXitin,,,,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2)
-cefTAZidime,,,,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2)
-cefTRIAXone,,,,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2)
-CeleBREX,,,,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2)
-CeleXA,,,,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2)
-chlordiazePOXIDE,,,,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2)
-CISplatin,,,,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2)
-cloBAZam,,,,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2)
-clonazePAM,,,,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2)
-cloNIDine,,,,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2)
-cloZAPine,,,,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2)
-DACTINomycin,,,,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2)
-DAPTOmycin,,,,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2)
-DEPO-Medrol,,,,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2)
-diazePAM,,,,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2)
-dilTIAZem,,,,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2)
-DOCEtaxel,,,,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2)
-DULoxetine,,,,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2)
-ePHEDrine,,,,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2)
-EPINEPHrine,,,,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2)
-epiRUBicin,,,,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2)
-eriBULin,,,,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2)
-fentaNYL,,,,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2)
-flavoxATE,,,,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2)
-FLUoxetine,,,,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2)
-fluPHENAZine,,,,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2)
-fluvoxaMINE,,,,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2)
-guaiFENesin,,,,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2)
-guanFACINE,,,,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2)
-HumaLOG,,,,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2)
-HumuLIN,,,,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2)
-hydroCHLOROthiazide,,,,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2)
-HYDROcodone,,,,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2)
-HYDROXYprogesterone,,,,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2)
-IDArubicin,,,,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2)
-idaruCIZUmab,,,,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2)
-inFLIXimab,,,,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2)
-INVanz,,,,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2)
-ISOtretinoin,,,,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2)
-KlonoPIN,,,,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2)
-LaMICtal,,,,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2)
-LamISIL,,,,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2)
-lamiVUDine,,,,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2)
-lamoTRIgine,,,,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2)
-leucovorin,,,comparator,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2); LASA comparator only (no TML form - verify against 2023 ISMP PDF Table 2 and remove or assign correct TML form)
-levETIRAcetam,,,,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2)
-levOCARNitine,,,,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2)
-levoFLOXacin,,,,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2)
-LEVOleucovorin,,,,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2)
-LORazepam,,,,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2)
-metFORMIN,,,,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2)
-methazolAMIDE,,,,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2)
-methIMAzole,,,,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2)
-metOLazone,,,,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2)
-metroNIDAZOLE,,,,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2)
-metyraPONE,,,,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2)
-metyroSINE,,,,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2)
-miFEPRIStone,,,,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2)
-miSOPROStol,,,,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2)
-mitoMYcin,,,,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2)
-morphine,,,comparator,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2); LASA comparator only (no TML form - verify against 2023 ISMP PDF Table 2 and remove or assign correct TML form)
-NexAVAR,,,,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2)
-NexIUM,,,,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2)
-niMODipine,,,,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2)
-NovoLIN,,,,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2)
-NovoLOG,,,,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2)
-OLANZapine,,,,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2)
-OXcarbazepine,,,,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2)
-oxyCODONE,,,,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2)
-OxyCONTIN,,,,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2)
-oxyMORphone,,,,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2)
-PACLitaxel,,,,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2)
-PARoxetine,,,,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2)
-PAZOPanib,,,,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2)
-PEMEtrexed,,,,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2)
-penicillAMINE,,,,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2)
-penicillin,,,comparator,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2); LASA comparator only (no TML form - verify against 2023 ISMP PDF Table 2 and remove or assign correct TML form)
-PENTobarbital,,,,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2)
-PHENobarbital,,,,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2)
-PONATinib,,,,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2)
-PRALAtrexate,,,,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2)
-PriLOSEC,,,,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2)
-PROzac,,,,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2)
-QUEtiapine,,,,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2)
-quiNIDine,,,,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2)
-quiNINE,,,,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2)
-RABEprazole,,,,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2)
-raNITIdine,,,,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2)
-rifAMPin,,,,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2)
-rifAXIMin,,,,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2)
-riMANTAdine,,,,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2)
-RisperDAL,,,,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2)
-riTUXimab,,,,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2)
-romiDEPsin,,,,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2)
-romiPLOStim,,,,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2)
-SandIMMUNE,,,,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2)
-SandoSTATIN,,,,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2)
-sAXagliptin,,,,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2)
-SEROquel,,,,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2)
-SINEquan,,,,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2)
-SITagliptin,,,,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2)
-Solu-CORTEF,,,,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2)
-SOLU-Medrol,,,,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2)
-SORAfenib,,,,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2)
-SUFentanil,,,,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2)
-sulfaSALAzine,,,,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2)
-SUMAtriptan,,,,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2)
-SUNItinib,,,,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2)
-TEGretol,,,,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2)
-tiaGABine,,,,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2)
-tiZANidine,,,,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2)
-traMADol,,,,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2)
-traZODone,,,,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2)
-TRENtal,,,,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2)
-tretinoin,,,comparator,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2); LASA comparator only (no TML form - verify against 2023 ISMP PDF Table 2 and remove or assign correct TML form)
-valACYclovir,,,,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2)
-valGANciclovir,,,,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2)
-ZOLMitriptan,,,,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2)
-ZyPREXA,,,,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2)
-ZyrTEC,,,,,DRAFT: derived from ISMP.json minus FDA.json v20160101; must be verified against January 2023 ISMP PDF (Table 2)
+﻿form,group,category,flags,page_ref,notes
+ALfentanil,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+ALPRAZolam,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+aMILoride,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+amLODIPine,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+ARIPiprazole,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+azaCITIDine,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+azaTHIOprine,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+BUPivacaine,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+carBAMazepine,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+CARBOplatin,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+ceFAZolin,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+cefoTEtan,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+cefOXitin,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+cefTAZidime,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+cefTRIAXone,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+CeleBREX,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+CeleXA,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+chlordiazePOXIDE,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+chlorproMAZINE,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+CISplatin,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+cloBAZam,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+clonazePAM,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+cloNIDine,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+cloZAPine,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+cycloPHOSphamide,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+cycloSERINE,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+cycloSPORINE,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+DACTINomycin,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+DAPTOmycin,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+DEPO-Medrol,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+dexAMETHasone,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+dexmedeTOMIDine,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+diazePAM,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+dilTIAZem,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+DOCEtaxel,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+DOXOrubicin,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+droNABinol,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+droPERidol,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+DULoxetine,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+ePHEDrine,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+EPINEPHrine,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+epiRUBicin,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+eriBULin,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+fentaNYL,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+flavoxATE,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+FLUoxetine,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+fluPHENAZine,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+fluvoxaMINE,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+guaiFENesin,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+guanFACINE,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+HumaLOG,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+HumuLIN,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+hydrALAZINE,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+hydroCHLOROthiazide,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+HYDROcodone,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+HYDROmorphone,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+HYDROXYprogesterone,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+hydrOXYzine,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+IDArubicin,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+idaruCIZUmab,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+inFLIXimab,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+ISOtretinoin,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+KlonoPIN,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+LaMICtal,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+LamISIL,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+lamiVUDine,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+lamoTRIgine,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+leucovorin,,,comparator,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+levETIRAcetam,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+levOCARNitine,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+levoFLOXacin,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+LEVOleucovorin,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+LORazepam,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+medroxyPROGESTERone,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+metFORMIN,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+methazolAMIDE,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+methIMAzole,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+metOLazone,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+metroNIDAZOLE,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+metyraPONE,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+metyroSINE,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+miFEPRIStone,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+migALAstat,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+migLUstat,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+miSOPROStol,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+mitoMYcin,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+mitoXANTRONE,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+morphine,,,comparator,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+NexAVAR,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+NexIUM,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+niCARdipine,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+NIFEdipine,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+niMODipine,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+NovoLIN,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+NovoLOG,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+OLANZapine,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+OXcarbazepine,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+oxyBUTYnin,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+oxyCODONE,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+OxyCONTIN,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+oxyMORphone,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+PACLitaxel,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+PARoxetine,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+PAZOPanib,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+PEMEtrexed,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+penicillAMINE,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+penicillin,,,comparator,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+PENTobarbital,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+PHENobarbital,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+PHYSostigmine,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+PONATinib,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+PRALAtrexate,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+PriLOSEC,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+PROzac,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+pyRIDostigmine,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+QUEtiapine,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+quiNIDine,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+quiNINE,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+RABEprazole,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+raNITIdine,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+rifAMPin,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+rifAXIMin,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+riMANTAdine,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+RisperDAL,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+risperiDONE,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+riTUXimab,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+romiDEPsin,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+romiPLOStim,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+rOPINIRole,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+ROPivacaine,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+SandIMMUNE,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+SandoSTATIN,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+sAXagliptin,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+SITagliptin,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+Solu-CORTEF,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+SOLU-Medrol,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+SORAfenib,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+SUFentanil,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+sulfADIAZINE,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+sulfaSALAzine,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+SUMAtriptan,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+SUNItinib,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+tiaGABine,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+tiZANidine,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+traMADol,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+traZODone,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+tretinoin,,,comparator,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+valACYclovir,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+valGANciclovir,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+ZOLMitriptan,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+ZyPREXA,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,
+ZyrTEC,,,,Table 2. ISMP List of Additional Drug Names with Tall Man (Mixed Case) Letters,

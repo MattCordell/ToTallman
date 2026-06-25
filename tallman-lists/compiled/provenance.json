@@ -2520,8 +2520,8 @@
       },
       "chlorpromazine": {
         "form": "chlorproMAZINE",
-        "authority": "FDA",
-        "version": "20260612.0"
+        "authority": "ISMP-SUPP",
+        "version": "20230100.0"
       },
       "chlorpropamide": {
         "form": "chlorproPAMIDE",
@@ -2550,13 +2550,13 @@
       },
       "cyclosporine": {
         "form": "cycloSPORINE",
-        "authority": "FDA",
-        "version": "20260612.0"
+        "authority": "ISMP-SUPP",
+        "version": "20230100.0"
       },
       "cycloserine": {
         "form": "cycloSERINE",
-        "authority": "FDA",
-        "version": "20260612.0"
+        "authority": "ISMP-SUPP",
+        "version": "20230100.0"
       },
       "daunorubicin": {
         "form": "DAUNOrubicin",
@@ -2565,8 +2565,8 @@
       },
       "doxorubicin": {
         "form": "DOXOrubicin",
-        "authority": "FDA",
-        "version": "20260612.0"
+        "authority": "ISMP-SUPP",
+        "version": "20230100.0"
       },
       "dimenhydrinate": {
         "form": "dimenhyDRINATE",
@@ -2600,23 +2600,23 @@
       },
       "hydralazine": {
         "form": "hydrALAZINE",
-        "authority": "FDA",
-        "version": "20260612.0"
+        "authority": "ISMP-SUPP",
+        "version": "20230100.0"
       },
       "hydroxyzine": {
         "form": "hydrOXYzine",
-        "authority": "FDA",
-        "version": "20260612.0"
+        "authority": "ISMP-SUPP",
+        "version": "20230100.0"
       },
       "hydromorphone": {
         "form": "HYDROmorphone",
-        "authority": "FDA",
-        "version": "20260612.0"
+        "authority": "ISMP-SUPP",
+        "version": "20230100.0"
       },
       "medroxyprogesterone": {
         "form": "medroxyPROGESTERone",
-        "authority": "FDA",
-        "version": "20260612.0"
+        "authority": "ISMP-SUPP",
+        "version": "20230100.0"
       },
       "methylprednisolone": {
         "form": "methylPREDNISolone",
@@ -2630,28 +2630,28 @@
       },
       "migalastat": {
         "form": "migALAstat",
-        "authority": "FDA",
-        "version": "20260612.0"
+        "authority": "ISMP-SUPP",
+        "version": "20230100.0"
       },
       "miglustat": {
         "form": "migLUstat",
-        "authority": "FDA",
-        "version": "20260612.0"
+        "authority": "ISMP-SUPP",
+        "version": "20230100.0"
       },
       "mitoxantrone": {
         "form": "mitoXANTRONE",
-        "authority": "FDA",
-        "version": "20260612.0"
+        "authority": "ISMP-SUPP",
+        "version": "20230100.0"
       },
       "nicardipine": {
         "form": "niCARdipine",
-        "authority": "FDA",
-        "version": "20260612.0"
+        "authority": "ISMP-SUPP",
+        "version": "20230100.0"
       },
       "nifedipine": {
         "form": "NIFEdipine",
-        "authority": "FDA",
-        "version": "20260612.0"
+        "authority": "ISMP-SUPP",
+        "version": "20230100.0"
       },
       "prednisone": {
         "form": "predniSONE",
@@ -2665,18 +2665,18 @@
       },
       "risperidone": {
         "form": "risperiDONE",
-        "authority": "FDA",
-        "version": "20260612.0"
+        "authority": "ISMP-SUPP",
+        "version": "20230100.0"
       },
       "ropinirole": {
         "form": "rOPINIRole",
-        "authority": "FDA",
-        "version": "20260612.0"
+        "authority": "ISMP-SUPP",
+        "version": "20230100.0"
       },
       "sulfadiazine": {
         "form": "sulfADIAZINE",
-        "authority": "FDA",
-        "version": "20260612.0"
+        "authority": "ISMP-SUPP",
+        "version": "20230100.0"
       },
       "sulfisoxazole": {
         "form": "sulfiSOXAZOLE",
@@ -2713,6 +2713,11 @@
         "authority": "FDA",
         "version": "20260612.0"
       },
+      "alfentanil": {
+        "form": "ALfentanil",
+        "authority": "ISMP-SUPP",
+        "version": "20230100.0"
+      },
       "alprazolam": {
         "form": "ALPRAZolam",
         "authority": "ISMP-SUPP",
@@ -2733,11 +2738,6 @@
         "authority": "ISMP-SUPP",
         "version": "20230100.0"
       },
-      "avinza": {
-        "form": "AVINza",
-        "authority": "ISMP-SUPP",
-        "version": "20230100.0"
-      },
       "azacitidine": {
         "form": "azaCITIDine",
         "authority": "ISMP-SUPP",
@@ -2745,6 +2745,11 @@
       },
       "azathioprine": {
         "form": "azaTHIOprine",
+        "authority": "ISMP-SUPP",
+        "version": "20230100.0"
+      },
+      "bupivacaine": {
+        "form": "BUPivacaine",
         "authority": "ISMP-SUPP",
         "version": "20230100.0"
       },
@@ -2813,6 +2818,11 @@
         "authority": "ISMP-SUPP",
         "version": "20230100.0"
       },
+      "cyclophosphamide": {
+        "form": "cycloPHOSphamide",
+        "authority": "ISMP-SUPP",
+        "version": "20230100.0"
+      },
       "dactinomycin": {
         "form": "DACTINomycin",
         "authority": "ISMP-SUPP",
@@ -2828,6 +2838,16 @@
         "authority": "ISMP-SUPP",
         "version": "20230100.0"
       },
+      "dexamethasone": {
+        "form": "dexAMETHasone",
+        "authority": "ISMP-SUPP",
+        "version": "20230100.0"
+      },
+      "dexmedetomidine": {
+        "form": "dexmedeTOMIDine",
+        "authority": "ISMP-SUPP",
+        "version": "20230100.0"
+      },
       "diazepam": {
         "form": "diazePAM",
         "authority": "ISMP-SUPP",
@@ -2840,6 +2860,16 @@
       },
       "docetaxel": {
         "form": "DOCEtaxel",
+        "authority": "ISMP-SUPP",
+        "version": "20230100.0"
+      },
+      "dronabinol": {
+        "form": "droNABinol",
+        "authority": "ISMP-SUPP",
+        "version": "20230100.0"
+      },
+      "droperidol": {
+        "form": "droPERidol",
         "authority": "ISMP-SUPP",
         "version": "20230100.0"
       },
@@ -2940,11 +2970,6 @@
       },
       "infliximab": {
         "form": "inFLIXimab",
-        "authority": "ISMP-SUPP",
-        "version": "20230100.0"
-      },
-      "invanz": {
-        "form": "INVanz",
         "authority": "ISMP-SUPP",
         "version": "20230100.0"
       },
@@ -3088,6 +3113,11 @@
         "authority": "ISMP-SUPP",
         "version": "20230100.0"
       },
+      "oxybutynin": {
+        "form": "oxyBUTYnin",
+        "authority": "ISMP-SUPP",
+        "version": "20230100.0"
+      },
       "oxycodone": {
         "form": "oxyCODONE",
         "authority": "ISMP-SUPP",
@@ -3138,6 +3168,11 @@
         "authority": "ISMP-SUPP",
         "version": "20230100.0"
       },
+      "physostigmine": {
+        "form": "PHYSostigmine",
+        "authority": "ISMP-SUPP",
+        "version": "20230100.0"
+      },
       "ponatinib": {
         "form": "PONATinib",
         "authority": "ISMP-SUPP",
@@ -3155,6 +3190,11 @@
       },
       "prozac": {
         "form": "PROzac",
+        "authority": "ISMP-SUPP",
+        "version": "20230100.0"
+      },
+      "pyridostigmine": {
+        "form": "pyRIDostigmine",
         "authority": "ISMP-SUPP",
         "version": "20230100.0"
       },
@@ -3218,6 +3258,11 @@
         "authority": "ISMP-SUPP",
         "version": "20230100.0"
       },
+      "ropivacaine": {
+        "form": "ROPivacaine",
+        "authority": "ISMP-SUPP",
+        "version": "20230100.0"
+      },
       "sandimmune": {
         "form": "SandIMMUNE",
         "authority": "ISMP-SUPP",
@@ -3230,16 +3275,6 @@
       },
       "saxagliptin": {
         "form": "sAXagliptin",
-        "authority": "ISMP-SUPP",
-        "version": "20230100.0"
-      },
-      "seroquel": {
-        "form": "SEROquel",
-        "authority": "ISMP-SUPP",
-        "version": "20230100.0"
-      },
-      "sinequan": {
-        "form": "SINEquan",
         "authority": "ISMP-SUPP",
         "version": "20230100.0"
       },
@@ -3283,11 +3318,6 @@
         "authority": "ISMP-SUPP",
         "version": "20230100.0"
       },
-      "tegretol": {
-        "form": "TEGretol",
-        "authority": "ISMP-SUPP",
-        "version": "20230100.0"
-      },
       "tiagabine": {
         "form": "tiaGABine",
         "authority": "ISMP-SUPP",
@@ -3295,11 +3325,6 @@
       },
       "tizanidine": {
         "form": "tiZANidine",
-        "authority": "ISMP-SUPP",
-        "version": "20230100.0"
-      },
-      "trental": {
-        "form": "TRENtal",
         "authority": "ISMP-SUPP",
         "version": "20230100.0"
       },
@@ -4838,7 +4863,7 @@
       "cyclosporine": {
         "form": "cycloSPORINE",
         "authority": "ISMP",
-        "version": "20260612.0"
+        "version": "20230100.0"
       },
       "dimenhydrinate": {
         "form": "dimenhyDRINATE",
@@ -4858,7 +4883,7 @@
       "hydroxyzine": {
         "form": "hydrOXYzine",
         "authority": "ISMP",
-        "version": "20260612.0"
+        "version": "20230100.0"
       },
       "methylprednisolone": {
         "form": "methylPREDNISolone",
@@ -4873,22 +4898,22 @@
       "migalastat": {
         "form": "migALAstat",
         "authority": "ISMP",
-        "version": "20260612.0"
+        "version": "20230100.0"
       },
       "miglustat": {
         "form": "migLUstat",
         "authority": "ISMP",
-        "version": "20260612.0"
+        "version": "20230100.0"
       },
       "mitoxantrone": {
         "form": "mitoXANTRONE",
         "authority": "ISMP",
-        "version": "20260612.0"
+        "version": "20230100.0"
       },
       "nicardipine": {
         "form": "niCARdipine",
         "authority": "ISMP",
-        "version": "20260612.0"
+        "version": "20230100.0"
       },
       "prednisolone": {
         "form": "prednisoLONE",
@@ -4915,6 +4940,11 @@
         "authority": "ISMP",
         "version": "20230100.0"
       },
+      "alfentanil": {
+        "form": "ALfentanil",
+        "authority": "ISMP",
+        "version": "20230100.0"
+      },
       "alprazolam": {
         "form": "ALPRAZolam",
         "authority": "ISMP",
@@ -4925,13 +4955,13 @@
         "authority": "ISMP",
         "version": "20230100.0"
       },
-      "avinza": {
-        "form": "AVINza",
+      "azacitidine": {
+        "form": "azaCITIDine",
         "authority": "ISMP",
         "version": "20230100.0"
       },
-      "azacitidine": {
-        "form": "azaCITIDine",
+      "bupivacaine": {
+        "form": "BUPivacaine",
         "authority": "ISMP",
         "version": "20230100.0"
       },
@@ -4952,6 +4982,16 @@
       },
       "diltiazem": {
         "form": "dilTIAZem",
+        "authority": "ISMP",
+        "version": "20230100.0"
+      },
+      "dronabinol": {
+        "form": "droNABinol",
+        "authority": "ISMP",
+        "version": "20230100.0"
+      },
+      "droperidol": {
+        "form": "droPERidol",
         "authority": "ISMP",
         "version": "20230100.0"
       },
@@ -5012,11 +5052,6 @@
       },
       "idarucizumab": {
         "form": "idaruCIZUmab",
-        "authority": "ISMP",
-        "version": "20230100.0"
-      },
-      "invanz": {
-        "form": "INVanz",
         "authority": "ISMP",
         "version": "20230100.0"
       },
@@ -5110,6 +5145,11 @@
         "authority": "ISMP",
         "version": "20230100.0"
       },
+      "oxybutynin": {
+        "form": "oxyBUTYnin",
+        "authority": "ISMP",
+        "version": "20230100.0"
+      },
       "oxycodone": {
         "form": "oxyCODONE",
         "authority": "ISMP",
@@ -5135,6 +5175,11 @@
         "authority": "ISMP",
         "version": "20230100.0"
       },
+      "physostigmine": {
+        "form": "PHYSostigmine",
+        "authority": "ISMP",
+        "version": "20230100.0"
+      },
       "pralatrexate": {
         "form": "PRALAtrexate",
         "authority": "ISMP",
@@ -5142,6 +5187,11 @@
       },
       "prilosec": {
         "form": "PriLOSEC",
+        "authority": "ISMP",
+        "version": "20230100.0"
+      },
+      "pyridostigmine": {
+        "form": "pyRIDostigmine",
         "authority": "ISMP",
         "version": "20230100.0"
       },
@@ -5180,6 +5230,11 @@
         "authority": "ISMP",
         "version": "20230100.0"
       },
+      "ropivacaine": {
+        "form": "ROPivacaine",
+        "authority": "ISMP",
+        "version": "20230100.0"
+      },
       "sandimmune": {
         "form": "SandIMMUNE",
         "authority": "ISMP",
@@ -5187,16 +5242,6 @@
       },
       "sandostatin": {
         "form": "SandoSTATIN",
-        "authority": "ISMP",
-        "version": "20230100.0"
-      },
-      "seroquel": {
-        "form": "SEROquel",
-        "authority": "ISMP",
-        "version": "20230100.0"
-      },
-      "sinequan": {
-        "form": "SINEquan",
         "authority": "ISMP",
         "version": "20230100.0"
       },

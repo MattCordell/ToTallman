@@ -8,7 +8,7 @@
   {
     "id": "DEFAULT",
     "version": "20240400.0",
-    "entries": 381,
+    "entries": 385,
     "description": "Default Tall Man list (AU+NZ+ISMP, precedence AU>NZ>ISMP). Sources: AU 20240400.0, NZ 20231000.0, ISMP 20230100.0."
   },
   {
@@ -20,7 +20,7 @@
   {
     "id": "ISMP",
     "version": "20230100.0",
-    "entries": 166,
+    "entries": 171,
     "description": "FDA and ISMP Lists of Look-Alike Drug Names (ISMP combined)"
   },
   {
