@@ -91,7 +91,11 @@ async function fetchFDAForms() {
   const tdPattern = /<td[^>]*>([\s\S]*?)<\/td>/gi;
   let m;
   while ((m = tdPattern.exec(html)) !== null) {
-    const cell = m[1].replace(/<[^>]+>/g, '').trim();
+    // Strip HTML tags iteratively so nested/malformed markup (e.g. <<script>>) cannot survive
+    let cell = m[1];
+    let prev;
+    do { prev = cell; cell = cell.replace(/<[^>]*>/g, ''); } while (cell !== prev);
+    cell = cell.trim();
     if (!cell) continue;
     // Split on ' / ' to get individual names
     const parts = cell.split(/\s*\/\s*/);
