@@ -1649,18 +1649,13 @@
         "authority": "NZ",
         "version": "20231000.0"
       },
-      "fluarix": {
-        "form": "fluARIx",
+      "flupentixol": {
+        "form": "flupENTIXOL",
         "authority": "NZ",
         "version": "20231000.0"
       },
       "flupenthixol": {
         "form": "flupENTHIXOL",
-        "authority": "NZ",
-        "version": "20231000.0"
-      },
-      "flupentixol": {
-        "form": "flupENTIXOL",
         "authority": "NZ",
         "version": "20231000.0"
       },
@@ -1839,16 +1834,6 @@
         "authority": "NZ",
         "version": "20231000.0"
       },
-      "m-enalapril": {
-        "form": "m-eNALAPRIL",
-        "authority": "NZ",
-        "version": "20231000.0"
-      },
-      "m-eslon": {
-        "form": "m-eSLON",
-        "authority": "NZ",
-        "version": "20231000.0"
-      },
       "maxidex": {
         "form": "maxiDEX",
         "authority": "NZ",
@@ -1864,6 +1849,11 @@
         "authority": "NZ",
         "version": "20231000.0"
       },
+      "m-enalapril": {
+        "form": "m-eNALAPRIL",
+        "authority": "NZ",
+        "version": "20231000.0"
+      },
       "mercaptamine": {
         "form": "mercaptAMine",
         "authority": "NZ",
@@ -1871,6 +1861,11 @@
       },
       "mercaptopurine": {
         "form": "mercaptOPURine",
+        "authority": "NZ",
+        "version": "20231000.0"
+      },
+      "m-eslon": {
+        "form": "m-eSLON",
         "authority": "NZ",
         "version": "20231000.0"
       },
@@ -4645,18 +4640,13 @@
         "authority": "NZ",
         "version": "20231000.0"
       },
-      "fluarix": {
-        "form": "fluARIx",
+      "flupentixol": {
+        "form": "flupENTIXOL",
         "authority": "NZ",
         "version": "20231000.0"
       },
       "flupenthixol": {
         "form": "flupENTHIXOL",
-        "authority": "NZ",
-        "version": "20231000.0"
-      },
-      "flupentixol": {
-        "form": "flupENTIXOL",
         "authority": "NZ",
         "version": "20231000.0"
       },
@@ -4705,16 +4695,6 @@
         "authority": "NZ",
         "version": "20231000.0"
       },
-      "m-enalapril": {
-        "form": "m-eNALAPRIL",
-        "authority": "NZ",
-        "version": "20231000.0"
-      },
-      "m-eslon": {
-        "form": "m-eSLON",
-        "authority": "NZ",
-        "version": "20231000.0"
-      },
       "maxidex": {
         "form": "maxiDEX",
         "authority": "NZ",
@@ -4727,6 +4707,16 @@
       },
       "medroxyprogesterone": {
         "form": "meDROXYPROGESTERone",
+        "authority": "NZ",
+        "version": "20231000.0"
+      },
+      "m-enalapril": {
+        "form": "m-eNALAPRIL",
+        "authority": "NZ",
+        "version": "20231000.0"
+      },
+      "m-eslon": {
+        "form": "m-eSLON",
         "authority": "NZ",
         "version": "20231000.0"
       },
