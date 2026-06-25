@@ -17,6 +17,11 @@
         "authority": "AU",
         "version": "20240400.0"
       },
+      "afatinib": {
+        "form": "aFATinib",
+        "authority": "AU",
+        "version": "20240400.0"
+      },
       "akamin": {
         "form": "aKAMin",
         "authority": "AU",
@@ -117,6 +122,11 @@
         "authority": "AU",
         "version": "20240400.0"
       },
+      "axitinib": {
+        "form": "aXITinib",
+        "authority": "AU",
+        "version": "20240400.0"
+      },
       "azathioprine": {
         "form": "azATHIOPRINE",
         "authority": "AU",
@@ -129,6 +139,31 @@
       },
       "azopt": {
         "form": "aZopt",
+        "authority": "AU",
+        "version": "20240400.0"
+      },
+      "baricitinib": {
+        "form": "bARICITinib",
+        "authority": "AU",
+        "version": "20240400.0"
+      },
+      "benralizumab": {
+        "form": "beNRALizumab",
+        "authority": "AU",
+        "version": "20240400.0"
+      },
+      "bevacizumab": {
+        "form": "beVACizumab",
+        "authority": "AU",
+        "version": "20240400.0"
+      },
+      "bezlotoxumab": {
+        "form": "beZLOTOXumab",
+        "authority": "AU",
+        "version": "20240400.0"
+      },
+      "binimetinib": {
+        "form": "biNIMEtinib",
         "authority": "AU",
         "version": "20240400.0"
       },
@@ -149,6 +184,16 @@
       },
       "bumetanide": {
         "form": "buMETANide",
+        "authority": "AU",
+        "version": "20240400.0"
+      },
+      "cabazitaxel": {
+        "form": "CABAZitaxel",
+        "authority": "AU",
+        "version": "20240400.0"
+      },
+      "cabozantinib": {
+        "form": "cABOZANtinib",
         "authority": "AU",
         "version": "20240400.0"
       },
@@ -179,11 +224,6 @@
       },
       "carboplatin": {
         "form": "cARBOplatin",
-        "authority": "AU",
-        "version": "20240400.0"
-      },
-      "carpine": {
-        "form": "CARpine",
         "authority": "AU",
         "version": "20240400.0"
       },
@@ -247,16 +287,6 @@
         "authority": "AU",
         "version": "20240400.0"
       },
-      "cephalexin": {
-        "form": "cephaLEXin",
-        "authority": "AU",
-        "version": "20240400.0"
-      },
-      "cephazolin": {
-        "form": "cephaZOLin",
-        "authority": "AU",
-        "version": "20240400.0"
-      },
       "chlorpromazine": {
         "form": "cHLORPROMAZine",
         "authority": "AU",
@@ -292,8 +322,13 @@
         "authority": "AU",
         "version": "20240400.0"
       },
-      "clomiphene": {
-        "form": "cLOMIPHEne",
+      "clobazam": {
+        "form": "cloBAZam",
+        "authority": "AU",
+        "version": "20240400.0"
+      },
+      "clomifene": {
+        "form": "cLOMIFEne",
         "authority": "AU",
         "version": "20240400.0"
       },
@@ -307,8 +342,8 @@
         "authority": "AU",
         "version": "20240400.0"
       },
-      "contin": {
-        "form": "Contin",
+      "cobimetinib": {
+        "form": "cOBIMEtinib",
         "authority": "AU",
         "version": "20240400.0"
       },
@@ -322,6 +357,16 @@
         "authority": "AU",
         "version": "20240400.0"
       },
+      "cyclizine": {
+        "form": "cycLIZINE",
+        "authority": "AU",
+        "version": "20240400.0"
+      },
+      "cyclonex": {
+        "form": "cycLONEX",
+        "authority": "AU",
+        "version": "20240400.0"
+      },
       "cyclophosphamide": {
         "form": "CYCLOPHOSPHamide",
         "authority": "AU",
@@ -332,8 +377,8 @@
         "authority": "AU",
         "version": "20240400.0"
       },
-      "cyclosporin": {
-        "form": "cyclosPORIN",
+      "dabrafenib": {
+        "form": "daBRAFEnib",
         "authority": "AU",
         "version": "20240400.0"
       },
@@ -344,6 +389,11 @@
       },
       "daptomycin": {
         "form": "daPTomycin",
+        "authority": "AU",
+        "version": "20240400.0"
+      },
+      "dasatinib": {
+        "form": "daSATinib",
         "authority": "AU",
         "version": "20240400.0"
       },
@@ -372,8 +422,18 @@
         "authority": "AU",
         "version": "20240400.0"
       },
+      "dexamethasone": {
+        "form": "dexAMETHASOne",
+        "authority": "AU",
+        "version": "20240400.0"
+      },
+      "dexmedetomidine": {
+        "form": "dexMEDETOMIDine",
+        "authority": "AU",
+        "version": "20240400.0"
+      },
       "diazepam": {
-        "form": "Diazepam",
+        "form": "DIAzepam",
         "authority": "AU",
         "version": "20240400.0"
       },
@@ -437,8 +497,38 @@
         "authority": "AU",
         "version": "20240400.0"
       },
+      "eculizumab": {
+        "form": "eCULizumab",
+        "authority": "AU",
+        "version": "20240400.0"
+      },
+      "efalizumab": {
+        "form": "eFALizumab",
+        "authority": "AU",
+        "version": "20240400.0"
+      },
+      "emicizumab": {
+        "form": "eMICizumab",
+        "authority": "AU",
+        "version": "20240400.0"
+      },
       "erythromycin": {
         "form": "ERYthromycin",
+        "authority": "AU",
+        "version": "20240400.0"
+      },
+      "flucloxacillin": {
+        "form": "flucLOXACILLIN",
+        "authority": "AU",
+        "version": "20240400.0"
+      },
+      "fluconazole": {
+        "form": "flucONAZOLe",
+        "authority": "AU",
+        "version": "20240400.0"
+      },
+      "flucytosine": {
+        "form": "flucYTOSINe",
         "authority": "AU",
         "version": "20240400.0"
       },
@@ -464,11 +554,6 @@
       },
       "glipizide": {
         "form": "gliPIZide",
-        "authority": "AU",
-        "version": "20240400.0"
-      },
-      "homatropine": {
-        "form": "HOMATROpine",
         "authority": "AU",
         "version": "20240400.0"
       },
@@ -587,8 +672,18 @@
         "authority": "AU",
         "version": "20240400.0"
       },
+      "lapatinib": {
+        "form": "laPAtinib",
+        "authority": "AU",
+        "version": "20240400.0"
+      },
       "largactil": {
         "form": "laRGACTil",
+        "authority": "AU",
+        "version": "20240400.0"
+      },
+      "lenvatinib": {
+        "form": "leNVAtinib",
         "authority": "AU",
         "version": "20240400.0"
       },
@@ -604,16 +699,6 @@
       },
       "linezolid": {
         "form": "linEZOLID",
-        "authority": "AU",
-        "version": "20240400.0"
-      },
-      "lipazil": {
-        "form": "lipAZil",
-        "authority": "AU",
-        "version": "20240400.0"
-      },
-      "lipidil": {
-        "form": "lipiDil",
         "authority": "AU",
         "version": "20240400.0"
       },
@@ -664,6 +749,11 @@
       },
       "moxifloxacin": {
         "form": "MOXifloxacin",
+        "authority": "AU",
+        "version": "20240400.0"
+      },
+      "ms contin": {
+        "form": "MS Contin",
         "authority": "AU",
         "version": "20240400.0"
       },
@@ -727,6 +817,26 @@
         "authority": "AU",
         "version": "20240400.0"
       },
+      "obinutuzumab": {
+        "form": "oBINUTUZumab",
+        "authority": "AU",
+        "version": "20240400.0"
+      },
+      "ocrelizumab": {
+        "form": "oCRELizumab",
+        "authority": "AU",
+        "version": "20240400.0"
+      },
+      "ofatumumab": {
+        "form": "oFATUMumab",
+        "authority": "AU",
+        "version": "20240400.0"
+      },
+      "omalizumab": {
+        "form": "oMALizumab",
+        "authority": "AU",
+        "version": "20240400.0"
+      },
       "oxazepam": {
         "form": "OXazepam",
         "authority": "AU",
@@ -752,6 +862,11 @@
         "authority": "AU",
         "version": "20240400.0"
       },
+      "panitumumab": {
+        "form": "pANITUMumab",
+        "authority": "AU",
+        "version": "20240400.0"
+      },
       "pariet": {
         "form": "paRIET",
         "authority": "AU",
@@ -767,8 +882,23 @@
         "authority": "AU",
         "version": "20240400.0"
       },
+      "pazopanib": {
+        "form": "pAZOPanib",
+        "authority": "AU",
+        "version": "20240400.0"
+      },
+      "pertuzumab": {
+        "form": "pERTUZumab",
+        "authority": "AU",
+        "version": "20240400.0"
+      },
       "pexsig": {
         "form": "pEXSIG",
+        "authority": "AU",
+        "version": "20240400.0"
+      },
+      "ponatinib": {
+        "form": "pONATinib",
         "authority": "AU",
         "version": "20240400.0"
       },
@@ -832,6 +962,16 @@
         "authority": "AU",
         "version": "20240400.0"
       },
+      "ramucirumab": {
+        "form": "raMUCIRumab",
+        "authority": "AU",
+        "version": "20240400.0"
+      },
+      "ranibizumab": {
+        "form": "raNIBIZumab",
+        "authority": "AU",
+        "version": "20240400.0"
+      },
       "rifampicin": {
         "form": "rifaMPICin",
         "authority": "AU",
@@ -882,6 +1022,16 @@
         "authority": "AU",
         "version": "20240400.0"
       },
+      "sonidegib": {
+        "form": "soNIDEGib",
+        "authority": "AU",
+        "version": "20240400.0"
+      },
+      "sorafenib": {
+        "form": "soRAFENib",
+        "authority": "AU",
+        "version": "20240400.0"
+      },
       "sulfadiazine": {
         "form": "sulfaDiazine",
         "authority": "AU",
@@ -894,6 +1044,11 @@
       },
       "sumatriptan": {
         "form": "sUMATRIPTAn",
+        "authority": "AU",
+        "version": "20240400.0"
+      },
+      "sunitinib": {
+        "form": "sUNITinib",
         "authority": "AU",
         "version": "20240400.0"
       },
@@ -917,6 +1072,11 @@
         "authority": "AU",
         "version": "20240400.0"
       },
+      "tofacitinib": {
+        "form": "tOFACitinib",
+        "authority": "AU",
+        "version": "20240400.0"
+      },
       "tofranil": {
         "form": "toFRANIL",
         "authority": "AU",
@@ -934,6 +1094,11 @@
       },
       "tramadol": {
         "form": "tRAMadol",
+        "authority": "AU",
+        "version": "20240400.0"
+      },
+      "trametinib": {
+        "form": "tRAMEtinib",
         "authority": "AU",
         "version": "20240400.0"
       },
@@ -3180,6 +3345,11 @@
         "authority": "AU",
         "version": "20240400.0"
       },
+      "afatinib": {
+        "form": "aFATinib",
+        "authority": "AU",
+        "version": "20240400.0"
+      },
       "akamin": {
         "form": "aKAMin",
         "authority": "AU",
@@ -3280,6 +3450,11 @@
         "authority": "AU",
         "version": "20240400.0"
       },
+      "axitinib": {
+        "form": "aXITinib",
+        "authority": "AU",
+        "version": "20240400.0"
+      },
       "azathioprine": {
         "form": "azATHIOPRINE",
         "authority": "AU",
@@ -3292,6 +3467,31 @@
       },
       "azopt": {
         "form": "aZopt",
+        "authority": "AU",
+        "version": "20240400.0"
+      },
+      "baricitinib": {
+        "form": "bARICITinib",
+        "authority": "AU",
+        "version": "20240400.0"
+      },
+      "benralizumab": {
+        "form": "beNRALizumab",
+        "authority": "AU",
+        "version": "20240400.0"
+      },
+      "bevacizumab": {
+        "form": "beVACizumab",
+        "authority": "AU",
+        "version": "20240400.0"
+      },
+      "bezlotoxumab": {
+        "form": "beZLOTOXumab",
+        "authority": "AU",
+        "version": "20240400.0"
+      },
+      "binimetinib": {
+        "form": "biNIMEtinib",
         "authority": "AU",
         "version": "20240400.0"
       },
@@ -3312,6 +3512,16 @@
       },
       "bumetanide": {
         "form": "buMETANide",
+        "authority": "AU",
+        "version": "20240400.0"
+      },
+      "cabazitaxel": {
+        "form": "CABAZitaxel",
+        "authority": "AU",
+        "version": "20240400.0"
+      },
+      "cabozantinib": {
+        "form": "cABOZANtinib",
         "authority": "AU",
         "version": "20240400.0"
       },
@@ -3342,11 +3552,6 @@
       },
       "carboplatin": {
         "form": "cARBOplatin",
-        "authority": "AU",
-        "version": "20240400.0"
-      },
-      "carpine": {
-        "form": "CARpine",
         "authority": "AU",
         "version": "20240400.0"
       },
@@ -3410,16 +3615,6 @@
         "authority": "AU",
         "version": "20240400.0"
       },
-      "cephalexin": {
-        "form": "cephaLEXin",
-        "authority": "AU",
-        "version": "20240400.0"
-      },
-      "cephazolin": {
-        "form": "cephaZOLin",
-        "authority": "AU",
-        "version": "20240400.0"
-      },
       "chlorpromazine": {
         "form": "cHLORPROMAZine",
         "authority": "AU",
@@ -3455,8 +3650,13 @@
         "authority": "AU",
         "version": "20240400.0"
       },
-      "clomiphene": {
-        "form": "cLOMIPHEne",
+      "clobazam": {
+        "form": "cloBAZam",
+        "authority": "AU",
+        "version": "20240400.0"
+      },
+      "clomifene": {
+        "form": "cLOMIFEne",
         "authority": "AU",
         "version": "20240400.0"
       },
@@ -3470,8 +3670,8 @@
         "authority": "AU",
         "version": "20240400.0"
       },
-      "contin": {
-        "form": "Contin",
+      "cobimetinib": {
+        "form": "cOBIMEtinib",
         "authority": "AU",
         "version": "20240400.0"
       },
@@ -3485,6 +3685,16 @@
         "authority": "AU",
         "version": "20240400.0"
       },
+      "cyclizine": {
+        "form": "cycLIZINE",
+        "authority": "AU",
+        "version": "20240400.0"
+      },
+      "cyclonex": {
+        "form": "cycLONEX",
+        "authority": "AU",
+        "version": "20240400.0"
+      },
       "cyclophosphamide": {
         "form": "CYCLOPHOSPHamide",
         "authority": "AU",
@@ -3495,8 +3705,8 @@
         "authority": "AU",
         "version": "20240400.0"
       },
-      "cyclosporin": {
-        "form": "cyclosPORIN",
+      "dabrafenib": {
+        "form": "daBRAFEnib",
         "authority": "AU",
         "version": "20240400.0"
       },
@@ -3507,6 +3717,11 @@
       },
       "daptomycin": {
         "form": "daPTomycin",
+        "authority": "AU",
+        "version": "20240400.0"
+      },
+      "dasatinib": {
+        "form": "daSATinib",
         "authority": "AU",
         "version": "20240400.0"
       },
@@ -3535,8 +3750,18 @@
         "authority": "AU",
         "version": "20240400.0"
       },
+      "dexamethasone": {
+        "form": "dexAMETHASOne",
+        "authority": "AU",
+        "version": "20240400.0"
+      },
+      "dexmedetomidine": {
+        "form": "dexMEDETOMIDine",
+        "authority": "AU",
+        "version": "20240400.0"
+      },
       "diazepam": {
-        "form": "Diazepam",
+        "form": "DIAzepam",
         "authority": "AU",
         "version": "20240400.0"
       },
@@ -3600,8 +3825,38 @@
         "authority": "AU",
         "version": "20240400.0"
       },
+      "eculizumab": {
+        "form": "eCULizumab",
+        "authority": "AU",
+        "version": "20240400.0"
+      },
+      "efalizumab": {
+        "form": "eFALizumab",
+        "authority": "AU",
+        "version": "20240400.0"
+      },
+      "emicizumab": {
+        "form": "eMICizumab",
+        "authority": "AU",
+        "version": "20240400.0"
+      },
       "erythromycin": {
         "form": "ERYthromycin",
+        "authority": "AU",
+        "version": "20240400.0"
+      },
+      "flucloxacillin": {
+        "form": "flucLOXACILLIN",
+        "authority": "AU",
+        "version": "20240400.0"
+      },
+      "fluconazole": {
+        "form": "flucONAZOLe",
+        "authority": "AU",
+        "version": "20240400.0"
+      },
+      "flucytosine": {
+        "form": "flucYTOSINe",
         "authority": "AU",
         "version": "20240400.0"
       },
@@ -3627,11 +3882,6 @@
       },
       "glipizide": {
         "form": "gliPIZide",
-        "authority": "AU",
-        "version": "20240400.0"
-      },
-      "homatropine": {
-        "form": "HOMATROpine",
         "authority": "AU",
         "version": "20240400.0"
       },
@@ -3750,8 +4000,18 @@
         "authority": "AU",
         "version": "20240400.0"
       },
+      "lapatinib": {
+        "form": "laPAtinib",
+        "authority": "AU",
+        "version": "20240400.0"
+      },
       "largactil": {
         "form": "laRGACTil",
+        "authority": "AU",
+        "version": "20240400.0"
+      },
+      "lenvatinib": {
+        "form": "leNVAtinib",
         "authority": "AU",
         "version": "20240400.0"
       },
@@ -3767,16 +4027,6 @@
       },
       "linezolid": {
         "form": "linEZOLID",
-        "authority": "AU",
-        "version": "20240400.0"
-      },
-      "lipazil": {
-        "form": "lipAZil",
-        "authority": "AU",
-        "version": "20240400.0"
-      },
-      "lipidil": {
-        "form": "lipiDil",
         "authority": "AU",
         "version": "20240400.0"
       },
@@ -3827,6 +4077,11 @@
       },
       "moxifloxacin": {
         "form": "MOXifloxacin",
+        "authority": "AU",
+        "version": "20240400.0"
+      },
+      "ms contin": {
+        "form": "MS Contin",
         "authority": "AU",
         "version": "20240400.0"
       },
@@ -3890,6 +4145,26 @@
         "authority": "AU",
         "version": "20240400.0"
       },
+      "obinutuzumab": {
+        "form": "oBINUTUZumab",
+        "authority": "AU",
+        "version": "20240400.0"
+      },
+      "ocrelizumab": {
+        "form": "oCRELizumab",
+        "authority": "AU",
+        "version": "20240400.0"
+      },
+      "ofatumumab": {
+        "form": "oFATUMumab",
+        "authority": "AU",
+        "version": "20240400.0"
+      },
+      "omalizumab": {
+        "form": "oMALizumab",
+        "authority": "AU",
+        "version": "20240400.0"
+      },
       "oxazepam": {
         "form": "OXazepam",
         "authority": "AU",
@@ -3915,6 +4190,11 @@
         "authority": "AU",
         "version": "20240400.0"
       },
+      "panitumumab": {
+        "form": "pANITUMumab",
+        "authority": "AU",
+        "version": "20240400.0"
+      },
       "pariet": {
         "form": "paRIET",
         "authority": "AU",
@@ -3930,8 +4210,23 @@
         "authority": "AU",
         "version": "20240400.0"
       },
+      "pazopanib": {
+        "form": "pAZOPanib",
+        "authority": "AU",
+        "version": "20240400.0"
+      },
+      "pertuzumab": {
+        "form": "pERTUZumab",
+        "authority": "AU",
+        "version": "20240400.0"
+      },
       "pexsig": {
         "form": "pEXSIG",
+        "authority": "AU",
+        "version": "20240400.0"
+      },
+      "ponatinib": {
+        "form": "pONATinib",
         "authority": "AU",
         "version": "20240400.0"
       },
@@ -3995,6 +4290,16 @@
         "authority": "AU",
         "version": "20240400.0"
       },
+      "ramucirumab": {
+        "form": "raMUCIRumab",
+        "authority": "AU",
+        "version": "20240400.0"
+      },
+      "ranibizumab": {
+        "form": "raNIBIZumab",
+        "authority": "AU",
+        "version": "20240400.0"
+      },
       "rifampicin": {
         "form": "rifaMPICin",
         "authority": "AU",
@@ -4045,6 +4350,16 @@
         "authority": "AU",
         "version": "20240400.0"
       },
+      "sonidegib": {
+        "form": "soNIDEGib",
+        "authority": "AU",
+        "version": "20240400.0"
+      },
+      "sorafenib": {
+        "form": "soRAFENib",
+        "authority": "AU",
+        "version": "20240400.0"
+      },
       "sulfadiazine": {
         "form": "sulfaDiazine",
         "authority": "AU",
@@ -4057,6 +4372,11 @@
       },
       "sumatriptan": {
         "form": "sUMATRIPTAn",
+        "authority": "AU",
+        "version": "20240400.0"
+      },
+      "sunitinib": {
+        "form": "sUNITinib",
         "authority": "AU",
         "version": "20240400.0"
       },
@@ -4080,6 +4400,11 @@
         "authority": "AU",
         "version": "20240400.0"
       },
+      "tofacitinib": {
+        "form": "tOFACitinib",
+        "authority": "AU",
+        "version": "20240400.0"
+      },
       "tofranil": {
         "form": "toFRANIL",
         "authority": "AU",
@@ -4097,6 +4422,11 @@
       },
       "tramadol": {
         "form": "tRAMadol",
+        "authority": "AU",
+        "version": "20240400.0"
+      },
+      "trametinib": {
+        "form": "tRAMEtinib",
         "authority": "AU",
         "version": "20240400.0"
       },
@@ -4175,11 +4505,6 @@
         "authority": "AU",
         "version": "20240400.0"
       },
-      "afatinib": {
-        "form": "aFATinib",
-        "authority": "NZ",
-        "version": "20231000.0"
-      },
       "alemtuzumab": {
         "form": "aLEMTUzumab",
         "authority": "NZ",
@@ -4205,18 +4530,8 @@
         "authority": "NZ",
         "version": "20231000.0"
       },
-      "axitinib": {
-        "form": "aXITinib",
-        "authority": "NZ",
-        "version": "20231000.0"
-      },
       "benzathine benzylpenicillin": {
         "form": "BENZATHINE benzylpenicillin",
-        "authority": "NZ",
-        "version": "20231000.0"
-      },
-      "bevacizumab": {
-        "form": "beVACizumab",
         "authority": "NZ",
         "version": "20231000.0"
       },
@@ -4240,6 +4555,16 @@
         "authority": "NZ",
         "version": "20231000.0"
       },
+      "cephalexin": {
+        "form": "cephaLEXin",
+        "authority": "NZ",
+        "version": "20231000.0"
+      },
+      "cephazolin": {
+        "form": "cephaZOLin",
+        "authority": "NZ",
+        "version": "20231000.0"
+      },
       "cetuximab": {
         "form": "CETUximab",
         "authority": "NZ",
@@ -4250,8 +4575,8 @@
         "authority": "NZ",
         "version": "20231000.0"
       },
-      "clomifene": {
-        "form": "cLOMIFEne",
+      "clomiphene": {
+        "form": "cLOMIPHEne",
         "authority": "NZ",
         "version": "20231000.0"
       },
@@ -4265,28 +4590,13 @@
         "authority": "NZ",
         "version": "20231000.0"
       },
-      "cobimetinib": {
-        "form": "cOBIMEtinib",
-        "authority": "NZ",
-        "version": "20231000.0"
-      },
-      "cyclizine": {
-        "form": "cyclIZINE",
-        "authority": "NZ",
-        "version": "20231000.0"
-      },
       "cycloblastin": {
         "form": "cyclOBLASTIN",
         "authority": "NZ",
         "version": "20231000.0"
       },
-      "dabrafenib": {
-        "form": "daBRAFEnib",
-        "authority": "NZ",
-        "version": "20231000.0"
-      },
-      "dasatinib": {
-        "form": "daSATinib",
+      "cyclosporin": {
+        "form": "cyclosPORIN",
         "authority": "NZ",
         "version": "20231000.0"
       },
@@ -4357,11 +4667,6 @@
       },
       "infliximab": {
         "form": "INFLIximab",
-        "authority": "NZ",
-        "version": "20231000.0"
-      },
-      "lapatinib": {
-        "form": "laPAtinib",
         "authority": "NZ",
         "version": "20231000.0"
       },
@@ -4455,21 +4760,6 @@
         "authority": "NZ",
         "version": "20231000.0"
       },
-      "obinutuzumab": {
-        "form": "oBINUTUZumab",
-        "authority": "NZ",
-        "version": "20231000.0"
-      },
-      "omalizumab": {
-        "form": "oMALizumab",
-        "authority": "NZ",
-        "version": "20231000.0"
-      },
-      "pazopanib": {
-        "form": "pAZOPanib",
-        "authority": "NZ",
-        "version": "20231000.0"
-      },
       "pegfilgrastim": {
         "form": "pegFILGRASTIM",
         "authority": "NZ",
@@ -4482,11 +4772,6 @@
       },
       "penicillamine": {
         "form": "penicillAMINE",
-        "authority": "NZ",
-        "version": "20231000.0"
-      },
-      "pertuzumab": {
-        "form": "pERTUZumab",
         "authority": "NZ",
         "version": "20231000.0"
       },
@@ -4517,16 +4802,6 @@
       },
       "rituximab": {
         "form": "RITUximab",
-        "authority": "NZ",
-        "version": "20231000.0"
-      },
-      "sorafenib": {
-        "form": "soRAFENib",
-        "authority": "NZ",
-        "version": "20231000.0"
-      },
-      "sunitinib": {
-        "form": "sUNITinib",
         "authority": "NZ",
         "version": "20231000.0"
       },
@@ -4672,11 +4947,6 @@
       },
       "chlordiazepoxide": {
         "form": "chlordiazePOXIDE",
-        "authority": "ISMP",
-        "version": "20230100.0"
-      },
-      "clobazam": {
-        "form": "cloBAZam",
         "authority": "ISMP",
         "version": "20230100.0"
       },
@@ -4862,11 +5132,6 @@
       },
       "phenobarbital": {
         "form": "PHENobarbital",
-        "authority": "ISMP",
-        "version": "20230100.0"
-      },
-      "ponatinib": {
-        "form": "PONATinib",
         "authority": "ISMP",
         "version": "20230100.0"
       },
