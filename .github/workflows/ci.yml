@@ -35,6 +35,12 @@ jobs:
         run: npm ci
         working-directory: tools/validator
 
+      - name: Build lists from source extracts (regenerates list JSON)
+        run: node tools/build-lists/build-lists.js
+
+      - name: Fail if list JSON is stale (run build-lists.js to fix)
+        run: git diff --exit-code -- tallman-lists/AU.json tallman-lists/NZ.json tallman-lists/FDA.json tallman-lists/ISMP.json tallman-lists/DEFAULT.json tallman-lists/compiled/provenance.json
+
       - name: Validate lists (regenerates manifest.json)
         run: npm run validate
         working-directory: tools/validator

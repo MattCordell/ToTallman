@@ -1,0 +1,16 @@
+{
+  "name": "totallman-build-lists-crosscheck",
+  "version": "1.0.0",
+  "description": "QA cross-check helpers: diff CSV extracts against machine-readable authority sources",
+  "scripts": {
+    "check:nz": "node nz-crosscheck.js",
+    "check:fda": "node fda-crosscheck.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "xlsx": "^0.18.5"
+  },
+  "private": true
+}

@@ -25,16 +25,16 @@
       "expected": "predniSONE"
     },
     {
-      "description": "Multiple drugs with different cases - MORPHINE normalizes to self-mapped form, HyDrOmOrPhOnE converts",
+      "description": "Multiple drugs with different cases - MORPHINE not in DEFAULT list (excluded as comparator) so passes through unchanged, HyDrOmOrPhOnE converts",
       "input": "MORPHINE and HyDrOmOrPhOnE",
       "listId": "DEFAULT",
-      "expected": "morphine and HYDROmorphone"
+      "expected": "MORPHINE and HYDROmorphone"
     },
     {
-      "description": "Sentence with mixed case drug names - self-mapped entry (morphine) and converting entry (prednisone) both normalize",
+      "description": "Sentence with mixed case drug names - MorPhiNe not in DEFAULT list so passes through unchanged, prednisone converts",
       "input": "Patient takes PredniSONE and MorPhiNe daily",
       "listId": "DEFAULT",
-      "expected": "Patient takes predniSONE and morphine daily"
+      "expected": "Patient takes predniSONE and MorPhiNe daily"
     }
   ]
 }

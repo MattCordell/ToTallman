@@ -1,0 +1,21 @@
+{
+  "id": "FDA",
+  "authority": "US Food and Drug Administration (FDA)",
+  "list_name": "FDA List of Established Drug Names Recommended to Use Tall Man Lettering",
+  "country": "USA",
+  "document_version": "20260612.0",
+  "document_date": "June 2026",
+  "source_url": "https://www.fda.gov/drugs/medication-errors-related-cder-regulated-drug-products/fda-name-differentiation-project",
+  "direct_download_url": null,
+  "retrieved_date": "2026-06-24",
+  "archived_file": null,
+  "sha256": null,
+  "format": "HTML (web page only; no downloadable file)",
+  "machine_readable": true,
+  "machine_readable_notes": "The FDA page is an HTML table and can be scraped. Used as a cross-check against the manually transcribed CSV. The cross-check helper at tools/build-lists/crosscheck/fda-crosscheck.js fetches and parses the live page.",
+  "licence": "US Government work; public domain",
+  "licence_notes": "No restrictions on reproduction or use.",
+  "monitoring": "Check after any Name Differentiation Project announcement. Page metadata showed most recent update on 12 June 2026.",
+  "notes": "The FDA list covers FDA-approved generic drug name pairs only where FDA has formally requested voluntary label revisions from manufacturers. It is a strict subset of the ISMP combined document; TML forms are identical for any pair appearing in both. As of June 2026 the list contains 23 unique pairs/groups covering ~45 individual drug names. No archived file: the US Government does not provide a downloadable version; the cross-check helper fetches the live page.",
+  "extract_file": "20260612.0.csv"
+}

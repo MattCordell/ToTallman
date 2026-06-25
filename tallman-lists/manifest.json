@@ -1,32 +1,32 @@
 [
   {
     "id": "AU",
-    "version": "20171124.0",
-    "entries": 206,
-    "description": "Australian National Tall Man Lettering List (November 2017)"
+    "version": "20240400.0",
+    "entries": 235,
+    "description": "Australian National Mixed-Case Lettering List (ACSQHC)"
   },
   {
     "id": "DEFAULT",
-    "version": "20180819.0",
-    "entries": 202,
-    "description": "Default aggregate Tallman list combining entries from multiple sources"
+    "version": "20240400.0",
+    "entries": 384,
+    "description": "Default Tall Man list (AU+ISMP+NZ+FDA, precedence AU>ISMP>NZ>FDA). Sources: AU 20240400.0, ISMP 20230100.0, NZ 20231000.0, FDA 20260612.0."
   },
   {
     "id": "FDA",
-    "version": "20160101.0",
-    "entries": 37,
-    "description": "US FDA/ISMP Tall Man Lettering List (2016)"
+    "version": "20260612.0",
+    "entries": 43,
+    "description": "FDA Name Differentiation Project List (US FDA)"
   },
   {
     "id": "ISMP",
-    "version": "20160101.0",
-    "entries": 143,
-    "description": "Institute for Safe Medication Practices (ISMP) Tall Man Lettering List (2016)"
+    "version": "20260612.0",
+    "entries": 171,
+    "description": "FDA and ISMP Lists of Look-Alike Drug Names (ISMP combined)"
   },
   {
     "id": "NZ",
-    "version": "20131201.0",
-    "entries": 190,
-    "description": "New Zealand Tall Man Lettering List (December 2013)"
+    "version": "20231000.0",
+    "entries": 219,
+    "description": "Aotearoa New Zealand Tall Man Lettering List (HQSC)"
   }
 ]
