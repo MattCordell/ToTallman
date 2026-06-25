@@ -16,8 +16,8 @@
 | 5. CI/CD | ✅ Complete — SHA-pinned Actions, dependency caching, Dependabot, CodeQL scanning, pre-commit hooks [#14](https://github.com/MattCordell/ToTallman/issues/14) |
 | 6. Documentation | ⏳ Planned — [#15](https://github.com/MattCordell/ToTallman/issues/15) |
 | 7. Example applications | ✅ Complete — [#47](https://github.com/MattCordell/ToTallman/issues/47) |
-| 8. Manual list review (clinical correctness) | ⏳ Planned — [#48](https://github.com/MattCordell/ToTallman/issues/48) (gates release) |
-| 9. Release &amp; publishing | ⛔ Blocked — [#49](https://github.com/MattCordell/ToTallman/issues/49) (awaits #15, #47, #48, #28, #20) |
+| 8. Manual list review (clinical correctness) | ✅ Complete — all lists re-transcribed from authoritative sources, maintenance pipeline added, parenthetical compounds resolved [#48](https://github.com/MattCordell/ToTallman/issues/48) [#28](https://github.com/MattCordell/ToTallman/issues/28) |
+| 9. Release &amp; publishing | ⛔ Blocked — [#49](https://github.com/MattCordell/ToTallman/issues/49) (awaits #15, #20) |
 
 Detailed, up-to-date work lives in [GitHub issues](https://github.com/MattCordell/ToTallman/issues).
 
