@@ -12,7 +12,7 @@
   "sha256": null,
   "format": "HTML (web page only; no downloadable file)",
   "machine_readable": true,
-  "machine_readable_notes": "The FDA page is an HTML table and can be scraped. Used as a cross-check against the manually transcribed CSV. The cross-check helper at tools/build-lists/crosscheck/fda-fetch.js fetches and parses the live page.",
+  "machine_readable_notes": "The FDA page is an HTML table and can be scraped. Used as a cross-check against the manually transcribed CSV. The cross-check helper at tools/build-lists/crosscheck/fda-crosscheck.js fetches and parses the live page.",
   "licence": "US Government work; public domain",
   "licence_notes": "No restrictions on reproduction or use.",
   "monitoring": "Check after any Name Differentiation Project announcement. Page metadata showed most recent update on 12 June 2026.",

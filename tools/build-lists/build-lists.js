@@ -219,7 +219,7 @@ function loadSourceExtract(authorityId) {
 function buildListJSON(id, description, sourceVersion, entries) {
   // entries: Map<casefold key, { form, ... }>
   // Sort by casefold key for stable diffs
-  const sortedKeys = [...entries.keys()].sort();
+  const sortedKeys = [...entries.keys()].sort((a, b) => a.localeCompare(b));
   const entryForms = sortedKeys.map(k => entries.get(k).form);
 
   return {
@@ -318,15 +318,15 @@ function main() {
   // 2. Derive ISMP = FDA + ISMP-SUPP
   console.log('\nDeriving ISMP (FDA + ISMP-SUPP)...');
   const ismpEntries = new Map([
-    ...extracted['FDA'].entries,
     ...extracted['ISMP-SUPP'].entries,
+    ...extracted['FDA'].entries,
   ]);
   // Check for casefold collisions between FDA and ISMP-SUPP
   for (const [key, fdaEntry] of extracted['FDA'].entries.entries()) {
     const suppEntry = extracted['ISMP-SUPP'].entries.get(key);
     if (suppEntry && suppEntry.form !== fdaEntry.form) {
-      allErrors.push(`ISMP derivation: FDA "${fdaEntry.form}" vs ISMP-SUPP "${suppEntry.form}" (key "${key}") -- FDA takes precedence`);
-      // FDA wins; suppress the ISMP-SUPP entry (already overridden by Map spread order)
+      allErrors.push(`ISMP derivation: FDA "${fdaEntry.form}" vs ISMP-SUPP "${suppEntry.form}" (key "${key}") -- FDA takes precedence (spread last in Map)`);
+      // FDA wins: spread last in the Map, so its value overwrites any ISMP-SUPP form for the same key
     }
   }
   console.log(`  ISMP: ${ismpEntries.size} entries`);
@@ -376,7 +376,7 @@ function main() {
     {
       id: 'ISMP',
       description: 'FDA and ISMP Lists of Look-Alike Drug Names (ISMP combined)',
-      version: extracted['ISMP-SUPP'].meta.document_version,
+      version: [extracted['FDA'].meta.document_version, extracted['ISMP-SUPP'].meta.document_version].sort().reverse()[0],
       entries: ismpEntries,
     },
     {

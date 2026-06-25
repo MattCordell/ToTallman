@@ -694,7 +694,7 @@ export const EMBEDDED_LISTS: Readonly<Record<string, ListData>> = {
     },
   },
   ISMP: {
-    version: '20230100.0',
+    version: '20260612.0',
     description: 'FDA and ISMP Lists of Look-Alike Drug Names (ISMP combined)',
     maxWords: 2,
     entries: {

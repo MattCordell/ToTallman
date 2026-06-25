@@ -2493,221 +2493,6 @@
       }
     },
     "ISMP": {
-      "acetohexamide": {
-        "form": "acetoHEXAMIDE",
-        "authority": "FDA",
-        "version": "20260612.0"
-      },
-      "acetazolamide": {
-        "form": "acetaZOLAMIDE",
-        "authority": "FDA",
-        "version": "20260612.0"
-      },
-      "bupropion": {
-        "form": "buPROPion",
-        "authority": "FDA",
-        "version": "20260612.0"
-      },
-      "buspirone": {
-        "form": "busPIRone",
-        "authority": "FDA",
-        "version": "20260612.0"
-      },
-      "chlorpromazine": {
-        "form": "chlorproMAZINE",
-        "authority": "ISMP-SUPP",
-        "version": "20230100.0"
-      },
-      "chlorpropamide": {
-        "form": "chlorproPAMIDE",
-        "authority": "FDA",
-        "version": "20260612.0"
-      },
-      "cisplatin": {
-        "form": "CISplatin",
-        "authority": "ISMP-SUPP",
-        "version": "20230100.0"
-      },
-      "carboplatin": {
-        "form": "CARBOplatin",
-        "authority": "ISMP-SUPP",
-        "version": "20230100.0"
-      },
-      "clomiphene": {
-        "form": "clomiPHENE",
-        "authority": "FDA",
-        "version": "20260612.0"
-      },
-      "clomipramine": {
-        "form": "clomiPRAMINE",
-        "authority": "FDA",
-        "version": "20260612.0"
-      },
-      "cyclosporine": {
-        "form": "cycloSPORINE",
-        "authority": "ISMP-SUPP",
-        "version": "20230100.0"
-      },
-      "cycloserine": {
-        "form": "cycloSERINE",
-        "authority": "ISMP-SUPP",
-        "version": "20230100.0"
-      },
-      "daunorubicin": {
-        "form": "DAUNOrubicin",
-        "authority": "FDA",
-        "version": "20260612.0"
-      },
-      "doxorubicin": {
-        "form": "DOXOrubicin",
-        "authority": "ISMP-SUPP",
-        "version": "20230100.0"
-      },
-      "dimenhydrinate": {
-        "form": "dimenhyDRINATE",
-        "authority": "FDA",
-        "version": "20260612.0"
-      },
-      "diphenhydramine": {
-        "form": "diphenhydrAMINE",
-        "authority": "FDA",
-        "version": "20260612.0"
-      },
-      "dobutamine": {
-        "form": "DOBUTamine",
-        "authority": "FDA",
-        "version": "20260612.0"
-      },
-      "dopamine": {
-        "form": "DOPamine",
-        "authority": "FDA",
-        "version": "20260612.0"
-      },
-      "glipizide": {
-        "form": "glipiZIDE",
-        "authority": "FDA",
-        "version": "20260612.0"
-      },
-      "glyburide": {
-        "form": "glyBURIDE",
-        "authority": "FDA",
-        "version": "20260612.0"
-      },
-      "hydralazine": {
-        "form": "hydrALAZINE",
-        "authority": "ISMP-SUPP",
-        "version": "20230100.0"
-      },
-      "hydroxyzine": {
-        "form": "hydrOXYzine",
-        "authority": "ISMP-SUPP",
-        "version": "20230100.0"
-      },
-      "hydromorphone": {
-        "form": "HYDROmorphone",
-        "authority": "ISMP-SUPP",
-        "version": "20230100.0"
-      },
-      "medroxyprogesterone": {
-        "form": "medroxyPROGESTERone",
-        "authority": "ISMP-SUPP",
-        "version": "20230100.0"
-      },
-      "methylprednisolone": {
-        "form": "methylPREDNISolone",
-        "authority": "FDA",
-        "version": "20260612.0"
-      },
-      "methyltestosterone": {
-        "form": "methylTESTOSTERone",
-        "authority": "FDA",
-        "version": "20260612.0"
-      },
-      "migalastat": {
-        "form": "migALAstat",
-        "authority": "ISMP-SUPP",
-        "version": "20230100.0"
-      },
-      "miglustat": {
-        "form": "migLUstat",
-        "authority": "ISMP-SUPP",
-        "version": "20230100.0"
-      },
-      "mitoxantrone": {
-        "form": "mitoXANTRONE",
-        "authority": "ISMP-SUPP",
-        "version": "20230100.0"
-      },
-      "nicardipine": {
-        "form": "niCARdipine",
-        "authority": "ISMP-SUPP",
-        "version": "20230100.0"
-      },
-      "nifedipine": {
-        "form": "NIFEdipine",
-        "authority": "ISMP-SUPP",
-        "version": "20230100.0"
-      },
-      "prednisone": {
-        "form": "predniSONE",
-        "authority": "FDA",
-        "version": "20260612.0"
-      },
-      "prednisolone": {
-        "form": "prednisoLONE",
-        "authority": "FDA",
-        "version": "20260612.0"
-      },
-      "risperidone": {
-        "form": "risperiDONE",
-        "authority": "ISMP-SUPP",
-        "version": "20230100.0"
-      },
-      "ropinirole": {
-        "form": "rOPINIRole",
-        "authority": "ISMP-SUPP",
-        "version": "20230100.0"
-      },
-      "sulfadiazine": {
-        "form": "sulfADIAZINE",
-        "authority": "ISMP-SUPP",
-        "version": "20230100.0"
-      },
-      "sulfisoxazole": {
-        "form": "sulfiSOXAZOLE",
-        "authority": "FDA",
-        "version": "20260612.0"
-      },
-      "tolazamide": {
-        "form": "TOLAZamide",
-        "authority": "FDA",
-        "version": "20260612.0"
-      },
-      "tolbutamide": {
-        "form": "TOLBUTamide",
-        "authority": "FDA",
-        "version": "20260612.0"
-      },
-      "trazodone": {
-        "form": "traZODone",
-        "authority": "ISMP-SUPP",
-        "version": "20230100.0"
-      },
-      "tramadol": {
-        "form": "traMADol",
-        "authority": "ISMP-SUPP",
-        "version": "20230100.0"
-      },
-      "vinblastine": {
-        "form": "vinBLAStine",
-        "authority": "FDA",
-        "version": "20260612.0"
-      },
-      "vincristine": {
-        "form": "vinCRIStine",
-        "authority": "FDA",
-        "version": "20260612.0"
-      },
       "alfentanil": {
         "form": "ALfentanil",
         "authority": "ISMP-SUPP",
@@ -2753,6 +2538,11 @@
         "authority": "ISMP-SUPP",
         "version": "20230100.0"
       },
+      "carboplatin": {
+        "form": "CARBOplatin",
+        "authority": "FDA",
+        "version": "20260612.0"
+      },
       "cefazolin": {
         "form": "ceFAZolin",
         "authority": "ISMP-SUPP",
@@ -2793,6 +2583,16 @@
         "authority": "ISMP-SUPP",
         "version": "20230100.0"
       },
+      "chlorpromazine": {
+        "form": "chlorproMAZINE",
+        "authority": "FDA",
+        "version": "20260612.0"
+      },
+      "cisplatin": {
+        "form": "CISplatin",
+        "authority": "FDA",
+        "version": "20260612.0"
+      },
       "clobazam": {
         "form": "cloBAZam",
         "authority": "ISMP-SUPP",
@@ -2817,6 +2617,16 @@
         "form": "cycloPHOSphamide",
         "authority": "ISMP-SUPP",
         "version": "20230100.0"
+      },
+      "cycloserine": {
+        "form": "cycloSERINE",
+        "authority": "FDA",
+        "version": "20260612.0"
+      },
+      "cyclosporine": {
+        "form": "cycloSPORINE",
+        "authority": "FDA",
+        "version": "20260612.0"
       },
       "dactinomycin": {
         "form": "DACTINomycin",
@@ -2857,6 +2667,11 @@
         "form": "DOCEtaxel",
         "authority": "ISMP-SUPP",
         "version": "20230100.0"
+      },
+      "doxorubicin": {
+        "form": "DOXOrubicin",
+        "authority": "FDA",
+        "version": "20260612.0"
       },
       "dronabinol": {
         "form": "droNABinol",
@@ -2938,6 +2753,11 @@
         "authority": "ISMP-SUPP",
         "version": "20230100.0"
       },
+      "hydralazine": {
+        "form": "hydrALAZINE",
+        "authority": "FDA",
+        "version": "20260612.0"
+      },
       "hydrochlorothiazide": {
         "form": "hydroCHLOROthiazide",
         "authority": "ISMP-SUPP",
@@ -2948,10 +2768,20 @@
         "authority": "ISMP-SUPP",
         "version": "20230100.0"
       },
+      "hydromorphone": {
+        "form": "HYDROmorphone",
+        "authority": "FDA",
+        "version": "20260612.0"
+      },
       "hydroxyprogesterone": {
         "form": "HYDROXYprogesterone",
         "authority": "ISMP-SUPP",
         "version": "20230100.0"
+      },
+      "hydroxyzine": {
+        "form": "hydrOXYzine",
+        "authority": "FDA",
+        "version": "20260612.0"
       },
       "idarubicin": {
         "form": "IDArubicin",
@@ -3023,6 +2853,11 @@
         "authority": "ISMP-SUPP",
         "version": "20230100.0"
       },
+      "medroxyprogesterone": {
+        "form": "medroxyPROGESTERone",
+        "authority": "FDA",
+        "version": "20260612.0"
+      },
       "metformin": {
         "form": "metFORMIN",
         "authority": "ISMP-SUPP",
@@ -3063,6 +2898,16 @@
         "authority": "ISMP-SUPP",
         "version": "20230100.0"
       },
+      "migalastat": {
+        "form": "migALAstat",
+        "authority": "FDA",
+        "version": "20260612.0"
+      },
+      "miglustat": {
+        "form": "migLUstat",
+        "authority": "FDA",
+        "version": "20260612.0"
+      },
       "misoprostol": {
         "form": "miSOPROStol",
         "authority": "ISMP-SUPP",
@@ -3073,6 +2918,11 @@
         "authority": "ISMP-SUPP",
         "version": "20230100.0"
       },
+      "mitoxantrone": {
+        "form": "mitoXANTRONE",
+        "authority": "FDA",
+        "version": "20260612.0"
+      },
       "nexavar": {
         "form": "NexAVAR",
         "authority": "ISMP-SUPP",
@@ -3082,6 +2932,16 @@
         "form": "NexIUM",
         "authority": "ISMP-SUPP",
         "version": "20230100.0"
+      },
+      "nicardipine": {
+        "form": "niCARdipine",
+        "authority": "FDA",
+        "version": "20260612.0"
+      },
+      "nifedipine": {
+        "form": "NIFEdipine",
+        "authority": "FDA",
+        "version": "20260612.0"
       },
       "nimodipine": {
         "form": "niMODipine",
@@ -3238,6 +3098,11 @@
         "authority": "ISMP-SUPP",
         "version": "20230100.0"
       },
+      "risperidone": {
+        "form": "risperiDONE",
+        "authority": "FDA",
+        "version": "20260612.0"
+      },
       "rituximab": {
         "form": "riTUXimab",
         "authority": "ISMP-SUPP",
@@ -3252,6 +3117,11 @@
         "form": "romiPLOStim",
         "authority": "ISMP-SUPP",
         "version": "20230100.0"
+      },
+      "ropinirole": {
+        "form": "rOPINIRole",
+        "authority": "FDA",
+        "version": "20260612.0"
       },
       "ropivacaine": {
         "form": "ROPivacaine",
@@ -3298,6 +3168,11 @@
         "authority": "ISMP-SUPP",
         "version": "20230100.0"
       },
+      "sulfadiazine": {
+        "form": "sulfADIAZINE",
+        "authority": "FDA",
+        "version": "20260612.0"
+      },
       "sulfasalazine": {
         "form": "sulfaSALAzine",
         "authority": "ISMP-SUPP",
@@ -3323,6 +3198,16 @@
         "authority": "ISMP-SUPP",
         "version": "20230100.0"
       },
+      "tramadol": {
+        "form": "traMADol",
+        "authority": "FDA",
+        "version": "20260612.0"
+      },
+      "trazodone": {
+        "form": "traZODone",
+        "authority": "FDA",
+        "version": "20260612.0"
+      },
       "valacyclovir": {
         "form": "valACYclovir",
         "authority": "ISMP-SUPP",
@@ -3347,6 +3232,121 @@
         "form": "ZyrTEC",
         "authority": "ISMP-SUPP",
         "version": "20230100.0"
+      },
+      "acetohexamide": {
+        "form": "acetoHEXAMIDE",
+        "authority": "FDA",
+        "version": "20260612.0"
+      },
+      "acetazolamide": {
+        "form": "acetaZOLAMIDE",
+        "authority": "FDA",
+        "version": "20260612.0"
+      },
+      "bupropion": {
+        "form": "buPROPion",
+        "authority": "FDA",
+        "version": "20260612.0"
+      },
+      "buspirone": {
+        "form": "busPIRone",
+        "authority": "FDA",
+        "version": "20260612.0"
+      },
+      "chlorpropamide": {
+        "form": "chlorproPAMIDE",
+        "authority": "FDA",
+        "version": "20260612.0"
+      },
+      "clomiphene": {
+        "form": "clomiPHENE",
+        "authority": "FDA",
+        "version": "20260612.0"
+      },
+      "clomipramine": {
+        "form": "clomiPRAMINE",
+        "authority": "FDA",
+        "version": "20260612.0"
+      },
+      "daunorubicin": {
+        "form": "DAUNOrubicin",
+        "authority": "FDA",
+        "version": "20260612.0"
+      },
+      "dimenhydrinate": {
+        "form": "dimenhyDRINATE",
+        "authority": "FDA",
+        "version": "20260612.0"
+      },
+      "diphenhydramine": {
+        "form": "diphenhydrAMINE",
+        "authority": "FDA",
+        "version": "20260612.0"
+      },
+      "dobutamine": {
+        "form": "DOBUTamine",
+        "authority": "FDA",
+        "version": "20260612.0"
+      },
+      "dopamine": {
+        "form": "DOPamine",
+        "authority": "FDA",
+        "version": "20260612.0"
+      },
+      "glipizide": {
+        "form": "glipiZIDE",
+        "authority": "FDA",
+        "version": "20260612.0"
+      },
+      "glyburide": {
+        "form": "glyBURIDE",
+        "authority": "FDA",
+        "version": "20260612.0"
+      },
+      "methylprednisolone": {
+        "form": "methylPREDNISolone",
+        "authority": "FDA",
+        "version": "20260612.0"
+      },
+      "methyltestosterone": {
+        "form": "methylTESTOSTERone",
+        "authority": "FDA",
+        "version": "20260612.0"
+      },
+      "prednisone": {
+        "form": "predniSONE",
+        "authority": "FDA",
+        "version": "20260612.0"
+      },
+      "prednisolone": {
+        "form": "prednisoLONE",
+        "authority": "FDA",
+        "version": "20260612.0"
+      },
+      "sulfisoxazole": {
+        "form": "sulfiSOXAZOLE",
+        "authority": "FDA",
+        "version": "20260612.0"
+      },
+      "tolazamide": {
+        "form": "TOLAZamide",
+        "authority": "FDA",
+        "version": "20260612.0"
+      },
+      "tolbutamide": {
+        "form": "TOLBUTamide",
+        "authority": "FDA",
+        "version": "20260612.0"
+      },
+      "vinblastine": {
+        "form": "vinBLAStine",
+        "authority": "FDA",
+        "version": "20260612.0"
+      },
+      "vincristine": {
+        "form": "vinCRIStine",
+        "authority": "FDA",
+        "version": "20260612.0"
       }
     },
     "DEFAULT": {
@@ -4525,136 +4525,6 @@
         "authority": "AU",
         "version": "20240400.0"
       },
-      "acetohexamide": {
-        "form": "acetoHEXAMIDE",
-        "authority": "ISMP",
-        "version": "20260612.0"
-      },
-      "acetazolamide": {
-        "form": "acetaZOLAMIDE",
-        "authority": "ISMP",
-        "version": "20260612.0"
-      },
-      "bupropion": {
-        "form": "buPROPion",
-        "authority": "ISMP",
-        "version": "20260612.0"
-      },
-      "buspirone": {
-        "form": "busPIRone",
-        "authority": "ISMP",
-        "version": "20260612.0"
-      },
-      "chlorpropamide": {
-        "form": "chlorproPAMIDE",
-        "authority": "ISMP",
-        "version": "20260612.0"
-      },
-      "clomiphene": {
-        "form": "clomiPHENE",
-        "authority": "ISMP",
-        "version": "20260612.0"
-      },
-      "cyclosporine": {
-        "form": "cycloSPORINE",
-        "authority": "ISMP",
-        "version": "20230100.0"
-      },
-      "dimenhydrinate": {
-        "form": "dimenhyDRINATE",
-        "authority": "ISMP",
-        "version": "20260612.0"
-      },
-      "diphenhydramine": {
-        "form": "diphenhydrAMINE",
-        "authority": "ISMP",
-        "version": "20260612.0"
-      },
-      "dobutamine": {
-        "form": "DOBUTamine",
-        "authority": "ISMP",
-        "version": "20260612.0"
-      },
-      "dopamine": {
-        "form": "DOPamine",
-        "authority": "ISMP",
-        "version": "20260612.0"
-      },
-      "glyburide": {
-        "form": "glyBURIDE",
-        "authority": "ISMP",
-        "version": "20260612.0"
-      },
-      "hydroxyzine": {
-        "form": "hydrOXYzine",
-        "authority": "ISMP",
-        "version": "20230100.0"
-      },
-      "medroxyprogesterone": {
-        "form": "medroxyPROGESTERone",
-        "authority": "ISMP",
-        "version": "20230100.0"
-      },
-      "methylprednisolone": {
-        "form": "methylPREDNISolone",
-        "authority": "ISMP",
-        "version": "20260612.0"
-      },
-      "methyltestosterone": {
-        "form": "methylTESTOSTERone",
-        "authority": "ISMP",
-        "version": "20260612.0"
-      },
-      "migalastat": {
-        "form": "migALAstat",
-        "authority": "ISMP",
-        "version": "20230100.0"
-      },
-      "miglustat": {
-        "form": "migLUstat",
-        "authority": "ISMP",
-        "version": "20230100.0"
-      },
-      "mitoxantrone": {
-        "form": "mitoXANTRONE",
-        "authority": "ISMP",
-        "version": "20230100.0"
-      },
-      "nicardipine": {
-        "form": "niCARdipine",
-        "authority": "ISMP",
-        "version": "20230100.0"
-      },
-      "prednisone": {
-        "form": "predniSONE",
-        "authority": "ISMP",
-        "version": "20260612.0"
-      },
-      "prednisolone": {
-        "form": "prednisoLONE",
-        "authority": "ISMP",
-        "version": "20260612.0"
-      },
-      "sulfisoxazole": {
-        "form": "sulfiSOXAZOLE",
-        "authority": "ISMP",
-        "version": "20260612.0"
-      },
-      "tolazamide": {
-        "form": "TOLAZamide",
-        "authority": "ISMP",
-        "version": "20260612.0"
-      },
-      "tolbutamide": {
-        "form": "TOLBUTamide",
-        "authority": "ISMP",
-        "version": "20260612.0"
-      },
-      "trazodone": {
-        "form": "traZODone",
-        "authority": "ISMP",
-        "version": "20230100.0"
-      },
       "alfentanil": {
         "form": "ALfentanil",
         "authority": "ISMP",
@@ -4704,6 +4574,11 @@
         "form": "cloZAPine",
         "authority": "ISMP",
         "version": "20230100.0"
+      },
+      "cyclosporine": {
+        "form": "cycloSPORINE",
+        "authority": "ISMP",
+        "version": "20260612.0"
       },
       "diltiazem": {
         "form": "dilTIAZem",
@@ -4780,6 +4655,11 @@
         "authority": "ISMP",
         "version": "20230100.0"
       },
+      "hydroxyzine": {
+        "form": "hydrOXYzine",
+        "authority": "ISMP",
+        "version": "20260612.0"
+      },
       "idarucizumab": {
         "form": "idaruCIZUmab",
         "authority": "ISMP",
@@ -4814,6 +4694,11 @@
         "form": "LEVOleucovorin",
         "authority": "ISMP",
         "version": "20230100.0"
+      },
+      "medroxyprogesterone": {
+        "form": "medroxyPROGESTERone",
+        "authority": "ISMP",
+        "version": "20260612.0"
       },
       "metformin": {
         "form": "metFORMIN",
@@ -4855,6 +4740,16 @@
         "authority": "ISMP",
         "version": "20230100.0"
       },
+      "migalastat": {
+        "form": "migALAstat",
+        "authority": "ISMP",
+        "version": "20260612.0"
+      },
+      "miglustat": {
+        "form": "migLUstat",
+        "authority": "ISMP",
+        "version": "20260612.0"
+      },
       "misoprostol": {
         "form": "miSOPROStol",
         "authority": "ISMP",
@@ -4864,6 +4759,16 @@
         "form": "mitoMYcin",
         "authority": "ISMP",
         "version": "20230100.0"
+      },
+      "mitoxantrone": {
+        "form": "mitoXANTRONE",
+        "authority": "ISMP",
+        "version": "20260612.0"
+      },
+      "nicardipine": {
+        "form": "niCARdipine",
+        "authority": "ISMP",
+        "version": "20260612.0"
       },
       "novolin": {
         "form": "NovoLIN",
@@ -5010,6 +4915,11 @@
         "authority": "ISMP",
         "version": "20230100.0"
       },
+      "trazodone": {
+        "form": "traZODone",
+        "authority": "ISMP",
+        "version": "20260612.0"
+      },
       "valacyclovir": {
         "form": "valACYclovir",
         "authority": "ISMP",
@@ -5029,6 +4939,96 @@
         "form": "ZyrTEC",
         "authority": "ISMP",
         "version": "20230100.0"
+      },
+      "acetohexamide": {
+        "form": "acetoHEXAMIDE",
+        "authority": "ISMP",
+        "version": "20260612.0"
+      },
+      "acetazolamide": {
+        "form": "acetaZOLAMIDE",
+        "authority": "ISMP",
+        "version": "20260612.0"
+      },
+      "bupropion": {
+        "form": "buPROPion",
+        "authority": "ISMP",
+        "version": "20260612.0"
+      },
+      "buspirone": {
+        "form": "busPIRone",
+        "authority": "ISMP",
+        "version": "20260612.0"
+      },
+      "chlorpropamide": {
+        "form": "chlorproPAMIDE",
+        "authority": "ISMP",
+        "version": "20260612.0"
+      },
+      "clomiphene": {
+        "form": "clomiPHENE",
+        "authority": "ISMP",
+        "version": "20260612.0"
+      },
+      "dimenhydrinate": {
+        "form": "dimenhyDRINATE",
+        "authority": "ISMP",
+        "version": "20260612.0"
+      },
+      "diphenhydramine": {
+        "form": "diphenhydrAMINE",
+        "authority": "ISMP",
+        "version": "20260612.0"
+      },
+      "dobutamine": {
+        "form": "DOBUTamine",
+        "authority": "ISMP",
+        "version": "20260612.0"
+      },
+      "dopamine": {
+        "form": "DOPamine",
+        "authority": "ISMP",
+        "version": "20260612.0"
+      },
+      "glyburide": {
+        "form": "glyBURIDE",
+        "authority": "ISMP",
+        "version": "20260612.0"
+      },
+      "methylprednisolone": {
+        "form": "methylPREDNISolone",
+        "authority": "ISMP",
+        "version": "20260612.0"
+      },
+      "methyltestosterone": {
+        "form": "methylTESTOSTERone",
+        "authority": "ISMP",
+        "version": "20260612.0"
+      },
+      "prednisone": {
+        "form": "predniSONE",
+        "authority": "ISMP",
+        "version": "20260612.0"
+      },
+      "prednisolone": {
+        "form": "prednisoLONE",
+        "authority": "ISMP",
+        "version": "20260612.0"
+      },
+      "sulfisoxazole": {
+        "form": "sulfiSOXAZOLE",
+        "authority": "ISMP",
+        "version": "20260612.0"
+      },
+      "tolazamide": {
+        "form": "TOLAZamide",
+        "authority": "ISMP",
+        "version": "20260612.0"
+      },
+      "tolbutamide": {
+        "form": "TOLBUTamide",
+        "authority": "ISMP",
+        "version": "20260612.0"
       },
       "alemtuzumab": {
         "form": "aLEMTUzumab",

@@ -1103,7 +1103,7 @@ final class EmbeddedTallmanLists {
         versions.put("AU", "20240400.0");
         versions.put("DEFAULT", "20240400.0");
         versions.put("FDA", "20260612.0");
-        versions.put("ISMP", "20230100.0");
+        versions.put("ISMP", "20260612.0");
         versions.put("NZ", "20231000.0");
         VERSIONS = Collections.unmodifiableMap(versions);
     }

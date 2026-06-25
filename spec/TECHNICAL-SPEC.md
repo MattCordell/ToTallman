@@ -95,6 +95,44 @@ Stored in `/tallman-lists/*.json`.
 Rules: - `entries` contains canonical Tallman output. - Input keys
 derived automatically via casefold(NFC(entry)).
 
+## 4.2 The DEFAULT List
+
+The `DEFAULT` list is **derived deterministically** at build time from four
+authority sources. It is not hand-curated. The derivation is implemented in
+`tools/build-lists/build-lists.js`.
+
+**Constituent sources (in precedence order):**
+
+| Precedence | List ID | Authority |
+|-----------|---------|-----------|
+| 1 (highest) | `AU` | Australian Commission on Safety and Quality in Health Care (ACSQHC) |
+| 2 | `ISMP` | ISMP combined (FDA base ∪ ISMP-SUPP); itself derived — see below |
+| 3 | `NZ` | Health Quality & Safety Commission New Zealand (HQSC) |
+| 4 (lowest) | `FDA` | US Food and Drug Administration |
+
+**Rationale:**
+
+- **AU first** — the project is Australia-focused; AU forms take priority in
+  any conflict.
+- **ISMP second over NZ** — ISMP is internationally recognised and a superset
+  of the FDA list; NZ forms occasionally diverge from AU+ISMP on capitalisation
+  of the same syllable.
+- **FDA last** — the FDA base list is entirely subsumed by ISMP; it is included
+  as an explicit fallback to allow per-entry provenance tracing.
+
+**Conflict policy:** when two lists supply different capitalisation for the same
+casefolded key, the higher-precedence form is used and the conflict is logged
+by the builder. A casefold-key collision where both forms are identical is
+silently accepted.
+
+**ISMP derivation:** `ISMP = FDA ∪ ISMP-SUPP` (FDA base list merged with the
+ISMP supplementary table). Where the same casefolded key appears in both, the
+FDA form takes precedence (FDA is spread last in the merge Map).
+
+**Version:** the DEFAULT list version is the lexicographic maximum of all
+constituent source document versions, so it advances whenever any constituent
+is updated.
+
 ------------------------------------------------------------------------
 
 # 5. Build-Time Processing
