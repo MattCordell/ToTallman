@@ -51,8 +51,8 @@ function casefoldKey(text) {
   return text.normalize('NFC').toLowerCase();
 }
 
-// DEFAULT precedence order: AU > ISMP > NZ (AU primary; ISMP over NZ for broader international coverage)
-const DEFAULT_PRECEDENCE = ['AU', 'ISMP', 'NZ'];
+// DEFAULT precedence order: AU > ISMP > NZ > FDA (AU primary; ISMP over NZ; FDA explicit fallback)
+const DEFAULT_PRECEDENCE = ['AU', 'ISMP', 'NZ', 'FDA'];
 
 // ---------------------------------------------------------------------------
 // CSV parsing
@@ -331,15 +331,16 @@ function main() {
   }
   console.log(`  ISMP: ${ismpEntries.size} entries`);
 
-  // 3. Derive DEFAULT (AU > NZ > ISMP)
-  console.log('Deriving DEFAULT (AU > NZ > ISMP)...');
+  // 3. Derive DEFAULT (AU > ISMP > NZ > FDA)
+  console.log('Deriving DEFAULT (AU > ISMP > NZ > FDA)...');
   const { merged: defaultEntries, conflicts } = deriveDefault({
     AU: extracted['AU'].entries,
-    NZ: extracted['NZ'].entries,
     ISMP: ismpEntries,
+    NZ: extracted['NZ'].entries,
+    FDA: extracted['FDA'].entries,
   });
   if (conflicts.length > 0) {
-    console.warn(`  ${conflicts.length} capitalisation conflict(s) -- AU/NZ/ISMP disagree on form:`);
+    console.warn(`  ${conflicts.length} capitalisation conflict(s) -- sources disagree on form:`);
     conflicts.forEach(c => {
       console.warn(`    "${c.key}": ${c.winnerAuthority} "${c.winner}" wins over ${c.loserAuthority} "${c.loser}"`);
     });
@@ -380,7 +381,7 @@ function main() {
     },
     {
       id: 'DEFAULT',
-      description: `Default Tall Man list (AU+NZ+ISMP, precedence AU>NZ>ISMP). Sources: AU ${extracted['AU'].meta.document_version}, NZ ${extracted['NZ'].meta.document_version}, ISMP ${extracted['ISMP-SUPP'].meta.document_version}.`,
+      description: `Default Tall Man list (AU+ISMP+NZ+FDA, precedence AU>ISMP>NZ>FDA). Sources: AU ${extracted['AU'].meta.document_version}, ISMP ${extracted['ISMP-SUPP'].meta.document_version}, NZ ${extracted['NZ'].meta.document_version}, FDA ${extracted['FDA'].meta.document_version}.`,
       // Version reflects the most recently updated constituent source
       version: [
         extracted['AU'].meta.document_version,
