@@ -4525,316 +4525,6 @@
         "authority": "AU",
         "version": "20240400.0"
       },
-      "alemtuzumab": {
-        "form": "aLEMTUzumab",
-        "authority": "NZ",
-        "version": "20231000.0"
-      },
-      "allopurinol": {
-        "form": "aLLOPURINol",
-        "authority": "NZ",
-        "version": "20231000.0"
-      },
-      "amisulpride": {
-        "form": "amiSULPRIDe",
-        "authority": "NZ",
-        "version": "20231000.0"
-      },
-      "atenolol": {
-        "form": "aTENOLol",
-        "authority": "NZ",
-        "version": "20231000.0"
-      },
-      "atezolizumab": {
-        "form": "aTEZOLIzumab",
-        "authority": "NZ",
-        "version": "20231000.0"
-      },
-      "benzathine benzylpenicillin": {
-        "form": "BENZATHINE benzylpenicillin",
-        "authority": "NZ",
-        "version": "20231000.0"
-      },
-      "bupropion": {
-        "form": "buPROPION",
-        "authority": "NZ",
-        "version": "20231000.0"
-      },
-      "buspirone": {
-        "form": "buSPIRONE",
-        "authority": "NZ",
-        "version": "20231000.0"
-      },
-      "cefaclor": {
-        "form": "cefaCLOR",
-        "authority": "NZ",
-        "version": "20231000.0"
-      },
-      "cefuroxime": {
-        "form": "cefUROXIME",
-        "authority": "NZ",
-        "version": "20231000.0"
-      },
-      "cephalexin": {
-        "form": "cephaLEXin",
-        "authority": "NZ",
-        "version": "20231000.0"
-      },
-      "cephazolin": {
-        "form": "cephaZOLin",
-        "authority": "NZ",
-        "version": "20231000.0"
-      },
-      "cetuximab": {
-        "form": "CETUximab",
-        "authority": "NZ",
-        "version": "20231000.0"
-      },
-      "clindamycin": {
-        "form": "clINDAmycin",
-        "authority": "NZ",
-        "version": "20231000.0"
-      },
-      "clomiphene": {
-        "form": "cLOMIPHEne",
-        "authority": "NZ",
-        "version": "20231000.0"
-      },
-      "clonidine": {
-        "form": "cloNIDine",
-        "authority": "NZ",
-        "version": "20231000.0"
-      },
-      "clozapine": {
-        "form": "cLOZAPine",
-        "authority": "NZ",
-        "version": "20231000.0"
-      },
-      "cycloblastin": {
-        "form": "cyclOBLASTIN",
-        "authority": "NZ",
-        "version": "20231000.0"
-      },
-      "cyclosporin": {
-        "form": "cyclosPORIN",
-        "authority": "NZ",
-        "version": "20231000.0"
-      },
-      "digoxin": {
-        "form": "dIGOXin",
-        "authority": "NZ",
-        "version": "20231000.0"
-      },
-      "dobutamine": {
-        "form": "doBUTamine",
-        "authority": "NZ",
-        "version": "20231000.0"
-      },
-      "dopamine": {
-        "form": "doPamine",
-        "authority": "NZ",
-        "version": "20231000.0"
-      },
-      "doxazosin": {
-        "form": "dOXAZOSin",
-        "authority": "NZ",
-        "version": "20231000.0"
-      },
-      "flupentixol": {
-        "form": "flupENTIXOL",
-        "authority": "NZ",
-        "version": "20231000.0"
-      },
-      "flupenthixol": {
-        "form": "flupENTHIXOL",
-        "authority": "NZ",
-        "version": "20231000.0"
-      },
-      "fluphenazine": {
-        "form": "flupHENAZINE",
-        "authority": "NZ",
-        "version": "20231000.0"
-      },
-      "fluvax": {
-        "form": "fluVAx",
-        "authority": "NZ",
-        "version": "20231000.0"
-      },
-      "folinic acid": {
-        "form": "foliNIc acid",
-        "authority": "NZ",
-        "version": "20231000.0"
-      },
-      "hyoscine butylbromide": {
-        "form": "hyoscine BUTYLbromide",
-        "authority": "NZ",
-        "version": "20231000.0"
-      },
-      "hyoscine hydrobromide": {
-        "form": "hyoscine HYDRObromide",
-        "authority": "NZ",
-        "version": "20231000.0"
-      },
-      "imuprine": {
-        "form": "imUPRine",
-        "authority": "NZ",
-        "version": "20231000.0"
-      },
-      "infliximab": {
-        "form": "INFLIximab",
-        "authority": "NZ",
-        "version": "20231000.0"
-      },
-      "loxalate": {
-        "form": "loxaLATe",
-        "authority": "NZ",
-        "version": "20231000.0"
-      },
-      "loxamine": {
-        "form": "loxaMINe",
-        "authority": "NZ",
-        "version": "20231000.0"
-      },
-      "maxidex": {
-        "form": "maxiDEX",
-        "authority": "NZ",
-        "version": "20231000.0"
-      },
-      "maxitrol": {
-        "form": "maxiTROL",
-        "authority": "NZ",
-        "version": "20231000.0"
-      },
-      "medroxyprogesterone": {
-        "form": "meDROXYPROGESTERone",
-        "authority": "NZ",
-        "version": "20231000.0"
-      },
-      "m-enalapril": {
-        "form": "m-eNALAPRIL",
-        "authority": "NZ",
-        "version": "20231000.0"
-      },
-      "m-eslon": {
-        "form": "m-eSLON",
-        "authority": "NZ",
-        "version": "20231000.0"
-      },
-      "methotrexate": {
-        "form": "metHOTREXATe",
-        "authority": "NZ",
-        "version": "20231000.0"
-      },
-      "methylprednisolone acetate": {
-        "form": "methylprednisolone ACETate",
-        "authority": "NZ",
-        "version": "20231000.0"
-      },
-      "methylprednisolone sodium succinate": {
-        "form": "methylprednisolone SODIUM SUCCINate",
-        "authority": "NZ",
-        "version": "20231000.0"
-      },
-      "metoclopramide": {
-        "form": "metOCLOPRAMIDe",
-        "authority": "NZ",
-        "version": "20231000.0"
-      },
-      "metoprolol": {
-        "form": "metoPROLOL",
-        "authority": "NZ",
-        "version": "20231000.0"
-      },
-      "naloxone": {
-        "form": "nalOXone",
-        "authority": "NZ",
-        "version": "20231000.0"
-      },
-      "naltrexone": {
-        "form": "nalTREXone",
-        "authority": "NZ",
-        "version": "20231000.0"
-      },
-      "neo-mercazole": {
-        "form": "neO-MERCAZOLe",
-        "authority": "NZ",
-        "version": "20231000.0"
-      },
-      "neurokare": {
-        "form": "neUROKARe",
-        "authority": "NZ",
-        "version": "20231000.0"
-      },
-      "nitrazepam": {
-        "form": "NITRazepam",
-        "authority": "NZ",
-        "version": "20231000.0"
-      },
-      "novoseven": {
-        "form": "novoSEVEN",
-        "authority": "NZ",
-        "version": "20231000.0"
-      },
-      "pegfilgrastim": {
-        "form": "pegFILGRASTIM",
-        "authority": "NZ",
-        "version": "20231000.0"
-      },
-      "peginterferon": {
-        "form": "pegINTERFERON",
-        "authority": "NZ",
-        "version": "20231000.0"
-      },
-      "penicillamine": {
-        "form": "penicillAMINE",
-        "authority": "NZ",
-        "version": "20231000.0"
-      },
-      "prednisone": {
-        "form": "prEDNISone",
-        "authority": "NZ",
-        "version": "20231000.0"
-      },
-      "primaquine": {
-        "form": "primAQUIne",
-        "authority": "NZ",
-        "version": "20231000.0"
-      },
-      "primidone": {
-        "form": "primIDOne",
-        "authority": "NZ",
-        "version": "20231000.0"
-      },
-      "procyclidine": {
-        "form": "procYCLIDine",
-        "authority": "NZ",
-        "version": "20231000.0"
-      },
-      "quinine": {
-        "form": "quINine",
-        "authority": "NZ",
-        "version": "20231000.0"
-      },
-      "rituximab": {
-        "form": "RITUximab",
-        "authority": "NZ",
-        "version": "20231000.0"
-      },
-      "tamoxifen": {
-        "form": "TAMoxifen",
-        "authority": "NZ",
-        "version": "20231000.0"
-      },
-      "yasmin": {
-        "form": "yasMIN",
-        "authority": "NZ",
-        "version": "20231000.0"
-      },
-      "yaz": {
-        "form": "yaZ",
-        "authority": "NZ",
-        "version": "20231000.0"
-      },
       "acetohexamide": {
         "form": "acetoHEXAMIDE",
         "authority": "ISMP",
@@ -4845,8 +4535,23 @@
         "authority": "ISMP",
         "version": "20260612.0"
       },
+      "bupropion": {
+        "form": "buPROPion",
+        "authority": "ISMP",
+        "version": "20260612.0"
+      },
+      "buspirone": {
+        "form": "busPIRone",
+        "authority": "ISMP",
+        "version": "20260612.0"
+      },
       "chlorpropamide": {
         "form": "chlorproPAMIDE",
+        "authority": "ISMP",
+        "version": "20260612.0"
+      },
+      "clomiphene": {
+        "form": "clomiPHENE",
         "authority": "ISMP",
         "version": "20260612.0"
       },
@@ -4865,6 +4570,16 @@
         "authority": "ISMP",
         "version": "20260612.0"
       },
+      "dobutamine": {
+        "form": "DOBUTamine",
+        "authority": "ISMP",
+        "version": "20260612.0"
+      },
+      "dopamine": {
+        "form": "DOPamine",
+        "authority": "ISMP",
+        "version": "20260612.0"
+      },
       "glyburide": {
         "form": "glyBURIDE",
         "authority": "ISMP",
@@ -4872,6 +4587,11 @@
       },
       "hydroxyzine": {
         "form": "hydrOXYzine",
+        "authority": "ISMP",
+        "version": "20230100.0"
+      },
+      "medroxyprogesterone": {
+        "form": "medroxyPROGESTERone",
         "authority": "ISMP",
         "version": "20230100.0"
       },
@@ -4904,6 +4624,11 @@
         "form": "niCARdipine",
         "authority": "ISMP",
         "version": "20230100.0"
+      },
+      "prednisone": {
+        "form": "predniSONE",
+        "authority": "ISMP",
+        "version": "20260612.0"
       },
       "prednisolone": {
         "form": "prednisoLONE",
@@ -4970,6 +4695,16 @@
         "authority": "ISMP",
         "version": "20230100.0"
       },
+      "clonidine": {
+        "form": "cloNIDine",
+        "authority": "ISMP",
+        "version": "20230100.0"
+      },
+      "clozapine": {
+        "form": "cloZAPine",
+        "authority": "ISMP",
+        "version": "20230100.0"
+      },
       "diltiazem": {
         "form": "dilTIAZem",
         "authority": "ISMP",
@@ -5020,6 +4755,11 @@
         "authority": "ISMP",
         "version": "20230100.0"
       },
+      "fluphenazine": {
+        "form": "fluPHENAZine",
+        "authority": "ISMP",
+        "version": "20230100.0"
+      },
       "guaifenesin": {
         "form": "guaiFENesin",
         "authority": "ISMP",
@@ -5042,6 +4782,11 @@
       },
       "idarucizumab": {
         "form": "idaruCIZUmab",
+        "authority": "ISMP",
+        "version": "20230100.0"
+      },
+      "infliximab": {
+        "form": "inFLIXimab",
         "authority": "ISMP",
         "version": "20230100.0"
       },
@@ -5155,6 +4900,11 @@
         "authority": "ISMP",
         "version": "20230100.0"
       },
+      "penicillamine": {
+        "form": "penicillAMINE",
+        "authority": "ISMP",
+        "version": "20230100.0"
+      },
       "pentobarbital": {
         "form": "PENTobarbital",
         "authority": "ISMP",
@@ -5190,6 +4940,11 @@
         "authority": "ISMP",
         "version": "20230100.0"
       },
+      "quinine": {
+        "form": "quiNINE",
+        "authority": "ISMP",
+        "version": "20230100.0"
+      },
       "ranitidine": {
         "form": "raNITIdine",
         "authority": "ISMP",
@@ -5207,6 +4962,11 @@
       },
       "risperdal": {
         "form": "RisperDAL",
+        "authority": "ISMP",
+        "version": "20230100.0"
+      },
+      "rituximab": {
+        "form": "riTUXimab",
         "authority": "ISMP",
         "version": "20230100.0"
       },
@@ -5269,6 +5029,246 @@
         "form": "ZyrTEC",
         "authority": "ISMP",
         "version": "20230100.0"
+      },
+      "alemtuzumab": {
+        "form": "aLEMTUzumab",
+        "authority": "NZ",
+        "version": "20231000.0"
+      },
+      "allopurinol": {
+        "form": "aLLOPURINol",
+        "authority": "NZ",
+        "version": "20231000.0"
+      },
+      "amisulpride": {
+        "form": "amiSULPRIDe",
+        "authority": "NZ",
+        "version": "20231000.0"
+      },
+      "atenolol": {
+        "form": "aTENOLol",
+        "authority": "NZ",
+        "version": "20231000.0"
+      },
+      "atezolizumab": {
+        "form": "aTEZOLIzumab",
+        "authority": "NZ",
+        "version": "20231000.0"
+      },
+      "benzathine benzylpenicillin": {
+        "form": "BENZATHINE benzylpenicillin",
+        "authority": "NZ",
+        "version": "20231000.0"
+      },
+      "cefaclor": {
+        "form": "cefaCLOR",
+        "authority": "NZ",
+        "version": "20231000.0"
+      },
+      "cefuroxime": {
+        "form": "cefUROXIME",
+        "authority": "NZ",
+        "version": "20231000.0"
+      },
+      "cephalexin": {
+        "form": "cephaLEXin",
+        "authority": "NZ",
+        "version": "20231000.0"
+      },
+      "cephazolin": {
+        "form": "cephaZOLin",
+        "authority": "NZ",
+        "version": "20231000.0"
+      },
+      "cetuximab": {
+        "form": "CETUximab",
+        "authority": "NZ",
+        "version": "20231000.0"
+      },
+      "clindamycin": {
+        "form": "clINDAmycin",
+        "authority": "NZ",
+        "version": "20231000.0"
+      },
+      "cycloblastin": {
+        "form": "cyclOBLASTIN",
+        "authority": "NZ",
+        "version": "20231000.0"
+      },
+      "cyclosporin": {
+        "form": "cyclosPORIN",
+        "authority": "NZ",
+        "version": "20231000.0"
+      },
+      "digoxin": {
+        "form": "dIGOXin",
+        "authority": "NZ",
+        "version": "20231000.0"
+      },
+      "doxazosin": {
+        "form": "dOXAZOSin",
+        "authority": "NZ",
+        "version": "20231000.0"
+      },
+      "flupentixol": {
+        "form": "flupENTIXOL",
+        "authority": "NZ",
+        "version": "20231000.0"
+      },
+      "flupenthixol": {
+        "form": "flupENTHIXOL",
+        "authority": "NZ",
+        "version": "20231000.0"
+      },
+      "fluvax": {
+        "form": "fluVAx",
+        "authority": "NZ",
+        "version": "20231000.0"
+      },
+      "folinic acid": {
+        "form": "foliNIc acid",
+        "authority": "NZ",
+        "version": "20231000.0"
+      },
+      "hyoscine butylbromide": {
+        "form": "hyoscine BUTYLbromide",
+        "authority": "NZ",
+        "version": "20231000.0"
+      },
+      "hyoscine hydrobromide": {
+        "form": "hyoscine HYDRObromide",
+        "authority": "NZ",
+        "version": "20231000.0"
+      },
+      "imuprine": {
+        "form": "imUPRine",
+        "authority": "NZ",
+        "version": "20231000.0"
+      },
+      "loxalate": {
+        "form": "loxaLATe",
+        "authority": "NZ",
+        "version": "20231000.0"
+      },
+      "loxamine": {
+        "form": "loxaMINe",
+        "authority": "NZ",
+        "version": "20231000.0"
+      },
+      "maxidex": {
+        "form": "maxiDEX",
+        "authority": "NZ",
+        "version": "20231000.0"
+      },
+      "maxitrol": {
+        "form": "maxiTROL",
+        "authority": "NZ",
+        "version": "20231000.0"
+      },
+      "m-enalapril": {
+        "form": "m-eNALAPRIL",
+        "authority": "NZ",
+        "version": "20231000.0"
+      },
+      "m-eslon": {
+        "form": "m-eSLON",
+        "authority": "NZ",
+        "version": "20231000.0"
+      },
+      "methotrexate": {
+        "form": "metHOTREXATe",
+        "authority": "NZ",
+        "version": "20231000.0"
+      },
+      "methylprednisolone acetate": {
+        "form": "methylprednisolone ACETate",
+        "authority": "NZ",
+        "version": "20231000.0"
+      },
+      "methylprednisolone sodium succinate": {
+        "form": "methylprednisolone SODIUM SUCCINate",
+        "authority": "NZ",
+        "version": "20231000.0"
+      },
+      "metoclopramide": {
+        "form": "metOCLOPRAMIDe",
+        "authority": "NZ",
+        "version": "20231000.0"
+      },
+      "metoprolol": {
+        "form": "metoPROLOL",
+        "authority": "NZ",
+        "version": "20231000.0"
+      },
+      "naloxone": {
+        "form": "nalOXone",
+        "authority": "NZ",
+        "version": "20231000.0"
+      },
+      "naltrexone": {
+        "form": "nalTREXone",
+        "authority": "NZ",
+        "version": "20231000.0"
+      },
+      "neo-mercazole": {
+        "form": "neO-MERCAZOLe",
+        "authority": "NZ",
+        "version": "20231000.0"
+      },
+      "neurokare": {
+        "form": "neUROKARe",
+        "authority": "NZ",
+        "version": "20231000.0"
+      },
+      "nitrazepam": {
+        "form": "NITRazepam",
+        "authority": "NZ",
+        "version": "20231000.0"
+      },
+      "novoseven": {
+        "form": "novoSEVEN",
+        "authority": "NZ",
+        "version": "20231000.0"
+      },
+      "pegfilgrastim": {
+        "form": "pegFILGRASTIM",
+        "authority": "NZ",
+        "version": "20231000.0"
+      },
+      "peginterferon": {
+        "form": "pegINTERFERON",
+        "authority": "NZ",
+        "version": "20231000.0"
+      },
+      "primaquine": {
+        "form": "primAQUIne",
+        "authority": "NZ",
+        "version": "20231000.0"
+      },
+      "primidone": {
+        "form": "primIDOne",
+        "authority": "NZ",
+        "version": "20231000.0"
+      },
+      "procyclidine": {
+        "form": "procYCLIDine",
+        "authority": "NZ",
+        "version": "20231000.0"
+      },
+      "tamoxifen": {
+        "form": "TAMoxifen",
+        "authority": "NZ",
+        "version": "20231000.0"
+      },
+      "yasmin": {
+        "form": "yasMIN",
+        "authority": "NZ",
+        "version": "20231000.0"
+      },
+      "yaz": {
+        "form": "yaZ",
+        "authority": "NZ",
+        "version": "20231000.0"
       }
     }
   }

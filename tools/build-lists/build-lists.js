@@ -51,8 +51,8 @@ function casefoldKey(text) {
   return text.normalize('NFC').toLowerCase();
 }
 
-// DEFAULT precedence order: AU > NZ > ISMP (most authoritative for Australian/NZ context first)
-const DEFAULT_PRECEDENCE = ['AU', 'NZ', 'ISMP'];
+// DEFAULT precedence order: AU > ISMP > NZ (AU primary; ISMP over NZ for broader international coverage)
+const DEFAULT_PRECEDENCE = ['AU', 'ISMP', 'NZ'];
 
 // ---------------------------------------------------------------------------
 // CSV parsing
