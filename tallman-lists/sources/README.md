@@ -38,7 +38,7 @@ Columns: `form`, `group`, `category`, `flags`, `page_ref`, `notes`
 
 | Flag | Meaning |
 |------|---------|
-| `comparator` | Plain-text LASA partner with no TML form assigned. Documented here for traceability but **excluded from the TML output**. Must be verified against source and either removed or assigned a correct TML form. |
+| `comparator` | Plain-text LASA partner with no TML form assigned. Documented here for traceability but **excluded from the TML output**. The intent of these entries was confirmed directly with ACSQHC and ISMP (see each authority's `CORRESPONDENCE.md`): they are deliberate context-only comparators, not always-lowercase TML forms, and input is returned unchanged at runtime. |
 | `exception_rule` | Authority explicitly excluded this drug from TML application (e.g. NZ `*`-marked entries). Documented but **excluded from output**. |
 | `discontinued` | Drug withdrawn from market in country of authority. Retained per source list; may be removed in a future revision. |
 | `brand` | Brand name entry (not INN/generic). |
