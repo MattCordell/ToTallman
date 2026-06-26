@@ -278,3 +278,400 @@ The following table is extracted verbatim from the FDA Name Differentiation Proj
 | Vinblastine / Vincristine | vinBLAStine / vinCRIStine |
 
 \* Flagged as discontinued in the ISMP combined document; retained on the FDA list.
+
+---
+
+## Appendix B: Cross-List Comparison Table (AU · NZ · FDA · ISMP)
+
+This table aligns all entries from the four source lists in the repository (AU, NZ, FDA, ISMP) against a shared case-insensitive key. Each row represents one drug name; columns show the TML form used by each authority, or are blank where that authority does not list the name. Rows where the same name appears in two or more lists with different capitalisation are marked **⚠ differs** in the Notes column.
+
+**Coverage summary:** 384 unique drug name keys across all four lists; 202 keys appear in two or more lists; 85 of those have at least one capitalisation difference across lists.
+
+**List versions used:** AU 20240400.0 · NZ 20231000.0 · FDA 20260612.0 · ISMP 20260612.0
+
+| Drug name (key) | AU | NZ | FDA | ISMP | Notes |
+|---|---|---|---|---|---|
+| acetazolamide |  |  | acetaZOLAMIDE | acetaZOLAMIDE |  |
+| acetohexamide |  |  | acetoHEXAMIDE | acetoHEXAMIDE |  |
+| aclin | aCLin |  |  |  |  |
+| actonel | actoNEL |  |  |  |  |
+| actos | actoS |  |  |  |  |
+| afatinib | aFATinib | aFATinib |  |  |  |
+| akamin | aKAMin |  |  |  |  |
+| aldactone | alDACTONE |  |  |  |  |
+| aldomet | alDOMET |  |  |  |  |
+| alemtuzumab |  | aLEMTUzumab |  |  |  |
+| alfentanil |  |  |  | ALfentanil |  |
+| alkeran | ALKeran | ALKeran |  |  |  |
+| allopurinol |  | aLLOPURINol |  |  |  |
+| alodorm | alODORM |  |  |  |  |
+| alprazolam |  |  |  | ALPRAZolam |  |
+| amaryl | amARYl |  |  |  |  |
+| amiloride |  |  |  | aMILoride |  |
+| aminophylline | amiNOPHYLLine | amINOPHYLLIne |  |  | **⚠ differs** |
+| amiodarone | amiODAROne | amIODAROne |  |  | **⚠ differs** |
+| amisulpride |  | amiSULPRIDe |  |  |  |
+| amitriptyline | amiTRIPTYLine | amITRIPTYLIne |  |  | **⚠ differs** |
+| amlodipine | amLODIPine | amLODIPIne |  | amLODIPine | **⚠ differs** |
+| amoxil | amOXil |  |  |  |  |
+| apomine | aPomine | aPomine |  |  |  |
+| arabloc | arABLOC |  |  |  |  |
+| aratac | arATAC | arATAC |  |  |  |
+| aripiprazole | ARIPiprazole |  |  | ARIPiprazole |  |
+| aropax | arOPAX | arOPAX |  |  |  |
+| atenolol |  | aTENOLol |  |  |  |
+| atezolizumab |  | aTEZOLIzumab |  |  |  |
+| atropt | aTRopt | aTRopt |  |  |  |
+| avastin | avaSTIN | avaSTIN |  |  |  |
+| avaxim | avaXIM | avaXIM |  |  |  |
+| avomine | aVomine | aVomine |  |  |  |
+| axitinib | aXITinib | aXITinib |  |  |  |
+| azacitidine |  |  |  | azaCITIDine |  |
+| azathioprine | azATHIOPRINE | azATHIOPRINE |  | azaTHIOprine | **⚠ differs** |
+| azithromycin | aziTHROMYCIN | azITHROMYCIN |  |  | **⚠ differs** |
+| azopt | aZopt | aZopt |  |  |  |
+| baricitinib | bARICITinib |  |  |  |  |
+| benralizumab | beNRALizumab |  |  |  |  |
+| benzathine benzylpenicillin |  | BENZATHINE benzylpenicillin |  |  |  |
+| bevacizumab | beVACizumab | beVACizumab |  |  |  |
+| bezlotoxumab | beZLOTOXumab |  |  |  |  |
+| binimetinib | biNIMEtinib |  |  |  |  |
+| bisacodyl | bisACODYl | bisACODYl |  |  |  |
+| bisoprolol | bisOPROLOl | bisOPROLOl |  |  |  |
+| budesonide | buDESONide | buDESONide |  |  |  |
+| bumetanide | buMETANide | buMETANide |  |  |  |
+| bupivacaine |  |  |  | BUPivacaine |  |
+| bupropion |  | buPROPION | buPROPion | buPROPion | **⚠ differs** |
+| buspirone |  | buSPIRONE | busPIRone | busPIRone | **⚠ differs** |
+| cabazitaxel | CABAZitaxel |  |  |  |  |
+| cabozantinib | cABOZANtinib |  |  |  |  |
+| caltrate | caLTRate | caLTRate |  |  |  |
+| captopril | caPTOPRil | caPTOPRIl |  |  | **⚠ differs** |
+| carafate | caRAFate | caRAFate |  |  |  |
+| carbamazepine | CARBAMazepine | CARBAMazepine |  | carBAMazepine | **⚠ differs** |
+| carbimazole | carbiMAZOLe | carbIMAZOLe |  |  | **⚠ differs** |
+| carboplatin | cARBOplatin | cARBOplatin | CARBOplatin | CARBOplatin | **⚠ differs** |
+| carvedilol | caRVEDILOl | caRVEDILOl |  |  |  |
+| cefaclor |  | cefaCLOR |  |  |  |
+| cefalexin | cefaLEXin | cefaLEXin |  |  |  |
+| cefalotin | cefALOTIN |  |  |  |  |
+| cefazolin | cefaZOLin | cefaZOLin |  | ceFAZolin | **⚠ differs** |
+| cefepime | cefEPIME | cefEPIME |  |  |  |
+| cefotaxime | cefOTAXIME | cefOTAXIME |  |  |  |
+| cefotetan |  |  |  | cefoTEtan |  |
+| cefoxitin | cefOXITIN | cefOXITIN |  | cefOXitin | **⚠ differs** |
+| ceftaroline | ceftAROLine | ceftAROLine |  |  |  |
+| ceftazidime | cefTAZIDIME | cefTAZIDIME |  | cefTAZidime | **⚠ differs** |
+| ceftriaxone | cefTRIAXONE | cefTRIAXONE |  | cefTRIAXone | **⚠ differs** |
+| cefuroxime |  | cefUROXIME |  |  |  |
+| celapram | celAPRAM | celAPRAM |  |  |  |
+| celebrex | celEBREX | celEBREX |  | CeleBREX | **⚠ differs** |
+| celexa |  |  |  | CeleXA |  |
+| cephalexin |  | cephaLEXin |  |  |  |
+| cephazolin |  | cephaZOLin |  |  |  |
+| cetuximab |  | CETUximab |  |  |  |
+| chlordiazepoxide |  |  |  | chlordiazePOXIDE |  |
+| chlorpromazine | cHLORPROMAZine | cHLORPROMAZIne | chlorproMAZINE | chlorproMAZINE | **⚠ differs** |
+| chlorpropamide |  |  | chlorproPAMIDE | chlorproPAMIDE |  |
+| ciclosporin | ciclosPORIN | ciclosPORIN |  |  |  |
+| cipramil | ciprAMIL | ciprAMIL |  |  |  |
+| ciprofloxacin | ciPROFLOXAcin | cIPROFLOXAcin |  |  | **⚠ differs** |
+| ciproxin | ciprOXIN | ciprOXIN |  |  |  |
+| cisplatin | ciSplatin | cISplatin | CISplatin | CISplatin | **⚠ differs** |
+| clarithromycin | cLARITHROMYcin | cLARITHROMYcin |  |  |  |
+| clindamycin |  | clINDAmycin |  |  |  |
+| clobazam | cloBAZam |  |  | cloBAZam |  |
+| clomifene | cLOMIFEne | cLOMIFEne |  |  |  |
+| clomiphene |  | cLOMIPHEne | clomiPHENE | clomiPHENE | **⚠ differs** |
+| clomipramine | cLOMIPRAMine | cLOMIPRAMIne | clomiPRAMINE | clomiPRAMINE | **⚠ differs** |
+| clonazepam | CLONazepam | CLONazepam |  | clonazePAM | **⚠ differs** |
+| clonidine |  | cloNIDine |  | cloNIDine |  |
+| clozapine |  | cLOZAPine |  | cloZAPine | **⚠ differs** |
+| cobimetinib | cOBIMEtinib | cOBIMEtinib |  |  |  |
+| coumadin | coUMADIN | coUMADIN |  |  |  |
+| coversyl | coVERSYL | coVERSYL |  |  |  |
+| cyclizine | cycLIZINE | cyclIZINE |  |  | **⚠ differs** |
+| cycloblastin |  | cyclOBLASTIN |  |  |  |
+| cyclonex | cycLONEX |  |  |  |  |
+| cyclophosphamide | CYCLOPHOSPHamide | CYCLOPHOSPHamide |  | cycloPHOSphamide | **⚠ differs** |
+| cycloserine | cyclosERINE | cyclosERINE | cycloSERINE | cycloSERINE | **⚠ differs** |
+| cyclosporin |  | cyclosPORIN |  |  |  |
+| cyclosporine |  |  | cycloSPORINE | cycloSPORINE |  |
+| dabrafenib | daBRAFEnib | daBRAFEnib |  |  |  |
+| dactinomycin | daCTINomycin | daCTINomycin |  | DACTINomycin | **⚠ differs** |
+| daptomycin | daPTomycin | daPTomycin |  | DAPTOmycin | **⚠ differs** |
+| dasatinib | daSATinib | daSATinib |  |  |  |
+| daunorubicin | DAUNOrubicin | DAUNOrubicin | DAUNOrubicin | DAUNOrubicin |  |
+| depo-medrol | DEPO-medrol | DEPO-medrol |  | DEPO-Medrol | **⚠ differs** |
+| depo-provera | depo-PROVERA | depo-PROVERA |  |  |  |
+| deptran | dePTRAn |  |  |  |  |
+| deralin | deRALin |  |  |  |  |
+| dexamethasone | dexAMETHASOne |  |  | dexAMETHasone | **⚠ differs** |
+| dexmedetomidine | dexMEDETOMIDine |  |  | dexmedeTOMIDine | **⚠ differs** |
+| diazepam | DIAzepam | DIazepam |  | diazePAM | **⚠ differs** |
+| digoxin |  | dIGOXin |  |  |  |
+| dilantin | dilaNTIN |  |  |  |  |
+| dilaudid | dilaUDID |  |  |  |  |
+| diltiazem |  |  |  | dilTIAZem |  |
+| dimenhydrinate |  |  | dimenhyDRINATE | dimenhyDRINATE |  |
+| diphenhydramine |  |  | diphenhydrAMINE | diphenhydrAMINE |  |
+| diprivan | diPRIVan |  |  |  |  |
+| dipyridamole | diPYRIDAMOLe | diPYRIDAMOLe |  |  |  |
+| disopyramide | diSOPYRAMIDe | diSOPYRAMIDe |  |  |  |
+| ditropan | diTROPan |  |  |  |  |
+| dobutamine |  | doBUTamine | DOBUTamine | DOBUTamine | **⚠ differs** |
+| docetaxel | DOCEtaxel | DOCEtaxel |  | DOCEtaxel |  |
+| dopamine |  | doPamine | DOPamine | DOPamine | **⚠ differs** |
+| dosulepin | doSULepin |  |  |  |  |
+| dothiepin | doTHiepin | doTHIEpin |  |  | **⚠ differs** |
+| doxazosin |  | dOXAZOSin |  |  |  |
+| doxepin | doXepin | doXEpin |  |  | **⚠ differs** |
+| doxorubicin | DOXOrubicin | DOXOrubicin | DOXOrubicin | DOXOrubicin |  |
+| dronabinol |  |  |  | droNABinol |  |
+| droperidol |  |  |  | droPERidol |  |
+| duloxetine | DULoxetine | DULoxetine |  | DULoxetine |  |
+| eculizumab | eCULizumab |  |  |  |  |
+| efalizumab | eFALizumab |  |  |  |  |
+| emicizumab | eMICizumab |  |  |  |  |
+| ephedrine |  |  |  | ePHEDrine |  |
+| epinephrine |  |  |  | EPINEPHrine |  |
+| epirubicin |  |  |  | epiRUBicin |  |
+| eribulin |  |  |  | eriBULin |  |
+| erythromycin | ERYthromycin | ERYthromycin |  |  |  |
+| fentanyl |  |  |  | fentaNYL |  |
+| flavoxate |  |  |  | flavoxATE |  |
+| flucloxacillin | flucLOXACILLIN |  |  |  |  |
+| fluconazole | flucONAZOLe |  |  |  |  |
+| flucytosine | flucYTOSINe |  |  |  |  |
+| fluoxetine |  |  |  | FLUoxetine |  |
+| flupenthixol |  | flupENTHIXOL |  |  |  |
+| flupentixol |  | flupENTIXOL |  |  |  |
+| fluphenazine |  | flupHENAZINE |  | fluPHENAZine | **⚠ differs** |
+| fluvax |  | fluVAx |  |  |  |
+| fluvoxamine | fluVOXAMine | fluVOXAMine |  | fluvoxaMINE | **⚠ differs** |
+| folinic acid |  | foliNIc acid |  |  |  |
+| glibenclamide | gliBENCLAMide | gliBENCLAMide |  |  |  |
+| gliclazide | gliCLAZide | gliCLAZide |  |  |  |
+| glimepiride | gliMEPIRide |  |  |  |  |
+| glipizide | gliPIZide | gliPIZide | glipiZIDE | glipiZIDE | **⚠ differs** |
+| glyburide |  |  | glyBURIDE | glyBURIDE |  |
+| guaifenesin |  |  |  | guaiFENesin |  |
+| guanfacine |  |  |  | guanFACINE |  |
+| humalog | humALOG | humALOG |  | HumaLOG | **⚠ differs** |
+| humulin | humULIN | humULIN |  | HumuLIN | **⚠ differs** |
+| hydralazine | hydrALAZINe |  | hydrALAZINE | hydrALAZINE | **⚠ differs** |
+| hydrea | hydreA |  |  |  |  |
+| hydrene | hydreNE |  |  |  |  |
+| hydrochlorothiazide | hydrOCHLOROTHIAZIDe |  |  | hydroCHLOROthiazide | **⚠ differs** |
+| hydrocodone |  |  |  | HYDROcodone |  |
+| hydromorphone | HYDROmorphone |  | HYDROmorphone | HYDROmorphone |  |
+| hydroxyprogesterone |  |  |  | HYDROXYprogesterone |  |
+| hydroxyzine |  |  | hydrOXYzine | hydrOXYzine |  |
+| hyoscine butylbromide |  | hyoscine BUTYLbromide |  |  |  |
+| hyoscine hydrobromide |  | hyoscine HYDRObromide |  |  |  |
+| idarubicin | iDArubicin | IDArubicin |  | IDArubicin | **⚠ differs** |
+| idarucizumab |  |  |  | idaruCIZUmab |  |
+| ifosfamide | iFOSFamide | IFOSFamide |  |  | **⚠ differs** |
+| imuprine |  | imUPRine |  |  |  |
+| inderal | INDEral | INDEral |  |  |  |
+| infliximab |  | INFLIximab |  | inFLIXimab | **⚠ differs** |
+| isopto carpine | isopto CARpine | isopto CARpine |  |  |  |
+| isopto homatropine | isopto HOMATROpine | isopto HOMATROpine |  |  |  |
+| isotretinoin | iSOtretinoin | ISOtretinoin |  | ISOtretinoin | **⚠ differs** |
+| janumet | januMET | januMET |  |  |  |
+| januvia | januVIA | januVIA |  |  |  |
+| ketalar | ketALAR | ketALAR |  |  |  |
+| ketorolac | ketOROLAC | ketOROLAC |  |  |  |
+| klonopin |  |  |  | KlonoPIN |  |
+| lamictal | laMICTAl | laMICTAl |  | LaMICtal | **⚠ differs** |
+| lamisil | laMISil | laMISIl |  | LamISIL | **⚠ differs** |
+| lamivudine | lamiVUDine | lamIVUDine |  | lamiVUDine | **⚠ differs** |
+| lamotrigine | lamOTRIGine | lamOTRIGine |  | lamoTRIgine | **⚠ differs** |
+| lantus | lanTUs | lanTUs |  |  |  |
+| lanvis | lanVis | lanVIs |  |  | **⚠ differs** |
+| lapatinib | laPAtinib | laPAtinib |  |  |  |
+| largactil | laRGACTil | laRGACTIl |  |  | **⚠ differs** |
+| lenvatinib | leNVAtinib |  |  |  |  |
+| leukeran | LEUKeran | LEUKeran |  |  |  |
+| levetiracetam |  |  |  | levETIRAcetam |  |
+| levocarnitine |  |  |  | levOCARNitine |  |
+| levofloxacin |  |  |  | levoFLOXacin |  |
+| levoleucovorin |  |  |  | LEVOleucovorin |  |
+| lincomycin | linCOMYCIN |  |  |  |  |
+| linezolid | linEZOLID |  |  |  |  |
+| lorazepam | LORazepam | LORazepam |  | LORazepam |  |
+| losec | loSEC |  |  |  |  |
+| lovan | loVAN |  |  |  |  |
+| loxalate |  | loxaLATe |  |  |  |
+| loxamine |  | loxaMINe |  |  |  |
+| m-enalapril |  | m-eNALAPRIL |  |  |  |
+| m-eslon |  | m-eSLON |  |  |  |
+| maxidex |  | maxiDEX |  |  |  |
+| maxitrol |  | maxiTROL |  |  |  |
+| medroxyprogesterone |  | meDROXYPROGESTERone | medroxyPROGESTERone | medroxyPROGESTERone | **⚠ differs** |
+| mercaptamine | mercaptAMine | mercaptAMine |  |  |  |
+| mercaptopurine | mercaptOPURine | mercaptOPURine |  |  |  |
+| metformin |  |  |  | metFORMIN |  |
+| methadone | methADONe | methADONe |  |  |  |
+| methazolamide |  |  |  | methazolAMIDE |  |
+| methimazole |  |  |  | methIMAzole |  |
+| methotrexate |  | metHOTREXATe |  |  |  |
+| methylphenidate | methYLPHENIDATe | methYLPHENIDATe |  |  |  |
+| methylprednisolone |  |  | methylPREDNISolone | methylPREDNISolone |  |
+| methylprednisolone acetate |  | methylprednisolone ACETate |  |  |  |
+| methylprednisolone sodium succinate |  | methylprednisolone SODIUM SUCCINate |  |  |  |
+| methyltestosterone |  |  | methylTESTOSTERone | methylTESTOSTERone |  |
+| metoclopramide |  | metOCLOPRAMIDe |  |  |  |
+| metolazone |  |  |  | metOLazone |  |
+| metoprolol |  | metoPROLOL |  |  |  |
+| metronidazole |  |  |  | metroNIDAZOLE |  |
+| metyrapone |  |  |  | metyraPONE |  |
+| metyrosine |  |  |  | metyroSINE |  |
+| mifepristone |  |  |  | miFEPRIStone |  |
+| migalastat |  |  | migALAstat | migALAstat |  |
+| miglustat |  |  | migLUstat | migLUstat |  |
+| misoprostol |  |  |  | miSOPROStol |  |
+| mitomycin |  |  |  | mitoMYcin |  |
+| mitoxantrone |  |  | mitoXANTRONE | mitoXANTRONE |  |
+| mobilis | moBILis |  |  |  |  |
+| movalis | moVALis |  |  |  |  |
+| moxifloxacin | MOXifloxacin | MOXIfloxacin |  |  | **⚠ differs** |
+| ms contin | MS Contin |  |  |  |  |
+| myleran | MYLeran | MYLeran |  |  |  |
+| naloxone |  | nalOXone |  |  |  |
+| naltrexone |  | nalTREXone |  |  |  |
+| neo-mercazole |  | neO-MERCAZOLe |  |  |  |
+| neoral | NEOral | NEOral |  |  |  |
+| neurokare |  | neUROKARe |  |  |  |
+| nexavar | nexAVAR |  |  | NexAVAR | **⚠ differs** |
+| nexium | nexiUM |  |  | NexIUM | **⚠ differs** |
+| nicardipine |  |  | niCARdipine | niCARdipine |  |
+| nifedipine | niFEDIPine | niFEDIPine | NIFEdipine | NIFEdipine | **⚠ differs** |
+| nimodipine | niMODIPine | niMODIPine |  | niMODipine | **⚠ differs** |
+| nitrazepam |  | NITRazepam |  |  |  |
+| nizatidine | niZATIDine |  |  |  |  |
+| norfloxacin | NORfloxacin | NORfloxacin |  |  |  |
+| normison | norMISON | norMISON |  |  |  |
+| norvasc | norVASC | norVASC |  |  |  |
+| novolin |  |  |  | NovoLIN |  |
+| novolog |  |  |  | NovoLOG |  |
+| novomix | novoMIX | novoMIX |  |  |  |
+| novorapid | novoRAPID | novoRAPID |  |  |  |
+| novoseven |  | novoSEVEN |  |  |  |
+| obinutuzumab | oBINUTUZumab | oBINUTUZumab |  |  |  |
+| ocrelizumab | oCRELizumab |  |  |  |  |
+| ofatumumab | oFATUMumab |  |  |  |  |
+| olanzapine |  |  |  | OLANZapine |  |
+| omalizumab | oMALizumab | oMALizumab |  |  |  |
+| oxazepam | OXazepam | OXazepam |  |  |  |
+| oxcarbazepine | OXCARBazepine | OXCARBazepine |  | OXcarbazepine | **⚠ differs** |
+| oxybutynin |  |  |  | oxyBUTYnin |  |
+| oxycodone |  |  |  | oxyCODONE |  |
+| oxycontin | oxyCONTIN | oxyCONTIN |  | OxyCONTIN | **⚠ differs** |
+| oxymorphone |  |  |  | oxyMORphone |  |
+| oxynorm | oxyNORM | oxyNORM |  |  |  |
+| paclitaxel | PACLitaxel | PACLItaxel |  | PACLitaxel | **⚠ differs** |
+| panitumumab | pANITUMumab |  |  |  |  |
+| pariet | paRIET |  |  |  |  |
+| paroxetine | PARoxetine | PARoxetine |  | PARoxetine |  |
+| paxtine | paXTINE |  |  |  |  |
+| pazopanib | pAZOPanib | pAZOPanib |  | PAZOPanib | **⚠ differs** |
+| pegfilgrastim |  | pegFILGRASTIM |  |  |  |
+| peginterferon |  | pegINTERFERON |  |  |  |
+| pemetrexed |  |  |  | PEMEtrexed |  |
+| penicillamine |  | penicillAMINE |  | penicillAMINE |  |
+| pentobarbital |  |  |  | PENTobarbital |  |
+| pertuzumab | pERTUZumab | pERTUZumab |  |  |  |
+| pexsig | pEXSIG |  |  |  |  |
+| phenobarbital |  |  |  | PHENobarbital |  |
+| physostigmine |  |  |  | PHYSostigmine |  |
+| ponatinib | pONATinib |  |  | PONATinib | **⚠ differs** |
+| pralatrexate |  |  |  | PRALAtrexate |  |
+| prednisolone |  |  | prednisoLONE | prednisoLONE |  |
+| prednisone |  | prEDNISone | predniSONE | predniSONE | **⚠ differs** |
+| prilosec |  |  |  | PriLOSEC |  |
+| primacin | primaCIN | primaCIN |  |  |  |
+| primacor | primaCOR | primaCOR |  |  |  |
+| primaquine |  | primAQUIne |  |  |  |
+| primaxin | primaXIN | primaXIN |  |  |  |
+| primidone |  | primIDOne |  |  |  |
+| pristiq | pRISTIQ |  |  |  |  |
+| prochlorperazine | proCHLORPERazine | proCHLORPERazine |  |  |  |
+| procyclidine |  | procYCLIDine |  |  |  |
+| prograf | proGRAF | proGRAF |  |  |  |
+| promethazine | proMETHazine | proMETHazine |  |  |  |
+| propofol | propOFol | propOFol |  |  |  |
+| propranolol | propRANOLol | propRANOLol |  |  |  |
+| prozac | proZAC | proZAC |  | PROzac | **⚠ differs** |
+| pyridostigmine |  |  |  | pyRIDostigmine |  |
+| quetiapine | QUETIAPine | QUETIAPine |  | QUEtiapine | **⚠ differs** |
+| quinidine |  |  |  | quiNIDine |  |
+| quinine |  | quINine |  | quiNINE | **⚠ differs** |
+| rabeprazole | RABEprazole |  |  | RABEprazole |  |
+| ramucirumab | raMUCIRumab |  |  |  |  |
+| ranibizumab | raNIBIZumab |  |  |  |  |
+| ranitidine |  |  |  | raNITIdine |  |
+| rifampicin | rifaMPICin | rifaMPICin |  |  |  |
+| rifampin |  |  |  | rifAMPin |  |
+| rifaximin | rifaXIMin | rifaXIMin |  | rifAXIMin | **⚠ differs** |
+| rimantadine |  |  |  | riMANTAdine |  |
+| risperdal |  |  |  | RisperDAL |  |
+| risperidone | riSPERIDONe | riSPERIDONe | risperiDONE | risperiDONE | **⚠ differs** |
+| rituximab |  | RITUximab |  | riTUXimab | **⚠ differs** |
+| romidepsin |  |  |  | romiDEPsin |  |
+| romiplostim |  |  |  | romiPLOStim |  |
+| ropinirole | rOPINIROLe | rOPINIROLe | rOPINIRole | rOPINIRole | **⚠ differs** |
+| ropivacaine |  |  |  | ROPivacaine |  |
+| sandimmune |  |  |  | SandIMMUNE |  |
+| sandostatin |  |  |  | SandoSTATIN |  |
+| saxagliptin | sAXagliptin |  |  | sAXagliptin |  |
+| sertraline | SERTRALine | SERTRALine |  |  |  |
+| sirolimus | Sirolimus | SIrolimus |  |  | **⚠ differs** |
+| sitagliptin | siTagliptin | siTagliptin |  | SITagliptin | **⚠ differs** |
+| solu-cortef | solu-CORTEF | solu-CORTEF |  | Solu-CORTEF | **⚠ differs** |
+| solu-medrol | SOLU-medrol | SOLU-medrol |  | SOLU-Medrol | **⚠ differs** |
+| sonidegib | soNIDEGib |  |  |  |  |
+| sorafenib | soRAFENib | soRAFENib |  | SORAfenib | **⚠ differs** |
+| sufentanil |  |  |  | SUFentanil |  |
+| sulfadiazine | sulfaDiazine | sulfaDIazine | sulfADIAZINE | sulfADIAZINE | **⚠ differs** |
+| sulfasalazine | sulfaSALazine | sulfaSALazine |  | sulfaSALAzine | **⚠ differs** |
+| sulfisoxazole |  |  | sulfiSOXAZOLE | sulfiSOXAZOLE |  |
+| sumatriptan | sUMATRIPTAn | sUMATRIPTAn |  | SUMAtriptan | **⚠ differs** |
+| sunitinib | sUNITinib | sUNITinib |  | SUNItinib | **⚠ differs** |
+| tacrolimus | TACrolimus | TACrolimus |  |  |  |
+| tamoxifen |  | TAMoxifen |  |  |  |
+| tapentadol | tAPENTadol |  |  |  |  |
+| tegretol | tEGRETOl |  |  |  |  |
+| temodal | tEMOdal | tEMOdal |  |  |  |
+| tiagabine |  |  |  | tiaGABine |  |
+| tizanidine |  |  |  | tiZANidine |  |
+| tofacitinib | tOFACitinib |  |  |  |  |
+| tofranil | toFRANIL | toFRANIL |  |  |  |
+| tolazamide |  |  | TOLAZamide | TOLAZamide |  |
+| tolbutamide |  |  | TOLBUTamide | TOLBUTamide |  |
+| topamax | toPAMAX | toPAMAX |  |  |  |
+| toradol | tORadol |  |  |  |  |
+| tramadol | tRAMadol | tRAMadol | traMADol | traMADol | **⚠ differs** |
+| trametinib | tRAMEtinib |  |  |  |  |
+| trazodone |  |  | traZODone | traZODone |  |
+| trental | tRENTAl |  |  |  |  |
+| trimeprazine | trimEPRAZINE | trimEPRAZINE |  |  |  |
+| trimethoprim | trimETHOPRIM | trimETHOPRIM |  |  |  |
+| valaciclovir | valAciclovir | valAciclovir |  |  |  |
+| valacyclovir |  |  |  | valACYclovir |  |
+| valganciclovir | valGANciclovir | valGANciclovir |  | valGANciclovir |  |
+| vinblastine | vinBLASTine | vinBLASTine | vinBLAStine | vinBLAStine | **⚠ differs** |
+| vincristine | vinCRISTine | vinCRISTine | vinCRIStine | vinCRIStine | **⚠ differs** |
+| vinorelbine | vinORELBine | vinORELBine |  |  |  |
+| xalacom | xalaCOM |  |  |  |  |
+| xalatan | xalaTAN |  |  |  |  |
+| yasmin |  | yasMIN |  |  |  |
+| yaz |  | yaZ |  |  |  |
+| zinnat | zinNAt |  |  |  |  |
+| zinvit | zinVit |  |  |  |  |
+| zocor | zoCOR |  |  |  |  |
+| zolmitriptan |  |  |  | ZOLMitriptan |  |
+| zoloft | zoLOFT |  |  |  |  |
+| zoton | zoTON |  |  |  |  |
+| zyprexa |  |  |  | ZyPREXA |  |
+| zyrtec |  |  |  | ZyrTEC |  |
