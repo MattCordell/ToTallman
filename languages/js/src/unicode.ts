@@ -10,13 +10,16 @@ export function caseFold(word: string): string {
   return word.toLowerCase();
 }
 
+// Hoisted to module scope so it is compiled once, not per-call (hot path).
+const LETTER_OR_MARK = /^[\p{L}\p{M}]$/u;
+
 // Returns true if the character at index i (UTF-16 position) is a Unicode
 // letter (category L*) or combining mark (category M*), matching \p{L}\p{M}.
 export function isLetterOrMark(str: string, i: number): boolean {
   const cp = str.codePointAt(i);
   if (cp === undefined) return false;
   const char = String.fromCodePoint(cp);
-  return /^[\p{L}\p{M}]$/u.test(char);
+  return LETTER_OR_MARK.test(char);
 }
 
 // Returns the number of UTF-16 code units consumed by the character at index i.
