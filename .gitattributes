@@ -4,6 +4,18 @@
 * text=auto
 
 ###############################################################################
+# Pin LF on generated/compiled/source-data files so freshness checks
+# (git diff --exit-code in CI) are stable across Windows and Linux contributors.
+# The emitters all produce \n; eol=lf makes the contract explicit and
+# guarantees checkout-to-LF everywhere so local regeneration never shows a
+# spurious diff from the committed state.
+###############################################################################
+*.json  text eol=lf
+*.py    text eol=lf
+*.java  text eol=lf
+*.ts    text eol=lf
+
+###############################################################################
 # Set default behavior for command prompt diff.
 #
 # This is need for earlier builds of msysgit that does not have it on by
