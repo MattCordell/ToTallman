@@ -121,6 +121,7 @@ def main() -> int:
         "    raise TallmanError("
         "f\"Unknown Tallman list ID: '{list_id}'. Available lists: {available}.\")"
     )
+    lines.append("")  # trailing newline (ruff W292)
     OUTPUT.write_text("\n".join(lines), encoding="utf-8")
     print(f"Success! Generated {OUTPUT}")
     print(f"  Lists: {len(list_ids)}")
