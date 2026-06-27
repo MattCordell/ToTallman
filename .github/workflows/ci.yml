@@ -254,7 +254,9 @@ jobs:
     runs-on: ubuntu-latest
     # `python` here refers to the matrix job; GitHub Actions waits for ALL
     # matrix variants to succeed before treating the job as done.
-    needs: [csharp, python, java, js]
+    # `lists` is included so this job never runs against unvalidated or stale
+    # source lists / compiled artifacts (freshness is proven in the lists job).
+    needs: [lists, csharp, python, java, js]
     steps:
       - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
 
@@ -281,6 +283,15 @@ jobs:
           node-version: '24'
           cache: 'npm'
           cache-dependency-path: languages/js/package-lock.json
+
+      # Defense-in-depth: re-run compile-lists and fail if the committed compiled
+      # artifact is stale. The lists job already proves this for the same commit,
+      # but repeating it here ensures the parity job is always working from a
+      # provably fresh compiled artifact even if dependency ordering ever changes.
+      - name: Verify compiled artifact is fresh
+        run: |
+          node tools/compile-lists/compile-lists.js
+          git diff --exit-code -- tallman-lists/compiled/lists.compiled.json
 
       # The C# adapter spawns `dotnet ToTallman.Demo.dll`; rebuild here so the
       # binary is present in this job's workspace.

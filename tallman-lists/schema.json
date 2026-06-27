@@ -30,10 +30,11 @@
     },
     "entries": {
       "type": "array",
-      "description": "Array of drug names with Tallman lettering (canonical output form)",
+      "description": "Array of drug names with Tallman lettering (canonical output form). Entries must be ASCII-only (letters, spaces, hyphens) so cross-language casefold parity is guaranteed (spec §3.2).",
       "items": {
         "type": "string",
-        "minLength": 1
+        "minLength": 1,
+        "pattern": "^[A-Za-z][A-Za-z -]*$"
       },
       "minItems": 1,
       "uniqueItems": true
