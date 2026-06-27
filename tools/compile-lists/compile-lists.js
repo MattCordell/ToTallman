@@ -44,6 +44,17 @@ function compileList(filePath) {
 
   for (const entry of data.entries) {
     const normalized = entry.normalize('NFC');
+
+    // Defensive ASCII check: all four language runtimes fold case with different
+    // functions that agree only for ASCII input (spec §3.2). Fail loudly here so
+    // a non-ASCII entry can never reach the embedded artifacts, even if the validator
+    // is bypassed (the two tools are independently runnable).
+    if (!/^[\x00-\x7F]+$/.test(normalized)) {
+      throw new Error(
+        `Non-ASCII entry "${entry}" in list ${data.id} violates the ASCII-only ` +
+        `parity invariant (spec §3.2). Run the validator to catch this earlier.`);
+    }
+
     const key = casefoldKey(normalized);
 
     if (seen.has(key)) {

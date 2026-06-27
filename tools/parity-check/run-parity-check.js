@@ -11,6 +11,15 @@
 // Exit codes:
 //   0 - All adapters agree (or fewer than 2 adapters found - parity deferred)
 //   1 - Parity failure: at least one adapter produced different output
+//
+// NOTE: This tool tests already-built artifacts. It does NOT rebuild from
+// source before comparing. In CI the language jobs rebuild each implementation
+// and the parity job re-verifies the compiled artifact before running this
+// script. When running locally, build each language first:
+//   dotnet build languages/csharp/ToTallman.sln -c Debug
+//   pip install -e languages/python
+//   node languages/java/tools/embed-lists.js && mvn -f languages/java/pom.xml package -DskipTests
+//   npm ci && npm run build  (in languages/js/)
 
 const fs = require('fs');
 const path = require('path');

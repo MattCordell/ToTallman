@@ -150,13 +150,14 @@ function validateFile(filePath, validate) {
 }
 
 function validateEntries(data, fileName) {
-  // Check for duplicates (case-insensitive)
+  // Check for duplicates using the same key derivation as the compiler:
+  // NFC-normalize then toLowerCase (spec §3.2, casefold = NFC + toLowerCase).
   const seen = new Map();
   const duplicates = [];
 
   for (let i = 0; i < data.entries.length; i++) {
     const entry = data.entries[i];
-    const lowerEntry = entry.toLowerCase();
+    const lowerEntry = entry.normalize('NFC').toLowerCase();
 
     if (seen.has(lowerEntry)) {
       duplicates.push({
