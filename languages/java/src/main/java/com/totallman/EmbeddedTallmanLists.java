@@ -1101,7 +1101,7 @@ final class EmbeddedTallmanLists {
     static {
         Map<String, String> versions = new HashMap<>(5);
         versions.put("AU", "20240400.0");
-        versions.put("DEFAULT", "20240400.0");
+        versions.put("DEFAULT", "20260612.0");
         versions.put("FDA", "20260612.0");
         versions.put("ISMP", "20260612.0");
         versions.put("NZ", "20231000.0");
