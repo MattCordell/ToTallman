@@ -387,7 +387,10 @@ function main() {
     },
     {
       id: 'DEFAULT',
-      description: `Default Tall Man list (AU+ISMP+NZ+FDA, precedence AU>ISMP>NZ>FDA). Sources: AU ${extracted['AU'].meta.document_version}, ISMP ${ismpVersion}, NZ ${extracted['NZ'].meta.document_version}, FDA ${extracted['FDA'].meta.document_version}.`,
+      // "Sources:" reports the true source-document versions for provenance
+      // tracing (so each one resolves to a real authority document); the
+      // version field above carries the derived lexicographic max separately.
+      description: `Default Tall Man list (AU+ISMP+NZ+FDA, precedence AU>ISMP>NZ>FDA). Sources: AU ${extracted['AU'].meta.document_version}, ISMP ${extracted['ISMP-SUPP'].meta.document_version}, NZ ${extracted['NZ'].meta.document_version}, FDA ${extracted['FDA'].meta.document_version}.`,
       // Version = lexicographic max of all four effective constituents merged
       // into DEFAULT (AU, derived ISMP, NZ, FDA), per spec 4.2 -- so it advances
       // whenever any constituent (including FDA or the derived ISMP) updates.
