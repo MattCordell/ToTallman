@@ -6,7 +6,7 @@ function getList(listId: string) {
   const list = Object.hasOwn(EMBEDDED_LISTS, listId) ? EMBEDDED_LISTS[listId] : undefined;
   if (list === undefined) {
     const available = Object.keys(EMBEDDED_LISTS).sort().join(', ');
-    throw new TallmanError(`Unknown list ID: '${listId}'. Available: ${available}.`);
+    throw new TallmanError(`Unknown Tallman list ID: '${listId}'. Available lists: ${available}.`);
   }
   return list;
 }

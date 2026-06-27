@@ -164,8 +164,7 @@ def test_invalid_list_message_lists_available() -> None:
     with pytest.raises(TallmanError) as exc_info:
         to_tallman("prednisone", "BOGUS")
     msg = str(exc_info.value)
-    assert "DEFAULT" in msg
-    assert "AU" in msg
+    assert msg == "Unknown Tallman list ID: 'BOGUS'. Available lists: AU, DEFAULT, FDA, ISMP, NZ."
 
 
 # ---------------------------------------------------------------------------

@@ -121,13 +121,6 @@ def main() -> int:
         "    raise TallmanError("
         "f\"Unknown Tallman list ID: '{list_id}'. Available lists: {available}.\")"
     )
-    lines.append("")
-    lines.append("")
-    lines.append("def has_list(list_id: str) -> bool:")
-    lines.append('    """Return True if list_id is a known list."""')
-    lines.append("    return list_id in ALL_LISTS")
-    lines.append("")
-
     OUTPUT.write_text("\n".join(lines), encoding="utf-8")
     print(f"Success! Generated {OUTPUT}")
     print(f"  Lists: {len(list_ids)}")

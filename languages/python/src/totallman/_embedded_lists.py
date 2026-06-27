@@ -1117,8 +1117,3 @@ def get_version(list_id: str) -> str:
         return VERSIONS[list_id]
     available = ", ".join(sorted(AVAILABLE_LIST_IDS))
     raise TallmanError(f"Unknown Tallman list ID: '{list_id}'. Available lists: {available}.")
-
-
-def has_list(list_id: str) -> bool:
-    """Return True if list_id is a known list."""
-    return list_id in ALL_LISTS

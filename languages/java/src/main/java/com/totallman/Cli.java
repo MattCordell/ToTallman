@@ -22,18 +22,35 @@ public final class Cli {
     String input = null;
     String listId = "DEFAULT";
 
-    for (int i = 0; i < args.length - 1; i++) {
+    for (int i = 0; i < args.length; i++) {
       switch (args[i]) {
         case "--input-base64":
-          byte[] decoded = Base64.getDecoder().decode(args[i + 1]);
-          input = new String(decoded, StandardCharsets.UTF_8);
+          if (i + 1 >= args.length) {
+            System.err.println("Error: --input-base64 requires a value.");
+            System.exit(1);
+          }
+          try {
+            byte[] decoded = Base64.getDecoder().decode(args[i + 1]);
+            input = new String(decoded, StandardCharsets.UTF_8);
+          } catch (IllegalArgumentException e) {
+            System.err.println("Error: invalid base64 input: " + e.getMessage());
+            System.exit(1);
+          }
           i++;
           break;
         case "--input":
+          if (i + 1 >= args.length) {
+            System.err.println("Error: --input requires a value.");
+            System.exit(1);
+          }
           input = args[i + 1];
           i++;
           break;
         case "--list":
+          if (i + 1 >= args.length) {
+            System.err.println("Error: --list requires a value.");
+            System.exit(1);
+          }
           listId = args[i + 1];
           i++;
           break;
