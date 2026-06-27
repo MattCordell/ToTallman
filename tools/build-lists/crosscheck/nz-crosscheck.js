@@ -21,7 +21,7 @@ const rootDir = path.join(__dirname, '..', '..', '..');
 const sourcesDir = path.join(rootDir, 'tallman-lists', 'sources');
 const nzDir = path.join(sourcesDir, 'NZ');
 
-const { casefoldKey, parseCSV } = require('../lib/util');
+const { casefoldKey, parseCSV } = require('../../lib/util');
 
 // Load meta
 const meta = JSON.parse(fs.readFileSync(path.join(nzDir, 'meta.json'), 'utf8'));

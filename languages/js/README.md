@@ -69,7 +69,7 @@ try {
   toTallman('prednisone', 'UNKNOWN');
 } catch (err) {
   if (err instanceof TallmanError) {
-    console.error(err.message); // "Unknown list ID: 'UNKNOWN'. Available: AU, DEFAULT, ..."
+    console.error(err.message); // "Unknown Tallman list ID: 'UNKNOWN'. Available lists: AU, DEFAULT, ..."
   }
 }
 ```

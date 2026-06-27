@@ -3,6 +3,7 @@
 const fs = require('fs');
 const path = require('path');
 const Ajv = require('ajv');
+const { casefoldKey } = require('../lib/util');
 
 // Colors for console output
 const colors = {
@@ -150,14 +151,12 @@ function validateFile(filePath, validate) {
 }
 
 function validateEntries(data, fileName) {
-  // Check for duplicates using the same key derivation as the compiler:
-  // NFC-normalize then toLowerCase (spec §3.2, casefold = NFC + toLowerCase).
   const seen = new Map();
   const duplicates = [];
 
   for (let i = 0; i < data.entries.length; i++) {
     const entry = data.entries[i];
-    const lowerEntry = entry.normalize('NFC').toLowerCase();
+    const lowerEntry = casefoldKey(entry);
 
     if (seen.has(lowerEntry)) {
       duplicates.push({
@@ -211,12 +210,11 @@ function validateEntries(data, fileName) {
 
   // Sort order rule: entries must be casefold-sorted (NFC+toLowerCase, ordinal).
   // Ordinal order matches compile-lists.js (Object.keys().sort()) and keeps
-  // generated artifacts reproducible across locales. NFC normalization matches
-  // the canonical casefold key derivation (spec §3.2).
+  // generated artifacts reproducible across locales.
   // build-lists.js guarantees this; a violation means the file was hand-edited.
   const sorted = [...data.entries].sort((a, b) => {
-    const ka = a.normalize('NFC').toLowerCase();
-    const kb = b.normalize('NFC').toLowerCase();
+    const ka = casefoldKey(a);
+    const kb = casefoldKey(b);
     return ka < kb ? -1 : ka > kb ? 1 : 0;
   });
   const unsortedIdx = data.entries.findIndex((e, i) => e !== sorted[i]);

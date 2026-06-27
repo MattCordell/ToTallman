@@ -23,7 +23,7 @@ const fdaDir = path.join(sourcesDir, 'FDA');
 
 const FDA_URL = 'https://www.fda.gov/drugs/medication-errors-related-cder-regulated-drug-products/fda-name-differentiation-project';
 
-const { casefoldKey, parseCSV } = require('../lib/util');
+const { casefoldKey, parseCSV } = require('../../lib/util');
 
 // Load meta + CSV
 const meta = JSON.parse(fs.readFileSync(path.join(fdaDir, 'meta.json'), 'utf8'));

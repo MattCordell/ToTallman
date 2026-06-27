@@ -43,7 +43,7 @@ const outDir = path.join(listsDir, 'compiled');
 
 const dryRun = process.argv.includes('--dry-run');
 
-const { casefoldKey, parseCSV } = require('./lib/util');
+const { casefoldKey, parseCSV } = require('../lib/util');
 
 // DEFAULT precedence order: AU > ISMP > NZ > FDA (AU primary; ISMP over NZ; FDA explicit fallback)
 const DEFAULT_PRECEDENCE = ['AU', 'ISMP', 'NZ', 'FDA'];
