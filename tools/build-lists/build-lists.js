@@ -354,6 +354,12 @@ function main() {
   }
 
   // 4. Build JSON objects
+  // Derived ISMP version = lexicographic max(FDA, ISMP-SUPP); reused by the
+  // ISMP list and as DEFAULT's effective ISMP constituent (spec 4.2).
+  const ismpVersion = [
+    extracted['FDA'].meta.document_version,
+    extracted['ISMP-SUPP'].meta.document_version,
+  ].sort().reverse()[0];
   const listOutputs = [
     {
       id: 'AU',
@@ -376,21 +382,46 @@ function main() {
     {
       id: 'ISMP',
       description: 'FDA and ISMP Lists of Look-Alike Drug Names (ISMP combined)',
-      version: [extracted['FDA'].meta.document_version, extracted['ISMP-SUPP'].meta.document_version].sort().reverse()[0],
+      version: ismpVersion,
       entries: ismpEntries,
     },
     {
       id: 'DEFAULT',
+      // "Sources:" reports the true source-document versions for provenance
+      // tracing (so each one resolves to a real authority document); the
+      // version field above carries the derived lexicographic max separately.
       description: `Default Tall Man list (AU+ISMP+NZ+FDA, precedence AU>ISMP>NZ>FDA). Sources: AU ${extracted['AU'].meta.document_version}, ISMP ${extracted['ISMP-SUPP'].meta.document_version}, NZ ${extracted['NZ'].meta.document_version}, FDA ${extracted['FDA'].meta.document_version}.`,
-      // Version reflects the most recently updated constituent source
+      // Version = lexicographic max of all four effective constituents merged
+      // into DEFAULT (AU, derived ISMP, NZ, FDA), per spec 4.2 -- so it advances
+      // whenever any constituent (including FDA or the derived ISMP) updates.
       version: [
         extracted['AU'].meta.document_version,
+        ismpVersion,
         extracted['NZ'].meta.document_version,
-        extracted['ISMP-SUPP'].meta.document_version,
+        extracted['FDA'].meta.document_version,
       ].sort().reverse()[0],
       entries: defaultEntries,
     },
   ];
+
+  // 4b. Invariant (spec 4.2): DEFAULT version == lexicographic max of all four
+  // effective constituents merged into DEFAULT (AU, derived ISMP, NZ, FDA), so a
+  // bare FDA/ISMP refresh can never silently leave DEFAULT stale. Guards against
+  // a future edit dropping a constituent from the version computation.
+  const defaultList = listOutputs.find(l => l.id === 'DEFAULT');
+  const ismpList = listOutputs.find(l => l.id === 'ISMP');
+  const expectedDefaultVersion = [
+    extracted['AU'].meta.document_version,
+    ismpList.version,
+    extracted['NZ'].meta.document_version,
+    extracted['FDA'].meta.document_version,
+  ].sort().reverse()[0];
+  if (defaultList.version !== expectedDefaultVersion) {
+    console.error(
+      `\nBuild invariant violated: DEFAULT version "${defaultList.version}" != ` +
+      `lexicographic max of {AU, ISMP, NZ, FDA} = "${expectedDefaultVersion}" (spec 4.2).`);
+    process.exit(1);
+  }
 
   // 5. Build provenance sidecar
   const provenance = {};

@@ -1081,7 +1081,7 @@ MAX_WORD_COUNTS: dict[str, int] = {
 
 VERSIONS: dict[str, str] = {
     "AU": "20240400.0",
-    "DEFAULT": "20240400.0",
+    "DEFAULT": "20260612.0",
     "FDA": "20260612.0",
     "ISMP": "20260612.0",
     "NZ": "20231000.0",

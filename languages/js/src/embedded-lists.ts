@@ -253,7 +253,7 @@ export const EMBEDDED_LISTS: Readonly<Record<string, ListData>> = {
     },
   },
   DEFAULT: {
-    version: '20240400.0',
+    version: '20260612.0',
     description: 'Default Tall Man list (AU+ISMP+NZ+FDA, precedence AU>ISMP>NZ>FDA). Sources: AU 20240400.0, ISMP 20230100.0, NZ 20231000.0, FDA 20260612.0.',
     maxWords: 3,
     entries: {
