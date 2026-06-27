@@ -47,6 +47,7 @@ const testSchemaPath = path.join(testsDir, 'test-schema.json');
 let totalTests = 0;
 let passedTests = 0;
 let failedTests = 0;
+let fileErrors = 0;
 const failures = [];
 
 function main() {
@@ -113,7 +114,7 @@ function main() {
   printSummary();
 
   // Exit with appropriate code
-  if (failedTests > 0) {
+  if (failedTests > 0 || fileErrors > 0) {
     process.exit(1);
   } else {
     process.exit(0);
@@ -131,6 +132,7 @@ function runTestFile(filePath, validateSchema, adapter) {
     testData = JSON.parse(fs.readFileSync(filePath, 'utf8'));
   } catch (error) {
     logError(`Failed to parse test file: ${error.message}`);
+    fileErrors++;
     return;
   }
 
@@ -141,6 +143,7 @@ function runTestFile(filePath, validateSchema, adapter) {
     validateSchema.errors.forEach(error => {
       logError(`  ${error.instancePath} ${error.message}`);
     });
+    fileErrors++;
     return;
   }
 

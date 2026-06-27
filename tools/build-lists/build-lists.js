@@ -43,63 +43,10 @@ const outDir = path.join(listsDir, 'compiled');
 
 const dryRun = process.argv.includes('--dry-run');
 
-// ---------------------------------------------------------------------------
-// Shared utilities (kept consistent with compile-lists.js)
-// ---------------------------------------------------------------------------
-
-function casefoldKey(text) {
-  return text.normalize('NFC').toLowerCase();
-}
+const { casefoldKey, parseCSV } = require('./lib/util');
 
 // DEFAULT precedence order: AU > ISMP > NZ > FDA (AU primary; ISMP over NZ; FDA explicit fallback)
 const DEFAULT_PRECEDENCE = ['AU', 'ISMP', 'NZ', 'FDA'];
-
-// ---------------------------------------------------------------------------
-// CSV parsing
-// ---------------------------------------------------------------------------
-
-function parseCSV(text) {
-  const lines = text.replace(/\r\n/g, '\n').split('\n');
-  const rows = [];
-  for (const line of lines) {
-    if (!line.trim()) continue;
-    // Minimal RFC 4180 parse (handles quoted fields with commas inside)
-    const fields = [];
-    let i = 0;
-    while (i < line.length) {
-      if (line[i] === '"') {
-        let val = '';
-        i++; // skip opening quote
-        while (i < line.length) {
-          if (line[i] === '"' && line[i + 1] === '"') {
-            val += '"';
-            i += 2;
-          } else if (line[i] === '"') {
-            i++; // skip closing quote
-            break;
-          } else {
-            val += line[i++];
-          }
-        }
-        fields.push(val);
-        if (i < line.length && line[i] === ',') i++;
-      } else {
-        let j = line.indexOf(',', i);
-        if (j === -1) j = line.length;
-        fields.push(line.slice(i, j));
-        i = j + 1;
-      }
-    }
-    rows.push(fields);
-  }
-  if (rows.length === 0) return [];
-  const headers = rows[0].map(h => h.trim().toLowerCase());
-  return rows.slice(1).map(row => {
-    const obj = {};
-    headers.forEach((h, idx) => { obj[h] = (row[idx] || '').trim(); });
-    return obj;
-  });
-}
 
 // ---------------------------------------------------------------------------
 // Parenthetical handling: "doSULepin (doTHiepin)" -> ["doSULepin", "doTHiepin"]
@@ -218,8 +165,8 @@ function loadSourceExtract(authorityId) {
 
 function buildListJSON(id, description, sourceVersion, entries) {
   // entries: Map<casefold key, { form, ... }>
-  // Sort by casefold key for stable diffs
-  const sortedKeys = [...entries.keys()].sort((a, b) => a.localeCompare(b));
+  // Sort by casefold key for stable diffs (ordinal, matches compile-lists.js).
+  const sortedKeys = [...entries.keys()].sort();
   const entryForms = sortedKeys.map(k => entries.get(k).form);
 
   return {

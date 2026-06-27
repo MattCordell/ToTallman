@@ -21,6 +21,8 @@ const rootDir = path.join(__dirname, '..', '..', '..');
 const sourcesDir = path.join(rootDir, 'tallman-lists', 'sources');
 const nzDir = path.join(sourcesDir, 'NZ');
 
+const { casefoldKey, parseCSV } = require('../lib/util');
+
 // Load meta
 const meta = JSON.parse(fs.readFileSync(path.join(nzDir, 'meta.json'), 'utf8'));
 if (!meta.machine_readable_file) {
@@ -56,33 +58,16 @@ for (let i = 2; i < xlsxRows.length; i++) {
   if (form.startsWith('*\t') || form.startsWith('* ')) continue;
   const clean = form.endsWith('*') ? form.slice(0, -1).trim() : form;
   if (clean.length < 2) continue;
-  xlsxForms.set(clean.toLowerCase(), clean);
+  xlsxForms.set(casefoldKey(clean), clean);
 }
 
 // Load CSV
-function parseCSV(text) {
-  const lines = text.replace(/\r\n/g, '\n').split('\n');
-  const rows = [];
-  for (const line of lines) {
-    if (!line.trim()) continue;
-    const fields = line.split(',').map(f => f.trim());
-    rows.push(fields);
-  }
-  if (!rows.length) return [];
-  const headers = rows[0].map(h => h.toLowerCase());
-  return rows.slice(1).map(row => {
-    const obj = {};
-    headers.forEach((h, i) => { obj[h] = row[i] || ''; });
-    return obj;
-  });
-}
-
 const csvPath = path.join(nzDir, meta.extract_file);
 const csvRows = parseCSV(fs.readFileSync(csvPath, 'utf8'));
 const csvForms = new Map(); // casefold -> row
 for (const row of csvRows) {
   if (!row.form) continue;
-  csvForms.set(row.form.toLowerCase(), row);
+  csvForms.set(casefoldKey(row.form), row);
 }
 
 // Cross-check

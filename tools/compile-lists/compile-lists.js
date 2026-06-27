@@ -38,7 +38,7 @@ function wordCount(text) {
 function compileList(filePath) {
   const data = JSON.parse(fs.readFileSync(filePath, 'utf8'));
 
-  const entries = {};
+  const entries = Object.create(null);
   const seen = new Map();
   let maxWords = 0;
 

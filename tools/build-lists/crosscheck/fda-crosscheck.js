@@ -23,51 +23,17 @@ const fdaDir = path.join(sourcesDir, 'FDA');
 
 const FDA_URL = 'https://www.fda.gov/drugs/medication-errors-related-cder-regulated-drug-products/fda-name-differentiation-project';
 
+const { casefoldKey, parseCSV } = require('../lib/util');
+
 // Load meta + CSV
 const meta = JSON.parse(fs.readFileSync(path.join(fdaDir, 'meta.json'), 'utf8'));
-
-function parseCSV(text) {
-  const lines = text.replace(/\r\n/g, '\n').split('\n');
-  const rows = [];
-  for (const line of lines) {
-    if (!line.trim()) continue;
-    const fields = [];
-    let i = 0;
-    while (i < line.length) {
-      if (line[i] === '"') {
-        let val = '';
-        i++;
-        while (i < line.length) {
-          if (line[i] === '"' && line[i + 1] === '"') { val += '"'; i += 2; }
-          else if (line[i] === '"') { i++; break; }
-          else { val += line[i++]; }
-        }
-        fields.push(val);
-        if (i < line.length && line[i] === ',') i++;
-      } else {
-        let j = line.indexOf(',', i);
-        if (j === -1) j = line.length;
-        fields.push(line.slice(i, j));
-        i = j + 1;
-      }
-    }
-    rows.push(fields);
-  }
-  if (!rows.length) return [];
-  const headers = rows[0].map(h => h.trim().toLowerCase());
-  return rows.slice(1).map(row => {
-    const obj = {};
-    headers.forEach((h, idx) => { obj[h] = (row[idx] || '').trim(); });
-    return obj;
-  });
-}
 
 const csvPath = path.join(fdaDir, meta.extract_file);
 const csvRows = parseCSV(fs.readFileSync(csvPath, 'utf8'));
 const csvForms = new Map(); // casefold -> original form
 for (const row of csvRows) {
   if (!row.form) continue;
-  csvForms.set(row.form.toLowerCase(), row.form);
+  csvForms.set(casefoldKey(row.form), row.form);
 }
 
 // Fetch and parse FDA page
@@ -103,7 +69,7 @@ async function fetchFDAForms() {
       const name = part.trim();
       // TML forms: have at least one uppercase and one lowercase, only letters
       if (/[A-Z]/.test(name) && /[a-z]/.test(name) && /^[A-Za-z-]+$/.test(name) && name.length > 3) {
-        forms.set(name.toLowerCase(), name);
+        forms.set(casefoldKey(name), name);
       }
     }
   }

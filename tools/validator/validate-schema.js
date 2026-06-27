@@ -209,9 +209,16 @@ function validateEntries(data, fileName) {
     logSuccess(`  All entries satisfy upper/lower rule`);
   }
 
-  // Sort order rule: entries must be casefold-sorted (toLowerCase order).
+  // Sort order rule: entries must be casefold-sorted (NFC+toLowerCase, ordinal).
+  // Ordinal order matches compile-lists.js (Object.keys().sort()) and keeps
+  // generated artifacts reproducible across locales. NFC normalization matches
+  // the canonical casefold key derivation (spec §3.2).
   // build-lists.js guarantees this; a violation means the file was hand-edited.
-  const sorted = [...data.entries].sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
+  const sorted = [...data.entries].sort((a, b) => {
+    const ka = a.normalize('NFC').toLowerCase();
+    const kb = b.normalize('NFC').toLowerCase();
+    return ka < kb ? -1 : ka > kb ? 1 : 0;
+  });
   const unsortedIdx = data.entries.findIndex((e, i) => e !== sorted[i]);
   if (unsortedIdx !== -1) {
     logError(`  Entries are not casefold-sorted (first mismatch at index ${unsortedIdx}: "${data.entries[unsortedIdx]}" should be "${sorted[unsortedIdx]}")`);
