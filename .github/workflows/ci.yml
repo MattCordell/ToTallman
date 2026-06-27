@@ -224,11 +224,7 @@ jobs:
         run: npm run typecheck
         working-directory: languages/js
 
-      - name: Build (tsc CJS + ESM)
-        run: npm run build
-        working-directory: languages/js
-
-      - name: Native tests (node:test)
+      - name: Native tests (node:test, includes build via pretest)
         run: npm test
         working-directory: languages/js
 

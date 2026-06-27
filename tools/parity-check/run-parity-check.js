@@ -75,7 +75,13 @@ function loadTestCases() {
 
   const cases = [];
   for (const file of testFiles) {
-    const data = JSON.parse(fs.readFileSync(path.join(testsDir, file), 'utf8'));
+    let data;
+    try {
+      data = JSON.parse(fs.readFileSync(path.join(testsDir, file), 'utf8'));
+    } catch (err) {
+      logError(`Failed to parse test file ${file}: ${err.message}`);
+      process.exit(1);
+    }
     for (const test of (data.tests || [])) {
       cases.push({ file, description: test.description, input: test.input, listId: test.listId });
     }

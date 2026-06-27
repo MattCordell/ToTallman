@@ -101,7 +101,8 @@ namespace ToTallman.Tests
         [Fact]
         public void ListVersion_Throws_For_Unknown_List()
         {
-            Assert.Throws<TallmanException>(() => TallmanConverter.ListVersion("NOT_A_REAL_LIST"));
+            var ex = Assert.Throws<TallmanException>(() => TallmanConverter.ListVersion("NOT_A_REAL_LIST"));
+            Assert.Equal("Unknown Tallman list ID: 'NOT_A_REAL_LIST'. Available lists: AU, DEFAULT, FDA, ISMP, NZ.", ex.Message);
         }
 
         [Fact]

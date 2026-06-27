@@ -84,7 +84,9 @@ test('uses DEFAULT list when no listId provided', () => {
 test('throws TallmanError for unknown listId', () => {
     assert.throws(
         () => toTallman('prednisone', 'INVALID'),
-        (err) => err instanceof TallmanError && /INVALID/.test(err.message),
+        (err) =>
+            err instanceof TallmanError &&
+            err.message === "Unknown Tallman list ID: 'INVALID'. Available lists: AU, DEFAULT, FDA, ISMP, NZ.",
     );
 });
 

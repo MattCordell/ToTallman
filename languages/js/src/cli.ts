@@ -8,28 +8,52 @@ function usage(): void {
   );
 }
 
+// Validates standard base64 (RFC 4648 §4). Node's Buffer.from silently accepts
+// invalid characters; this check ensures malformed input fails loudly.
+const BASE64_RE =
+  /^(?:[A-Za-z0-9+/]{4})*(?:[A-Za-z0-9+/]{2}==|[A-Za-z0-9+/]{3}=|[A-Za-z0-9+/]{4})?$/;
+
 function main(): void {
   const args = process.argv.slice(2);
   let input: string | undefined;
   let listId = 'DEFAULT';
 
-  for (let i = 0; i < args.length - 1; i++) {
+  for (let i = 0; i < args.length; i++) {
     switch (args[i]) {
-      case '--input':
-        input = args[i + 1];
+      case '--input': {
+        const val = args[i + 1];
+        if (val === undefined) {
+          process.stderr.write('Error: --input requires a value\n');
+          process.exit(1);
+        }
+        input = val;
         i++;
         break;
+      }
       case '--input-base64': {
         const raw = args[i + 1];
-        if (raw === undefined) break;
+        if (raw === undefined) {
+          process.stderr.write('Error: --input-base64 requires a value\n');
+          process.exit(1);
+        }
+        if (!BASE64_RE.test(raw)) {
+          process.stderr.write('Error: invalid base64 input\n');
+          process.exit(1);
+        }
         input = Buffer.from(raw, 'base64').toString('utf8');
         i++;
         break;
       }
-      case '--list':
-        listId = args[i + 1] ?? listId;
+      case '--list': {
+        const val = args[i + 1];
+        if (val === undefined) {
+          process.stderr.write('Error: --list requires a value\n');
+          process.exit(1);
+        }
+        listId = val;
         i++;
         break;
+      }
     }
   }
 

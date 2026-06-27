@@ -51,10 +51,15 @@ namespace ToTallman.Demo
                 }
 
                 // Check for optional --list parameter
-                for (int i = 2; i < args.Length - 1; i++)
+                for (int i = 2; i < args.Length; i++)
                 {
                     if (args[i] == "--list")
                     {
+                        if (i + 1 >= args.Length)
+                        {
+                            Console.Error.WriteLine("Error: --list requires a value");
+                            return 1;
+                        }
                         listId = args[i + 1];
                         break;
                     }

@@ -181,7 +181,9 @@ class TallmanConverterTest {
     TallmanException ex =
         assertThrows(
             TallmanException.class, () -> TallmanConverter.toTallman("prednisone", "UNKNOWN"));
-    assertTrue(ex.getMessage().contains("UNKNOWN"));
+    assertEquals(
+        "Unknown Tallman list ID: 'UNKNOWN'. Available lists: AU, DEFAULT, FDA, ISMP, NZ.",
+        ex.getMessage());
   }
 
   @Test

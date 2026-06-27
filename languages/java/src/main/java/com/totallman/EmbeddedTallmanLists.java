@@ -1145,11 +1145,6 @@ final class EmbeddedTallmanLists {
         throw new TallmanException("Unknown Tallman list ID: '" + listId + "'. Available lists: " + available + ".");
     }
 
-    /** Return true if listId is a known list. */
-    static boolean hasList(String listId) {
-        return ALL_LISTS.containsKey(listId);
-    }
-
     /** Return an unmodifiable view of all available list IDs. */
     static Set<String> availableListIds() {
         return AVAILABLE_LIST_IDS;

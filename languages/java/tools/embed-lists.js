@@ -156,11 +156,6 @@ lines.push('        String available = String.join(", ", AVAILABLE_LIST_IDS.stre
 lines.push('        throw new TallmanException("Unknown Tallman list ID: \'" + listId + "\'. Available lists: " + available + ".");');
 lines.push('    }');
 lines.push('');
-lines.push('    /** Return true if listId is a known list. */');
-lines.push('    static boolean hasList(String listId) {');
-lines.push('        return ALL_LISTS.containsKey(listId);');
-lines.push('    }');
-lines.push('');
 lines.push('    /** Return an unmodifiable view of all available list IDs. */');
 lines.push('    static Set<String> availableListIds() {');
 lines.push('        return AVAILABLE_LIST_IDS;');
