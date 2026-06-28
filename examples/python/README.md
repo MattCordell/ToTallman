@@ -16,12 +16,6 @@ pip install ./languages/python
 python examples/python/example.py
 ```
 
-With custom input text:
-
-```powershell
-python examples/python/example.py "prednisone and prednisolone"
-```
-
 ## Expected output
 
 ```
@@ -31,3 +25,9 @@ AU:      Prescribe vinCRISTine and vinBLASTine carefully; prednisone requires mo
 ```
 
 Note that `prednisone` is only in the `DEFAULT` list, not `AU` — the output differs between lists.
+
+With custom input text:
+
+```powershell
+python examples/python/example.py "prednisone and prednisolone"
+```

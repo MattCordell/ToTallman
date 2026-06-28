@@ -18,12 +18,6 @@ mvn -f languages/java/pom.xml install -DskipTests
 mvn -f examples/java/pom.xml compile exec:java
 ```
 
-With custom input text:
-
-```powershell
-mvn -f examples/java/pom.xml compile exec:java "-Dexec.args=prednisone and prednisolone"
-```
-
 ## Expected output
 
 ```
@@ -33,3 +27,9 @@ AU:      Prescribe vinCRISTine and vinBLASTine carefully; prednisone requires mo
 ```
 
 Note that `prednisone` is only in the `DEFAULT` list, not `AU` — the output differs between lists.
+
+With custom input text:
+
+```powershell
+mvn -f examples/java/pom.xml compile exec:java "-Dexec.args=prednisone and prednisolone"
+```

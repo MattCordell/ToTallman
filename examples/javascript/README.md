@@ -23,12 +23,6 @@ npm install
 npm start
 ```
 
-With custom input text:
-
-```powershell
-node examples/javascript/example.js "prednisone and prednisolone"
-```
-
 ## Expected output
 
 ```
@@ -38,3 +32,9 @@ AU:      Prescribe vinCRISTine and vinBLASTine carefully; prednisone requires mo
 ```
 
 Note that `prednisone` is only in the `DEFAULT` list, not `AU` — the output differs between lists.
+
+With custom input text:
+
+```powershell
+node examples/javascript/example.js "prednisone and prednisolone"
+```

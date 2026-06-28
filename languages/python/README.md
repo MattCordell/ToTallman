@@ -16,7 +16,7 @@ highlighting distinguishing characters in look-alike, sound-alike (LASA) drug na
 - ✅ **Hyphenated drugs**: Supports "SOLU-medrol", "DEPO-medrol"
 - ✅ **Multiple lists**: DEFAULT, AU, FDA, ISMP, NZ
 - ✅ **Build-time embedding**: Zero runtime I/O, embedded dictionaries
-- ✅ **100% canonical pass rate**: Passes all 98 canonical tests
+- ✅ **100% canonical pass rate**: Passes all 99 canonical tests
 - ✅ **Byte-identical output**: Verified against C# reference via parity check
 - ✅ **Typed**: PEP 561 py.typed marker, strict mypy-clean
 
@@ -139,7 +139,7 @@ cd languages/python
 python -m pytest tests/ -v
 ```
 
-### Run Canonical Suite (98 tests)
+### Run Canonical Suite (99 tests)
 
 ```bash
 # From repo root — requires Node.js
@@ -148,7 +148,7 @@ cd ../..
 node tools/test-runner/run-canonical-tests.js languages/python/test-adapter.js
 ```
 
-Expected: 100% pass (98/98 tests)
+Expected: 100% pass (99/99 tests)
 
 ### Run Cross-Language Parity Check
 
@@ -158,17 +158,19 @@ dotnet build languages/csharp/ToTallman.sln -c Debug
 node tools/parity-check/run-parity-check.js
 ```
 
-Expected: Python output is byte-identical to C# for all 98 canonical inputs.
+Expected: Python output is byte-identical to C# for all 99 canonical inputs.
 
 ## Available Lists
 
-| List ID | Description | Entries | Source |
-|---------|-------------|---------|--------|
-| DEFAULT | Aggregate from multiple sources | 202 | Combined |
-| AU | Australian National List (2017) | 206 | Australian |
-| FDA | US FDA/ISMP List (2016) | 37 | FDA |
-| ISMP | ISMP List (2016) | 143 | ISMP |
-| NZ | New Zealand List (2013) | 190 | New Zealand |
+| List ID | Description | Entries | Version |
+|---------|-------------|---------|---------|
+| DEFAULT | Combined list (AU + ISMP + NZ + FDA) | 384 | 20260612.0 |
+| AU | Australian National Tall Man Lettering List (ACSQHC) | 235 | 20240400.0 |
+| FDA | US Food and Drug Administration Name Differentiation Project | 43 | 20260612.0 |
+| ISMP | FDA + ISMP Tall Man Lettering Lists (combined) | 171 | 20260612.0 |
+| NZ | Aotearoa New Zealand Tall Man Lettering List (HQSC) | 219 | 20231000.0 |
+
+Current entry counts are always in [`tallman-lists/manifest.json`](../../tallman-lists/manifest.json).
 
 ## API Reference
 
@@ -245,7 +247,7 @@ to_tallman("vincristine", "AU")   # → "vinCRISTine"
 from totallman import available_lists, list_version
 
 print(available_lists())          # frozenset({'AU', 'DEFAULT', 'FDA', 'ISMP', 'NZ'})
-print(list_version("DEFAULT"))    # "20180819.0"
+print(list_version("DEFAULT"))    # "20260612.0"
 ```
 
 ## Performance

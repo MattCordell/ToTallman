@@ -16,12 +16,13 @@ namespace ToTallman
         /// </summary>
         /// <param name="input">The input string containing medication names</param>
         /// <param name="listId">
-        /// The Tall Man list to use. Defaults to "DEFAULT" — a 202-entry aggregate of FDA/ISMP, AU, and NZ
-        /// sources, suitable when no specific jurisdiction is required.
-        /// Other lists: AU (206 entries, Australian National), FDA (37 entries, US FDA),
-        /// ISMP (143 entries, Institute for Safe Medication Practices), NZ (190 entries, New Zealand).
-        /// See <see cref="AvailableLists"/> for the runtime set of valid IDs and
-        /// <see cref="ListVersion"/> for provenance of each list.
+        /// The Tall Man list to use. Defaults to <c>"DEFAULT"</c> — an aggregate of AU, ISMP, NZ, and
+        /// FDA sources, suitable when no specific jurisdiction is required.
+        /// Other lists: <c>"AU"</c> (Australian National), <c>"FDA"</c> (US FDA),
+        /// <c>"ISMP"</c> (Institute for Safe Medication Practices), <c>"NZ"</c> (New Zealand).
+        /// Use <see cref="AvailableLists"/> for the current set of valid IDs,
+        /// <see cref="ListVersion"/> for each list's version, or
+        /// <c>tallman-lists/manifest.json</c> in the repository for current entry counts.
         /// </param>
         /// <returns>The input string with medication names converted to Tall Man format</returns>
         /// <exception cref="TallmanException">If the specified list ID is not found</exception>

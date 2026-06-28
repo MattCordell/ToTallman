@@ -24,7 +24,7 @@ toTallman('prednisone', 'FDA');   // 'predniSONE'  — explicit list
 toTallman('DOBUTamine', 'FDA');   // 'DOBUTamine'  — already in Tall Man form
 
 availableLists(); // ['AU', 'DEFAULT', 'FDA', 'ISMP', 'NZ']
-listVersion('DEFAULT'); // e.g. '20180819.0'
+listVersion('DEFAULT'); // e.g. '20260612.0'
 ```
 
 ### CommonJS
@@ -50,13 +50,15 @@ npx totallman --input-base64 "cHJlZG5pc29uZQ==" --list DEFAULT
 
 ## Available lists
 
-| ID | Description |
-|----|-------------|
-| `DEFAULT` | Combined default list |
-| `AU` | Australian National Tall Man Lettering List |
-| `FDA` | US FDA Tall Man Lettering List |
-| `ISMP` | ISMP Recommended Tall Man Lettering List |
-| `NZ` | New Zealand Tall Man Lettering List |
+| ID | Description | Entries | Version |
+|----|-------------|---------|---------|
+| `DEFAULT` | Combined list (AU + ISMP + NZ + FDA) | 384 | 20260612.0 |
+| `AU` | Australian National Tall Man Lettering List (ACSQHC) | 235 | 20240400.0 |
+| `ISMP` | FDA + ISMP Tall Man Lettering Lists (combined) | 171 | 20260612.0 |
+| `NZ` | Aotearoa New Zealand Tall Man Lettering List (HQSC) | 219 | 20231000.0 |
+| `FDA` | US Food and Drug Administration Name Differentiation Project | 43 | 20260612.0 |
+
+Current entry counts are always in [`tallman-lists/manifest.json`](../../tallman-lists/manifest.json).
 
 ## Error handling
 
@@ -99,7 +101,7 @@ npm run typecheck
 # Native unit tests
 npm test
 
-# Canonical test suite (98/98)
+# Canonical test suite (99/99)
 npm run test:canonical
 ```
 

@@ -1,25 +1,97 @@
-> [!WARNING]
-> **Major Refactor in Progress (v2.0.0)**
-> This repository is undergoing a complete rewrite for multi-language support and to address outstanding test cases. Work is tracked in [GitHub issues](https://github.com/MattCordell/ToTallman/issues). The content below the divider describes the current (v1) API and will be updated when v2 ships.
-
 [![CI](https://github.com/MattCordell/ToTallman/actions/workflows/ci.yml/badge.svg)](https://github.com/MattCordell/ToTallman/actions/workflows/ci.yml)
 [![CodeQL](https://github.com/MattCordell/ToTallman/actions/workflows/codeql.yml/badge.svg)](https://github.com/MattCordell/ToTallman/actions/workflows/codeql.yml)
 
-## v2.0.0 Progress
+# ToTallman
 
-| Phase | Status |
-|-------|--------|
-| 1. Foundation (data format + validation) | ✅ Complete |
-| 2. Canonical test suite | ✅ Complete |
-| 3. C# implementation | ✅ Complete — 99/99 canonical, 102/102 native |
-| 4. Multi-language (Python → JS → Java) | ✅ Complete — Python ✅ 99/99 canonical [#24](https://github.com/MattCordell/ToTallman/issues/24); JS ✅ 99/99 canonical [#25](https://github.com/MattCordell/ToTallman/issues/25); Java ✅ 99/99 canonical [#26](https://github.com/MattCordell/ToTallman/issues/26) |
-| 5. CI/CD | ✅ Complete — SHA-pinned Actions, dependency caching, Dependabot, CodeQL scanning, pre-commit hooks [#14](https://github.com/MattCordell/ToTallman/issues/14) |
-| 6. Documentation | ⏳ Planned — [#15](https://github.com/MattCordell/ToTallman/issues/15) |
-| 7. Example applications | ✅ Complete — [#47](https://github.com/MattCordell/ToTallman/issues/47) |
-| 8. Manual list review (clinical correctness) | ✅ Complete — all lists re-transcribed from authoritative sources, maintenance pipeline added, parenthetical compounds resolved [#48](https://github.com/MattCordell/ToTallman/issues/48) [#28](https://github.com/MattCordell/ToTallman/issues/28) |
-| 9. Release &amp; publishing | ⛔ Blocked — [#49](https://github.com/MattCordell/ToTallman/issues/49) (awaits #15, #20) |
+Cross-language [Tall Man lettering](https://en.wikipedia.org/wiki/Tall_Man_lettering) library for medication safety. Converts drug names to their standardised mixed-case form (e.g. `prednisone` → `predniSONE`) to reduce look-alike, sound-alike (LASA) medication errors.
 
-Detailed, up-to-date work lives in [GitHub issues](https://github.com/MattCordell/ToTallman/issues).
+Available in C#/.NET, Python, JavaScript/TypeScript, and Java. All implementations share a canonical dataset, produce byte-identical output, and pass 99/99 canonical tests.
+
+## Quick Start
+
+### C# / .NET
+
+```bash
+dotnet add package ToTallman
+```
+
+```csharp
+using ToTallman;
+
+"prednisone".ToTallman();               // "predniSONE"
+"vincristine".ToTallman("AU");          // "vinCRISTine"
+"ms contin".ToTallman();                // "MS Contin"
+"solu-medrol".ToTallman();             // "SOLU-medrol"
+```
+
+### Python
+
+```bash
+pip install totallman
+```
+
+```python
+from totallman import to_tallman
+
+to_tallman("prednisone")               # "predniSONE"
+to_tallman("vincristine", "AU")        # "vinCRISTine"
+to_tallman("ms contin")                # "MS Contin"
+```
+
+### JavaScript / TypeScript
+
+```bash
+npm install totallman
+```
+
+```typescript
+import { toTallman } from 'totallman';
+
+toTallman('prednisone');               // 'predniSONE'
+toTallman('vincristine', 'AU');        // 'vinCRISTine'
+toTallman('ms contin');                // 'MS Contin'
+```
+
+### Java
+
+```xml
+<dependency>
+  <groupId>com.totallman</groupId>
+  <artifactId>totallman</artifactId>
+  <version>2.0.0</version>
+</dependency>
+```
+
+```java
+import com.totallman.TallmanConverter;
+
+TallmanConverter.toTallman("prednisone");           // "predniSONE"
+TallmanConverter.toTallman("vincristine", "AU");    // "vinCRISTine"
+TallmanConverter.toTallman("ms contin");            // "MS Contin"
+```
+
+## Available Lists
+
+| ID | Description | Entries |
+|----|-------------|---------|
+| `DEFAULT` | Combined list (AU + ISMP + NZ + FDA, precedence AU > ISMP > NZ > FDA) | 384 |
+| `AU` | Australian National Tall Man Lettering List (ACSQHC) | 235 |
+| `ISMP` | FDA + ISMP Tall Man Lettering Lists (combined) | 171 |
+| `NZ` | Aotearoa New Zealand Tall Man Lettering List (HQSC) | 219 |
+| `FDA` | US Food and Drug Administration Name Differentiation Project | 43 |
+
+Entry counts and list versions are in [`tallman-lists/manifest.json`](tallman-lists/manifest.json).
+
+## Language Implementations
+
+| Language | Package | README |
+|----------|---------|--------|
+| C# / .NET | `ToTallman` on NuGet | [languages/csharp/](languages/csharp/README.md) |
+| Python | `totallman` on PyPI | [languages/python/](languages/python/README.md) |
+| JavaScript / TypeScript | `totallman` on npm | [languages/js/](languages/js/README.md) |
+| Java | `com.totallman:totallman` | [languages/java/](languages/java/README.md) |
+
+See the [Technical Specification](spec/TECHNICAL-SPEC.md) for the canonical algorithm and cross-language design decisions.
 
 ## Examples
 
@@ -34,56 +106,22 @@ Runnable examples for each language live under [`examples/`](examples/):
 
 Each example requires the library to be built first — see the README in each example directory.
 
-### v2 Goals
-- **Byte-identical output** across C#, Python, JavaScript/TypeScript, and Java from a shared canonical dataset
-- **100% canonical test pass** in every language
-- Whole-word, Unicode-safe, punctuation-aware matching, with multi-word and hyphenated drug support
-- Build-time embedding (zero runtime I/O)
-- Example apps and documentation for each language
+## Contributing
 
-------------------------------------------------------------------------------------------------------------------------------
-------------------------------------------------------------------------------------------------------------------------------
+See [CONTRIBUTING.md](CONTRIBUTING.md) for how to add or update Tall Man lists, run the test suite, and submit changes.
 
-# ToTallman
-An extension method that will apply specified [Tallman lettering](https://en.wikipedia.org/wiki/Tall_Man_lettering) to any string.
-The default parameterless method, is intended to use all "known" Tallman lists.
-A single overload exists that allows a specific "known" list to be specified.
+## Release Status
 
-ToTallman can be applied anywhere a string is being output.
+| Phase | Status |
+|-------|--------|
+| 1. Foundation (data format + validation) | ✅ Complete |
+| 2. Canonical test suite | ✅ Complete |
+| 3. C# implementation | ✅ Complete — 99/99 canonical, 123 total |
+| 4. Multi-language (Python, JS, Java) | ✅ Complete — all 99/99 canonical |
+| 5. CI/CD | ✅ Complete |
+| 6. Documentation | ✅ Complete |
+| 7. Example applications | ✅ Complete |
+| 8. Manual list review (clinical correctness) | ✅ Complete |
+| 9. Release & publishing | ⛔ Blocked — [#49](https://github.com/MattCordell/ToTallman/issues/49) |
 
-```C#
-  var d = "This drug is norfloxacin";
-  Console.WriteLine("{0} => {1}", d, d.ToTallman();  // To use the default list
-  Console.WriteLine("{0} => {1}", d, d.ToTallman(Tallman.List.AU)); //To specifiy a particular list
-  
-  //Outputs:
-  //    This drug is norfloxacin => This drug is NORfloxacin
-```
-
-Built with [.Net Standard 1.0](http://immo.landwerth.net/netstandard-versions/#), so it'll run on wherever .Net runs!
-
-There is effectively zero impact on UI performance.[link to performance metrics - coming soon]
-
-The algorithm is essentially a case insensitive Regex replacement for target words. Only words that match will be replaced.[link for ports - coming soon]
-
-
-Planned lists for inclusion are
-* [Australia](https://www.safetyandquality.gov.au/wp-content/uploads/2018/01/National-Tall-Man-Lettering-List-Nov-2017.pdf)
-* [US](https://www.ismp.org/sites/default/files/attachments/2017-11/tallmanletters.pdf) FDA/ISMP distinction to be determined.
-* [New Zealand](https://www.hqsc.govt.nz/our-programmes/medication-safety/projects/tall-man-lettering/)
-* [Canada](https://www.ismp-canada.org/download/TALLman/Principles_for_the_Application_of_TALLman_Lettering_in_Canada.pdf)
-
-If you want to see additional lists supported, please [raise an issue](https://github.com/MattCordell/ToTallman/issues/new) and at least provide some authoritative reference
-
-Additional References:
-
-http://www.waltersmedical.co.uk/uploads/u29108/File/tall_man_~_ku_~_v3_i3.pdf
-https://www.ismp.org/resources/special-edition-tall-man-lettering-ismp-updates-its-list-drug-names-tall-man-letters
-http://www.ismp.org/recommendations/tall-man-letters-list
-
-Comparison of known lists to also be described on the wiki (eventually).
-
-
-
-
-
+Detailed, up-to-date work lives in [GitHub issues](https://github.com/MattCordell/ToTallman/issues).

@@ -1,4 +1,9 @@
-# Known Failures - Current C# Implementation
+> [!NOTE]
+> **Historical record — superseded by v2.0.0.** This document describes v1.x failures
+> against an 83-test suite. As of v2.0.0, all four language implementations (C#, Python,
+> JavaScript, Java) pass 99/99 canonical tests. This file is retained for reference only.
+
+# Known Failures - v1.x C# Implementation
 
 This document tracks known failures of the current (v1.x) C# implementation against the canonical test suite.
 
