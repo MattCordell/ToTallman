@@ -55,7 +55,7 @@ node languages/java/tools/embed-lists.js
 # 3. Build, format-check, and test
 mvn -f languages/java/pom.xml verify
 
-# 4. Run the canonical test suite (98 tests, shared harness)
+# 4. Run the canonical test suite (99 tests, shared harness)
 npm ci --prefix tools/test-runner
 node tools/test-runner/run-canonical-tests.js languages/java/test-adapter.js
 
@@ -108,29 +108,31 @@ node tools/parity-check/run-parity-check.js
 # Native JUnit tests (30 tests)
 mvn -f languages/java/pom.xml test
 
-# Canonical suite via shared harness (98 tests)
+# Canonical suite via shared harness (99 tests)
 node tools/test-runner/run-canonical-tests.js languages/java/test-adapter.js
 
-# Cross-language parity (Java == C# == Python for all 98 inputs)
+# Cross-language parity (Java == C# == Python for all 99 inputs)
 node tools/parity-check/run-parity-check.js
 ```
 
-**100% canonical pass rate**: 98/98 tests pass, output byte-identical to C# and Python.
+**100% canonical pass rate**: 99/99 tests pass, output byte-identical to C# and Python.
 
 ## Available Lists
 
-| ID | Description | Entries |
-|---|---|---|
-| DEFAULT | Combined list (ISMP + FDA derivation) | ~202 |
-| AU | Australian National Tall Man Lettering List (2017) | ~206 |
-| FDA | US Food and Drug Administration list (2016) | 37 |
-| ISMP | Institute for Safe Medication Practices (2016) | ~143 |
-| NZ | New Zealand Medicines and Medical Devices Safety Authority (2013) | ~190 |
+| ID | Description | Entries | Version |
+|---|---|---|---|
+| DEFAULT | Combined list (AU + ISMP + NZ + FDA) | 384 | 20260612.0 |
+| AU | Australian National Tall Man Lettering List (ACSQHC) | 235 | 20240400.0 |
+| FDA | US Food and Drug Administration Name Differentiation Project | 43 | 20260612.0 |
+| ISMP | FDA + ISMP Tall Man Lettering Lists (combined) | 171 | 20260612.0 |
+| NZ | Aotearoa New Zealand Tall Man Lettering List (HQSC) | 219 | 20231000.0 |
+
+Current entry counts are always in [`tallman-lists/manifest.json`](../../tallman-lists/manifest.json).
 
 ```java
 // List introspection
 Set<String> ids = TallmanConverter.availableLists();   // {"DEFAULT", "AU", "FDA", "ISMP", "NZ"}
-String ver       = TallmanConverter.listVersion("AU"); // "20171124.0"
+String ver       = TallmanConverter.listVersion("AU"); // "20240400.0"
 ```
 
 ## API Reference

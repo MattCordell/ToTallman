@@ -57,16 +57,16 @@ module.exports = {
 
 The canonical test suite includes:
 - `basic-replacement.json` - Simple whole-word matching (8 tests)
-- `case-insensitive.json` - Upper/lower/mixed case (7 tests)
+- `case-insensitive.json` - Upper/lower/mixed case (6 tests)
 - `no-substring.json` - No partial word replacement (8 tests)
-- `punctuation.json` - Punctuation preservation (9 tests)
+- `punctuation.json` - Punctuation preservation (13 tests)
 - `unicode-nfc.json` - Unicode normalization (6 tests)
 - `unicode-casefolding.json` - Special Unicode cases (6 tests)
-- `multi-list.json` - Different list behaviors (11 tests)
-- `edge-cases.json` - Null, empty, whitespace (15 tests)
-- `multi-word.json` - Hyphenated/multi-word drugs (13 tests)
+- `multi-list.json` - Different list behaviors (15 tests)
+- `edge-cases.json` - Null, empty, whitespace (16 tests)
+- `multi-word.json` - Hyphenated/multi-word drugs (21 tests)
 
-**Total: 83 canonical test cases**
+**Total: 99 canonical test cases**
 
 ## Exit Codes
 

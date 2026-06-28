@@ -1,7 +1,7 @@
 # Tallman Case Conversion --- Full Technical Specification
 
-**Version:** 1.0\
-**Status:** Draft
+**Version:** 2.0\
+**Status:** Approved
 
 ------------------------------------------------------------------------
 
@@ -48,7 +48,12 @@ Examples: - `prednisone` → `predniSONE` - `prednisone.` →
     this; any entry containing a non-ASCII character is a validation error.
     Within the ASCII range `toLowerCase` is identical to Unicode Default Case
     Folding, so the canonical fold is simultaneously simple and formally
-    correct.
+    correct. Accordingly, the **correct and intended fold in every language
+    runtime** is the locale-independent lowercase family: `ToLowerInvariant()`
+    in C#, `str.lower()` in Python, `String.prototype.toLowerCase()` in
+    JavaScript, and `String.toLowerCase(Locale.ROOT)` in Java. Using
+    `casefold()` (Python) or ICU4J case folding would produce divergent results
+    for non-ASCII input and MUST NOT be used.
 -   Match keys are derived once by the shared compiler and embedded in the
     compiled artifact. Every language runtime MUST apply `toLowerCase(NFC(word))`
     to the input word before dictionary lookup; this guarantees byte-identical
@@ -82,7 +87,7 @@ Stored in `/tallman-lists/*.json`.
   "id": "AU",
   "description": "Australian approved Tallman list",
   "source": "https://example.gov.au/tallman",
-  "version": "20251124.0",
+  "version": "20240400.0",
   "entries": [
     "predniSONE",
     "prednisoLONE",
@@ -158,6 +163,29 @@ language embeds identical data.
     so cross-language output stays byte-identical.
 
 The validator additionally generates a manifest of available list IDs.
+
+## 5.1 Parenthetical synonym handling (source extracts)
+
+Authority source documents occasionally give two names for the same drug in a
+single row using a parenthetical alternative form, e.g. `doSULepin (doTHiepin)`
+or `mercaptAMine (cysteamine)`. Such entries are **not** stored verbatim: a
+literal `(` is a word boundary in the canonical algorithm (§7), so a parenthetical
+compound key could never be matched as a single lookup.
+
+Instead, `tools/build-lists/build-lists.js` splits each `name (synonym)` entry
+into its two candidate forms and evaluates each independently against the
+upper/lower rule:
+
+-   A candidate containing at least one uppercase **and** one lowercase letter is
+    added as a standalone entry (e.g. `doSULepin` and `doTHiepin` each become an
+    entry).
+-   A candidate with no Tall Man capitalisation — typically an all-lowercase
+    synonym such as `cysteamine` — is dropped, with a build warning.
+
+Consequently no list contains a parenthetical entry, yet input text such as
+`ciclosporin (cyclosporin)` still converts correctly to
+`ciclosPORIN (cyclosPORIN)`, because each word is matched independently as a
+standalone entry rather than via a compound key.
 
 ------------------------------------------------------------------------
 
@@ -265,22 +293,33 @@ entries.
 
 # 9. Directory Structure
 
-    /tallman-lists/*.json              (source of truth)
+    /tallman-lists/*.json              (source of truth — authority JSON lists)
     /tallman-lists/compiled/           (generated canonical artifact)
+    /tallman-lists/sources/            (upstream CSVs and correspondence records)
     /spec/TECHNICAL-SPEC.md
     /tests/canonical/*
-    /tools/validator/
-    /tools/compile-lists/              (shared, language-agnostic compiler)
+    /tools/
+        /build-lists/                  (derives DEFAULT from authority sources)
+        /compile-lists/                (shared, language-agnostic compiler)
+        /validator/                    (validates JSON + generates manifest)
+        /test-runner/                  (canonical test harness + adapter interface)
+        /parity-check/                 (cross-language output parity verification)
 
     /languages/
         /csharp/
             /tools/                    (thin C# emitter)
         /python/
+            /tools/                    (thin Python emitter)
         /js/
+            /tools/                    (thin JS emitter)
         /java/
+            /tools/                    (thin Java emitter)
 
-    /build/
-        /ci-scripts/
+    /examples/
+        /csharp/
+        /python/
+        /javascript/
+        /java/
 
 ------------------------------------------------------------------------
 

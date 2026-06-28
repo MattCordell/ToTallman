@@ -249,13 +249,14 @@ The old v1.x implementation has been removed (it remains in git history if ever 
 ### ❌ Do NOT Use Regex Replacement
 v1.x used regex. v2.0.0 uses character-by-character iteration per canonical algorithm.
 
-### ❌ Do NOT Use Simple Case Conversion
-- C#: NOT `ToLower()` → Use `ToUpperInvariant().ToLowerInvariant()` or proper casefolding
-- Python: NOT `lower()` → Use `casefold()`
-- JavaScript: NOT `toLowerCase()` → Use proper Unicode casefolding
-- Java: NOT raw `toLowerCase()` → Use `toLowerCase(Locale.ROOT)` (ASCII-safe approximation, no ICU4J needed)
+### ❌ Do NOT Use Locale-Sensitive Case Conversion
+The prohibition is against locale-sensitive lowering (e.g. `String.ToLower()` with a Turkish locale where `I` → `ı`). Because all list entries are ASCII-only (enforced by the validator, spec §3.2), the following are **correct and intended** in each runtime:
+- C#: `ToLowerInvariant()` (or equivalently `ToUpperInvariant().ToLowerInvariant()`)
+- Python: `str.lower()` — **not** `casefold()` (casefold folds ß→ss and would break cross-language parity on non-ASCII input)
+- JavaScript: `String.prototype.toLowerCase()` — locale-independent for ASCII
+- Java: `String.toLowerCase(Locale.ROOT)` — locale-independent
 
-The canonical match key is `casefold(NFC(text))` (spec Section 3.2); every language runtime must fold identically. All current entries are ASCII, so C#'s `ToUpperInvariant().ToLowerInvariant()` is an exact (ASCII-safe) approximation; cross-language parity is enforced in Phase 5.
+The canonical fold is `toLowerCase(NFC(word))` (spec §3.2); within the ASCII range all four runtimes produce identical results. Do NOT use ICU4J case folding or Python `casefold()` — both would diverge from other runtimes if the ASCII constraint were ever relaxed.
 
 ### ❌ Do NOT Load JSON at Runtime
 Lists must be embedded at build time. No file I/O in production code.

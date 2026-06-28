@@ -14,7 +14,7 @@ This is the C# implementation of ToTallman, which converts medication names to T
 - ✅ **Hyphenated drugs**: Supports "SOLU-medrol", "DEPO-medrol"
 - ✅ **Multiple lists**: DEFAULT, AU, FDA, ISMP, NZ
 - ✅ **Build-time embedding**: Zero runtime I/O, embedded dictionaries
-- ✅ **100% test coverage**: Passes all 83 canonical tests
+- ✅ **100% test coverage**: Passes all 99 canonical tests
 
 ## Quick Start
 
@@ -57,7 +57,7 @@ string result = "Administer solu-medrol".ToTallman();
 
 ```bash
 # Clone repository
-git clone https://github.com/your-repo/ToTallman
+git clone https://github.com/MattCordell/ToTallman
 cd ToTallman/languages/csharp
 
 # Build solution
@@ -73,9 +73,13 @@ dotnet run --project src/ToTallman.Demo/ToTallman.Demo.csproj
 ### Build Process
 
 The build process automatically:
-1. Runs `build/embed-lists.ps1` to generate `EmbeddedTallmanLists.g.cs`
+1. Runs `languages/csharp/tools/generate-embedded.ps1` to generate `EmbeddedTallmanLists.g.cs`
 2. Applies NFC normalization and casefolding to all list entries
 3. Embeds dictionaries into the compiled assembly (zero runtime I/O)
+
+> **Fresh clone note**: `EmbeddedTallmanLists.g.cs` is generated at build time and is not
+> committed. Opening the project before building shows red squiggles (CS0103) until `dotnet build`
+> generates the file. This is expected — run `dotnet build` once to resolve them.
 
 ## Architecture
 
@@ -115,7 +119,7 @@ npm install
 node run-canonical-tests.js ../../languages/csharp/test-adapter.js
 ```
 
-Expected: 100% pass (83/83 tests)
+Expected: 100% pass (99/99 tests)
 
 ### Run Unit Tests
 
@@ -126,13 +130,15 @@ dotnet test tests/ToTallman.Tests/ToTallman.Tests.csproj
 
 ## Available Lists
 
-| List ID | Description | Entries | Source |
-|---------|-------------|---------|--------|
-| DEFAULT | Aggregate from multiple sources | 199 | Combined |
-| AU | Australian National List (2017) | 206 | Australian |
-| FDA | US FDA/ISMP List (2016) | 37 | FDA |
-| ISMP | ISMP List (2016) | 143 | ISMP |
-| NZ | New Zealand List (2013) | 190 | New Zealand |
+| List ID | Description | Entries | Version |
+|---------|-------------|---------|---------|
+| DEFAULT | Combined list (AU + ISMP + NZ + FDA) | 384 | 20260612.0 |
+| AU | Australian National Tall Man Lettering List (ACSQHC) | 235 | 20240400.0 |
+| FDA | US Food and Drug Administration Name Differentiation Project | 43 | 20260612.0 |
+| ISMP | FDA + ISMP Tall Man Lettering Lists (combined) | 171 | 20260612.0 |
+| NZ | Aotearoa New Zealand Tall Man Lettering List (HQSC) | 219 | 20231000.0 |
+
+Current entry counts are always in [`tallman-lists/manifest.json`](../../tallman-lists/manifest.json).
 
 ## API Reference
 
@@ -203,5 +209,5 @@ MIT License - see [LICENSE](../../LICENSE) for details.
 
 ## Support
 
-- Issues: https://github.com/your-repo/ToTallman/issues
-- Documentation: https://github.com/your-repo/ToTallman/wiki
+- Issues: https://github.com/MattCordell/ToTallman/issues
+- Documentation: https://github.com/MattCordell/ToTallman/wiki

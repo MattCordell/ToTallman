@@ -11,8 +11,8 @@
     <Authors>ToTallman Contributors</Authors>
     <Description>Cross-language Tall Man lettering library for medication safety. Converts drug names to standardized mixed-case format (e.g., predniSONE) to prevent medication errors.</Description>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <PackageProjectUrl>https://github.com/your-repo/ToTallman</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/your-repo/ToTallman</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/MattCordell/ToTallman</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/MattCordell/ToTallman</RepositoryUrl>
     <PackageTags>medication;safety;tallman;lettering;healthcare;pharmacy</PackageTags>
   </PropertyGroup>
 
